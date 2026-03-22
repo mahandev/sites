@@ -1,0 +1,49 @@
+name: Business Site Pipeline
+
+on:
+  push:
+    paths:
+      - "business_website_data/new/**.json"
+  workflow_dispatch:
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install gspread google-auth python-dotenv requests
+
+      - name: Create .env from secrets
+        run: |
+          echo "GOOGLE_SHEET_ID=${{ secrets.GOOGLE_SHEET_ID }}"    >> .env
+          echo "GITHUB_TOKEN=${{ secrets.PIPELINE_GITHUB_TOKEN }}" >> .env
+          echo "GITHUB_REPO=${{ github.repository }}"              >> .env
+          echo "CREDENTIALS_PATH=credentials.json"                 >> .env
+
+      - name: Create Google credentials file
+        run: |
+          echo '${{ secrets.GOOGLE_CREDENTIALS_JSON }}' > credentials.json
+
+      - name: Run pipeline
+        run: python pipeline.py
+
+      - name: Commit output sites
+        run: |
+          git config user.name "Pipeline Bot"
+          git config user.email "pipeline@noreply.com"
+          git add output/ business_website_data/businesses_progress.json pipeline_state.json processed/
+          git diff --staged --quiet || git commit -m "Pipeline: auto-generated sites [skip ci]"
+          git push

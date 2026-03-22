@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>S U VHORA &amp; CO Tax consultancy and Accounting – Tax preparation service in Pune</title>
+<title>S U VHORA &amp; CO Tax consultancy and Accounting – Tax consultant in Pune</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -149,6 +149,43 @@
     .section-inner { padding: 4rem 1.5rem; }
     .wa-float { bottom: 1rem; right: 1rem; padding: 0.8rem 1.2rem; }
   }
+
+  /* Mobile photo scroll */
+  @media (max-width: 900px) {
+    .photos-strip { overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; }
+    .photo-cell { min-width: 260px; }
+  }
+</style>
+
+<style>
+  /* USP chips */
+  .usp-chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+  .usp-chip { background: rgba(184,151,42,0.12); border: 1px solid var(--gold);
+              color: var(--ink); padding: 6px 16px; border-radius: 20px;
+              font-size: 0.82rem; font-weight: 500; }
+
+  /* FAQ */
+  .faq { padding: 80px 5%; background: #1a1a18; color: var(--cream); }
+  .faq .section-label { color: var(--gold-light); font-size: 0.75rem; letter-spacing: 0.15em;
+                         text-transform: uppercase; margin-bottom: 8px; }
+  .faq h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,4vw,3rem);
+            margin-bottom: 40px; font-weight: 600; }
+  .faq-item { border-bottom: 1px solid rgba(255,255,255,0.08); padding: 24px 0; }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q { font-weight: 500; font-size: 1.05rem; margin-bottom: 8px; }
+  .faq-a { color: rgba(245,240,232,0.7); line-height: 1.75; font-size: 0.95rem; }
+
+  /* Payment badges */
+  .pay-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .pay-badge { background: transparent; border: 1px solid var(--gold);
+               color: var(--muted); padding: 3px 12px; border-radius: 20px;
+               font-size: 0.75rem; }
+
+  /* Social links */
+  .social-links { display: flex; gap: 20px; margin-bottom: 12px; flex-wrap: wrap; }
+  .social-link { color: rgba(245,240,232,0.55); text-decoration: none; font-size: 0.85rem;
+                 transition: color 0.2s; }
+  .social-link:hover { color: var(--gold); }
 </style>
 </head>
 <body>
@@ -168,8 +205,9 @@
 <section class="hero">
   <div class="hero-left">
     <p class="hero-eyebrow">Pune's Trusted Tax Expert</p>
-    <h1 class="hero-title">Clarity in<br><em>every filing,</em><br>every year.</h1>
-    <p class="hero-sub">S U VHORA &amp; CO Tax consultancy and Accounting offers professional tax preparation service services in Hanumant niwas, Pune - serving the local community with expertise and care.</p>
+    <h1 class="hero-title">Tax Solutions<br><em>Expert Guidance</em><br>Your Partner</h1>
+    <p class="hero-sub">At S U VHORA &amp; CO, we provide personalized tax consultancy and accounting services in Pune, tailored to your specific needs.</p>
+    <div class="usp-chips"><span class="usp-chip">Quick Filing</span><span class="usp-chip">Home Visits</span><span class="usp-chip">Tax Solutions Specialist</span></div>
     <div class="hero-actions">
       <a href="tel:082620 87442" class="btn-primary">📞 Call Now</a>
       <a href="https://wa.me/918262087442?text=Hi%2C%20I%20found%20S%20U%20VHORA%20%26%20CO%20Tax%20consultancy%20and%20Accounting%20online%20and%20would%20like%20to%20know%20more%20about%20your%20services." class="btn-wa" target="_blank">💬 WhatsApp Us</a>
@@ -200,42 +238,42 @@
         <div class="service-item reveal">
           <span class="service-num">01</span>
           <div>
-            <p class="service-name">ITR Filing</p>
-            <p class="service-desc">Simple to complex income tax returns for individuals, HUF, and businesses. Fast turnaround, zero errors.</p>
+            <p class="service-name">Income Tax Filing</p>
+            <p class="service-desc">Expert assistance with income tax returns and filings</p>
           </div>
         </div>
         <div class="service-item reveal">
           <span class="service-num">02</span>
           <div>
-            <p class="service-name">GST Registration &amp; Filing</p>
-            <p class="service-desc">End-to-end GST setup and monthly/quarterly return filing.</p>
+            <p class="service-name">Tax Audits</p>
+            <p class="service-desc">Representation and guidance during tax audits and assessments</p>
           </div>
         </div>
         <div class="service-item reveal">
           <span class="service-num">03</span>
           <div>
-            <p class="service-name">Business Compliance</p>
-            <p class="service-desc">Company incorporation, ROC filings, and annual compliance - great for startups.</p>
+            <p class="service-name">GST Registration</p>
+            <p class="service-desc">Help with GST registration and compliance services</p>
           </div>
         </div>
         <div class="service-item reveal">
           <span class="service-num">04</span>
           <div>
-            <p class="service-name">Financial Advisory</p>
-            <p class="service-desc">Tax planning, investment guidance, and personalised financial consulting.</p>
+            <p class="service-name">Financial Planning</p>
+            <p class="service-desc">Customized financial planning and analysis for individuals and businesses</p>
           </div>
         </div>
         <div class="service-item reveal">
           <span class="service-num">05</span>
           <div>
-            <p class="service-name">CA Consultation</p>
-            <p class="service-desc">Direct access to chartered accountants for any financial or legal query.</p>
+            <p class="service-name">Accounting Services</p>
+            <p class="service-desc">Accurate and efficient accounting services for businesses and individuals</p>
           </div>
         </div>
       </div>
       <div class="about-text reveal">
-        <p>S U VHORA &amp; CO Tax consultancy and Accounting has been serving individuals and businesses in Pune with a commitment to quality, speed, and complete transparency. Whether you&#x27;re a first-time customer or a long-standing client - we&#x27;re here for you.</p>
-        <p>Our team is known for being approachable, thorough, and always available to answer your questions in plain language - no jargon, just clarity.</p>
+        <p>Established in &lt;insert establishment year&gt;, S U VHORA &amp; CO is a renowned tax consultancy and accounting firm providing expert advice and services to individuals and businesses in Pune. With years of experience, our team of experts helps clients navigate the complexities of tax laws and achieves compliance with precision.</p>
+        <p>Our clients trust us for our exceptional professionalism, unparalleled expertise, and prompt response to their queries. Many have praised our exceptional customer service, quick filing of returns, and accurate accounting services.</p>
         <div class="about-stat-row">
           <div class="stat-box"><div class="stat-num">43</div><div class="stat-label">Google Reviews</div></div>
           <div class="stat-box"><div class="stat-num">5.0</div><div class="stat-label">Average Rating</div></div>
@@ -256,23 +294,36 @@
       
         <div class="review-card reveal">
           <div class="review-quote">"</div>
-          <p class="review-text">I was extremely satisfied with this CA firm&#x27;s ITR filing services. They were very knowledgeable and professional, and they explained everything clearly and concisely. They handled all the paperwork and ensured that my...</p>
+          <p class="review-text">Customers appreciate our quality, responsiveness, and professional service.</p>
           <div class="review-stars">★★★★★</div>
-          <p class="review-meta">Verified Google Review · a year ago</p>
-        </div>
-        <div class="review-card reveal">
-          <div class="review-quote">"</div>
-          <p class="review-text">I had a great experience working with this tax consultant. They explained every tax-related issue clearly, guided me through the documentation process, and ensured accurate and timely filing. Their professionalism and...</p>
-          <div class="review-stars">★★★★★</div>
-          <p class="review-meta">Verified Google Review · 5 months ago</p>
-        </div>
-        <div class="review-card reveal">
-          <div class="review-quote">"</div>
-          <p class="review-text">Excellent service for ITR and GST returns. Very supportive Sanket sir and  team and quick response to all queries. They made the entire process smooth and stress-free. I truly appreciate their professionalism and tran...</p>
-          <div class="review-stars">★★★★★</div>
-          <p class="review-meta">Verified Google Review · a month ago</p>
+          <p class="review-meta">Verified Google Review · Recently</p>
         </div>
     </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <p class="section-label">Common Questions</p>
+  <h2>Frequently asked<br><em>questions</em></h2>
+  <div class="faq-list">
+    
+      <div class="faq-item">
+        <p class="faq-q">What types of taxes do you provide services for?</p>
+        <p class="faq-a">We provide services for income tax, GST, and other tax-related compliances.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Can I get a home visit for my tax consultancy needs?</p>
+        <p class="faq-a">Yes, we offer home visits to ensure your comfort and convenience.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">How long does it take to file my tax returns?</p>
+        <p class="faq-a">We strive to file tax returns within the stipulated deadlines to avoid any penalties or fines.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Do you provide financial planning services?</p>
+        <p class="faq-a">Yes, our team of experts provides customized financial planning and analysis services for individuals and businesses.</p>
+      </div>
   </div>
 </section>
 
@@ -280,7 +331,7 @@
 <section id="gallery">
   <div class="section-inner">
     <p class="section-label reveal">Our Space</p>
-    <h2 class="section-title reveal">Come visit us in<br>Hanumant niwas</h2>
+    <h2 class="section-title reveal">Come visit us in<br>Hadapsar</h2>
     <div class="photos-strip reveal">
       
         <div class="photo-cell">
@@ -298,14 +349,7 @@
     <div class="hours-grid">
       <div class="reveal">
         <table class="hours-table">
-          <tr><td>Monday</td><td>10:30 am–6:30 pm</td></tr>
-<tr><td>Tuesday</td><td>10:30 am–6:30 pm</td></tr>
-<tr><td>Wednesday</td><td>10:30 am–6:30 pm</td></tr>
-<tr><td>Thursday</td><td>10:30 am–6:30 pm</td></tr>
-<tr><td>Friday</td><td>10:30 am–6:30 pm</td></tr>
-<tr><td>Saturday</td><td>10:30 am–6:30 pm</td></tr>
-<tr><td>Sunday</td><td class="closed">Closed</td></tr>
-
+          <tr><td colspan='2' style='color:var(--muted)'>Hours not available</td></tr>
         </table>
       </div>
       <div class="contact-block reveal" id="contact">
@@ -315,7 +359,8 @@
         </div>
         <div class="contact-item">
           <div class="contact-icon">📞</div>
-          <div><p class="contact-label">Phone</p><p class="contact-value"><a href="tel:082620 87442" style="color:inherit;text-decoration:none;">082620 87442</a></p></div>
+          <div><p class="contact-label">Phone</p><p class="contact-value"><a href="tel:082620 87442" style="color:inherit;text-decoration:none;">082620 87442</a></p>
+          </div>
         </div>
         <div class="contact-item">
           <div class="contact-icon">💬</div>
@@ -332,7 +377,7 @@
 <!-- FOOTER -->
 <footer>
   <div><div class="footer-logo"><span>S</span> U VHORA &amp; CO Tax consultancy and Accounting</div></div>
-  <div class="footer-text">Hanumant niwas, Dhamalwadi, Bhekrai Nagar, Hadapsar, Phursungi, Pune, Maharashtra 412308<br>082620 87442 · Tax preparation service</div>
+  <div class="footer-text">Hanumant niwas, Dhamalwadi, Bhekrai Nagar, Hadapsar, Phursungi, Pune, Maharashtra 412308<br>082620 87442 · Tax consultant</div>
   <div class="footer-text" style="text-align:right;">© 2026 S U VHORA &amp; CO Tax consultancy and Accounting<br>All rights reserved</div>
 </footer>
 

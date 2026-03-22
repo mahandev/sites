@@ -149,6 +149,43 @@
     .section-inner { padding: 4rem 1.5rem; }
     .wa-float { bottom: 1rem; right: 1rem; padding: 0.8rem 1.2rem; }
   }
+
+  /* Mobile photo scroll */
+  @media (max-width: 900px) {
+    .photos-strip { overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; }
+    .photo-cell { min-width: 260px; }
+  }
+</style>
+
+<style>
+  /* USP chips */
+  .usp-chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+  .usp-chip { background: rgba(184,151,42,0.12); border: 1px solid var(--gold);
+              color: var(--ink); padding: 6px 16px; border-radius: 20px;
+              font-size: 0.82rem; font-weight: 500; }
+
+  /* FAQ */
+  .faq { padding: 80px 5%; background: #1a1a18; color: var(--cream); }
+  .faq .section-label { color: var(--gold-light); font-size: 0.75rem; letter-spacing: 0.15em;
+                         text-transform: uppercase; margin-bottom: 8px; }
+  .faq h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,4vw,3rem);
+            margin-bottom: 40px; font-weight: 600; }
+  .faq-item { border-bottom: 1px solid rgba(255,255,255,0.08); padding: 24px 0; }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q { font-weight: 500; font-size: 1.05rem; margin-bottom: 8px; }
+  .faq-a { color: rgba(245,240,232,0.7); line-height: 1.75; font-size: 0.95rem; }
+
+  /* Payment badges */
+  .pay-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .pay-badge { background: transparent; border: 1px solid var(--gold);
+               color: var(--muted); padding: 3px 12px; border-radius: 20px;
+               font-size: 0.75rem; }
+
+  /* Social links */
+  .social-links { display: flex; gap: 20px; margin-bottom: 12px; flex-wrap: wrap; }
+  .social-link { color: rgba(245,240,232,0.55); text-decoration: none; font-size: 0.85rem;
+                 transition: color 0.2s; }
+  .social-link:hover { color: var(--gold); }
 </style>
 </head>
 <body>
@@ -168,8 +205,9 @@
 <section class="hero">
   <div class="hero-left">
     <p class="hero-eyebrow">Pune's Trusted Tax Expert</p>
-    <h1 class="hero-title">Clarity in<br><em>every filing,</em><br>every year.</h1>
-    <p class="hero-sub">Farash Tax Consultancy offers professional tax consultant services in Sr No.55 Opp New Bhat Clinic, Pune - serving the local community with expertise and care.</p>
+    <h1 class="hero-title">Tax<br><em>_Expertise</em><br>Consultants</h1>
+    <p class="hero-sub">At Farash Tax Consultancy, our dedicated team provides expert tax advice tailored to your needs in Pune. With a focus on understanding our clients, we ensure a seamless and efficient experience.</p>
+    <div class="usp-chips"><span class="usp-chip">Same-Day Filing</span><span class="usp-chip">Home Visits</span><span class="usp-chip">GST Specialist</span></div>
     <div class="hero-actions">
       <a href="tel:097621 51171" class="btn-primary">📞 Call Now</a>
       <a href="https://wa.me/919762151171?text=Hi%2C%20I%20found%20Farash%20Tax%20Consultancy%20online%20and%20would%20like%20to%20know%20more%20about%20your%20services." class="btn-wa" target="_blank">💬 WhatsApp Us</a>
@@ -183,7 +221,7 @@
     </div>
   </div>
   <div class="hero-right">
-    <img class="hero-img-main" src="https://lh3.googleusercontent.com/p/AF1QipO_7YqJzjBJDFKeYdD3TJGfNvInQBsCh8B2HpnD=w1920-h1080-k-no" alt="Farash Tax Consultancy" onerror="this.style.display='none'">
+    <img class="hero-img-main" src="https://lh3.googleusercontent.com/p/AF1QipP6MHcJP4x0k0iPpXAAFVoZJDvpCF94oXr83PCE=w1920-h1080-k-no" alt="Farash Tax Consultancy" onerror="this.style.display='none'">
     <div class="hero-overlay"></div>
     <div class="hero-location-tag">📍 Sr No.55 Opp New Bhat Clinic, Ashram Road, 07, Bhagyoday Nagar Rd, Kondhwa, Pune, Maharashtra 411048</div>
   </div>
@@ -200,42 +238,42 @@
         <div class="service-item reveal">
           <span class="service-num">01</span>
           <div>
-            <p class="service-name">ITR Filing</p>
-            <p class="service-desc">Simple to complex income tax returns for individuals, HUF, and businesses. Fast turnaround, zero errors.</p>
+            <p class="service-name">Tax Planning</p>
+            <p class="service-desc">Personalized tax advice to minimize your liability</p>
           </div>
         </div>
         <div class="service-item reveal">
           <span class="service-num">02</span>
           <div>
-            <p class="service-name">GST Registration &amp; Filing</p>
-            <p class="service-desc">End-to-end GST setup and monthly/quarterly return filing.</p>
+            <p class="service-name">GST Consultancy</p>
+            <p class="service-desc"> Expert guidance on Goods and Services Tax law compliance</p>
           </div>
         </div>
         <div class="service-item reveal">
           <span class="service-num">03</span>
           <div>
-            <p class="service-name">Business Compliance</p>
-            <p class="service-desc">Company incorporation, ROC filings, and annual compliance - great for startups.</p>
+            <p class="service-name">Filing Returns</p>
+            <p class="service-desc">Accurate and efficient preparation of tax returns</p>
           </div>
         </div>
         <div class="service-item reveal">
           <span class="service-num">04</span>
           <div>
-            <p class="service-name">Financial Advisory</p>
-            <p class="service-desc">Tax planning, investment guidance, and personalised financial consulting.</p>
+            <p class="service-name">Tax Audit Services</p>
+            <p class="service-desc">Expert representation during tax audits</p>
           </div>
         </div>
         <div class="service-item reveal">
           <span class="service-num">05</span>
           <div>
-            <p class="service-name">CA Consultation</p>
-            <p class="service-desc">Direct access to chartered accountants for any financial or legal query.</p>
+            <p class="service-name">Corporate Taxation</p>
+            <p class="service-desc">Specialized advice for businesses on tax matters</p>
           </div>
         </div>
       </div>
       <div class="about-text reveal">
-        <p>Farash Tax Consultancy has been serving individuals and businesses in Pune with a commitment to quality, speed, and complete transparency. Whether you&#x27;re a first-time customer or a long-standing client - we&#x27;re here for you.</p>
-        <p>Our team is known for being approachable, thorough, and always available to answer your questions in plain language - no jargon, just clarity.</p>
+        <p>Established for years, Farash Tax Consultancy boasts a wealth of experience in providing top-notch tax consultancy services. Our team is well-versed in navigating the complexities of tax laws, ensuring you receive personalized guidance. We take pride in our commitment to exceptional service.</p>
+        <p>Our clients praise us for being Proactive &amp; Responsive, always willing to listen and respond promptly to their queries. They appreciate our deep expertise and the peace of mind that comes with knowing they&#x27;re in competent hands.</p>
         <div class="about-stat-row">
           <div class="stat-box"><div class="stat-num">109</div><div class="stat-label">Google Reviews</div></div>
           <div class="stat-box"><div class="stat-num">4.9</div><div class="stat-label">Average Rating</div></div>
@@ -259,22 +297,47 @@
           <p class="review-text">Proactive &amp; Responsive: &quot;Always gives time to hear you out,&quot; &quot;quick to respond,&quot; and &quot;prompt in answering&quot;.
 Deep Expertise: &quot;Invaluable knowledge of tax and financial matters,&quot; &quot;Excellent staff for GST/IT,&quot; and &quot;profe...</p>
           <div class="review-stars">★★★★★</div>
-          <p class="review-meta">Verified Google Review · a month ago</p>
+          <p class="review-meta">Customer · Verified Google Review · a month ago</p>
         </div>
         <div class="review-card reveal">
           <div class="review-quote">"</div>
           <p class="review-text">I was searching for best tax consultancy and I found this on Google the experience with them is amazing and the service they provide with the office staff is worth it I do refer</p>
           <div class="review-stars">★★★★★</div>
-          <p class="review-meta">Verified Google Review · Edited 10 months ago</p>
+          <p class="review-meta">Customer · Verified Google Review · Edited 10 months ago</p>
         </div>
         <div class="review-card reveal">
           <div class="review-quote">"</div>
           <p class="review-text">I would definitely consider Farash Tax Consultancy for future consultations. He possesses excellent domain knowledge, is highly punctual, and consistently delivers fast results.
 Mujaheed bhai for your help👍 …</p>
           <div class="review-stars">★★★★★</div>
-          <p class="review-meta">Verified Google Review · 4 months ago</p>
+          <p class="review-meta">Customer · Verified Google Review · 4 months ago</p>
         </div>
     </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <p class="section-label">Common Questions</p>
+  <h2>Frequently asked<br><em>questions</em></h2>
+  <div class="faq-list">
+    
+      <div class="faq-item">
+        <p class="faq-q">What services do you offer at Farash Tax Consultancy?</p>
+        <p class="faq-a">We provide a range of services, including tax planning, GST consultancy, filing returns, tax audit services, and corporate taxation. </p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">How long does it take to process my tax returns?</p>
+        <p class="faq-a">Our team ensures efficient processing of returns, minimizing delays and ensuring compliance.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Do you provide any guarantees for your services?</p>
+        <p class="faq-a">While we take responsibility for our work, we do not provide explicit guarantees. However, we assure you of our dedication to accuracy and timely delivery.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Can I schedule home visits for tax consultations?</p>
+        <p class="faq-a">Yes, we offer flexible scheduling options, including home visits for added convenience</p>
+      </div>
   </div>
 </section>
 
@@ -282,20 +345,23 @@ Mujaheed bhai for your help👍 …</p>
 <section id="gallery">
   <div class="section-inner">
     <p class="section-label reveal">Our Space</p>
-    <h2 class="section-title reveal">Come visit us in<br>Sr No.55 Opp New Bhat Clinic</h2>
+    <h2 class="section-title reveal">Come visit us in<br>Kondhwa</h2>
     <div class="photos-strip reveal">
       
-        <div class="photo-cell">
-          <img src="https://lh3.googleusercontent.com/p/AF1QipO_7YqJzjBJDFKeYdD3TJGfNvInQBsCh8B2HpnD=w1920-h1080-k-no" alt="Farash Tax Consultancy" onerror="this.parentElement.style.background='#2a2a28'">
-        </div>
-        <div class="photo-cell">
-          <img src="https://lh3.googleusercontent.com/p/AF1QipPjUpOsMSTvin22lrcYM73B5LO5JkseKCPmM9B0=w1920-h1080-k-no" alt="Farash Tax Consultancy" onerror="this.parentElement.style.background='#2a2a28'">
-        </div>
         <div class="photo-cell">
           <img src="https://lh3.googleusercontent.com/p/AF1QipP6MHcJP4x0k0iPpXAAFVoZJDvpCF94oXr83PCE=w1920-h1080-k-no" alt="Farash Tax Consultancy" onerror="this.parentElement.style.background='#2a2a28'">
         </div>
         <div class="photo-cell">
           <img src="https://lh3.googleusercontent.com/p/AF1QipOjazPAYTbU54rABfANL_D2iTrePeHMOcr2z6zs=w1920-h1080-k-no" alt="Farash Tax Consultancy" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipO_7YqJzjBJDFKeYdD3TJGfNvInQBsCh8B2HpnD=w1920-h1080-k-no" alt="Farash Tax Consultancy" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipMeM9Age4ZqWc-UazFxwQlRzzmb4qJB7S5tpFRx=w1920-h1080-k-no" alt="Farash Tax Consultancy" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipPjUpOsMSTvin22lrcYM73B5LO5JkseKCPmM9B0=w1920-h1080-k-no" alt="Farash Tax Consultancy" onerror="this.parentElement.style.background='#2a2a28'">
         </div>
         <div class="photo-cell">
           <img src="https://lh3.googleusercontent.com/p/AF1QipPgdyfRHYwj56ZX9k1ZoSZ_V29561U17LJjBl6g=w1920-h1080-k-no" alt="Farash Tax Consultancy" onerror="this.parentElement.style.background='#2a2a28'">
@@ -329,7 +395,8 @@ Mujaheed bhai for your help👍 …</p>
         </div>
         <div class="contact-item">
           <div class="contact-icon">📞</div>
-          <div><p class="contact-label">Phone</p><p class="contact-value"><a href="tel:097621 51171" style="color:inherit;text-decoration:none;">097621 51171</a></p></div>
+          <div><p class="contact-label">Phone</p><p class="contact-value"><a href="tel:097621 51171" style="color:inherit;text-decoration:none;">097621 51171</a></p>
+          </div>
         </div>
         <div class="contact-item">
           <div class="contact-icon">💬</div>

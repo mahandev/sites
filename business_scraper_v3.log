@@ -14080,3 +14080,3141 @@ Hours might differ
 2026-03-23 01:27:54,525 - WARNING - SKIP  urban-diagnostic-service-sahyadri-speciality-labs.json: Missing required field: phone; Invalid phone number: None
 2026-03-23 01:27:54,530 - INFO - Pipeline complete. Generated: 33, Skipped: 12, Errors: 0
 2026-03-23 01:27:54,530 - INFO - ============================================================
+2026-03-23 17:52:12,926 - INFO - Filter mode: no_website
+2026-03-23 17:52:16,929 - INFO - Template: wedding
+2026-03-23 17:52:28,359 - INFO - ✓ Browser initialized
+2026-03-23 17:52:28,359 - INFO - 
+Starting scrape: Wedding photographers & videographers in pune
+2026-03-23 17:52:34,186 - INFO - Loading all business results...
+2026-03-23 17:52:36,274 - INFO - Found 21 businesses...
+2026-03-23 17:52:38,352 - INFO - Found 32 businesses...
+2026-03-23 17:52:40,429 - INFO - Found 42 businesses...
+2026-03-23 17:52:42,465 - INFO - Found 53 businesses...
+2026-03-23 17:52:44,492 - INFO - Found 62 businesses...
+2026-03-23 17:52:46,544 - INFO - Found 73 businesses...
+2026-03-23 17:52:48,580 - INFO - Found 82 businesses...
+2026-03-23 17:52:50,656 - INFO - Found 93 businesses...
+2026-03-23 17:52:52,683 - INFO - Found 102 businesses...
+2026-03-23 17:52:54,775 - INFO - Found 113 businesses...
+2026-03-23 17:52:56,806 - INFO - Found 122 businesses...
+2026-03-23 17:53:02,901 - INFO - ✓ Total businesses found: 122
+2026-03-23 17:53:03,143 - INFO - Found 119 businesses to process
+2026-03-23 17:53:03,144 - INFO - 
+
+######################################################################
+2026-03-23 17:53:03,144 - INFO - # BUSINESS 1/119
+2026-03-23 17:53:03,144 - INFO - ######################################################################
+2026-03-23 17:53:03,144 - INFO - 
+======================================================================
+2026-03-23 17:53:03,144 - INFO - SCRAPING: https://www.google.com/maps/place/Pune+Dusk+Photography/data=!4m7!3m6!1s0x3bc2bf...
+2026-03-23 17:53:03,144 - INFO - ======================================================================
+2026-03-23 17:53:07,944 - INFO - Extracting basic info...
+2026-03-23 17:53:07,983 - INFO -   Name: Pune Dusk Photography
+2026-03-23 17:53:08,003 - INFO -   Rating: 4.6
+2026-03-23 17:53:08,011 - INFO -   Total Reviews: 276
+2026-03-23 17:53:08,017 - INFO - Skipping - has website: http://www.punedusk.com/
+2026-03-23 17:53:10,023 - INFO - 
+
+######################################################################
+2026-03-23 17:53:10,023 - INFO - # BUSINESS 2/119
+2026-03-23 17:53:10,023 - INFO - ######################################################################
+2026-03-23 17:53:10,023 - INFO - 
+======================================================================
+2026-03-23 17:53:10,023 - INFO - SCRAPING: https://www.google.com/maps/place/Prathmesh+Gujar+Photography+%26+Films+-+Best+P...
+2026-03-23 17:53:10,023 - INFO - ======================================================================
+2026-03-23 17:53:14,696 - INFO - Extracting basic info...
+2026-03-23 17:53:14,736 - INFO -   Name: Prathmesh Gujar Photography & Films - Best Photography Service in Pune
+2026-03-23 17:53:14,753 - INFO -   Rating: 5.0
+2026-03-23 17:53:14,759 - INFO -   Total Reviews: 31
+2026-03-23 17:53:14,773 - INFO -   Address: C/164, kanhaiya park lane no.03, 33, Thergaon, Pun...
+2026-03-23 17:53:14,780 - INFO -   Phone: 093565 52074
+2026-03-23 17:53:14,788 - INFO - Extracting hours...
+2026-03-23 17:53:15,842 - INFO -   Using element directly: 'Open 24 hours'
+2026-03-23 17:53:15,846 - INFO -   Hours element text: 'Open 24 hours'
+2026-03-23 17:53:15,846 - INFO -   Clicking to expand hours...
+2026-03-23 17:53:15,852 - INFO -   Clicked via JS
+2026-03-23 17:53:18,357 - INFO -   Looking for hours table...
+2026-03-23 17:53:18,371 - INFO -   Found a table element
+2026-03-23 17:53:18,372 - INFO -   Parsing hours table...
+2026-03-23 17:53:18,384 - INFO -   Found 7 rows
+2026-03-23 17:53:18,392 - INFO -     Row: 'Monday
+Open 24 hours'
+2026-03-23 17:53:18,404 - INFO -     ✓ Monday: Open 24 hours
+2026-03-23 17:53:18,408 - INFO -     Row: 'Tuesday
+Open 24 hours'
+2026-03-23 17:53:18,416 - INFO -     ✓ Tuesday: Open 24 hours
+2026-03-23 17:53:18,420 - INFO -     Row: 'Wednesday
+Open 24 hours'
+2026-03-23 17:53:18,427 - INFO -     ✓ Wednesday: Open 24 hours
+2026-03-23 17:53:18,431 - INFO -     Row: 'Thursday
+Open 24 hours'
+2026-03-23 17:53:18,437 - INFO -     ✓ Thursday: Open 24 hours
+2026-03-23 17:53:18,441 - INFO -     Row: 'Friday
+(Rama Navami)
+Open 24 hours
+Hours might differ'
+2026-03-23 17:53:18,448 - INFO -     ✓ Friday: Open 24 hours
+Hours might differ
+2026-03-23 17:53:18,451 - INFO -     Row: 'Saturday
+Open 24 hours'
+2026-03-23 17:53:18,457 - INFO -     ✓ Saturday: Open 24 hours
+2026-03-23 17:53:18,461 - INFO -     Row: 'Sunday
+8:30 am–7 pm'
+2026-03-23 17:53:18,468 - INFO -     ✓ Sunday: 8:30 am–7 pm
+2026-03-23 17:53:18,468 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 17:53:18,468 - INFO - Extracting About section...
+2026-03-23 17:53:18,472 - INFO -   Found About tab
+2026-03-23 17:53:21,547 - INFO -   Clicked About tab
+2026-03-23 17:53:22,674 - INFO -   ✓ Total features extracted: 1
+2026-03-23 17:53:25,199 - INFO - Extracting all photos...
+2026-03-23 17:53:28,310 - INFO -   Opened photo gallery
+2026-03-23 17:53:28,335 - INFO -     Found 2 photos...
+2026-03-23 17:53:31,870 - INFO -     Found 10 photos...
+2026-03-23 17:53:38,884 - INFO -     Found 26 photos...
+2026-03-23 17:53:42,391 - INFO -     Found 35 photos...
+2026-03-23 17:53:45,885 - INFO -     Found 44 photos...
+2026-03-23 17:53:49,380 - INFO -     Found 54 photos...
+2026-03-23 17:53:52,914 - INFO -     Found 63 photos...
+2026-03-23 17:53:56,367 - INFO -     Found 73 photos...
+2026-03-23 17:53:59,875 - INFO -     Found 83 photos...
+2026-03-23 17:54:03,513 - INFO -   ✓ Found 92 photo URLs (stored, not downloaded)
+2026-03-23 17:54:06,513 - INFO - Extracting reviews...
+2026-03-23 17:54:09,598 - INFO -   Clicked Reviews tab
+2026-03-23 17:54:14,719 - INFO -   Found 20 review elements
+2026-03-23 17:54:16,302 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 17:54:16,302 - INFO - Extracting social media...
+2026-03-23 17:54:16,316 - INFO -   Written to new/: prathmesh-gujar-photography-films-best-photography-service-in-pune.json
+2026-03-23 17:54:16,318 - INFO - Added: Prathmesh Gujar Photography & Films - Best Photography Service in Pune
+2026-03-23 17:54:18,323 - INFO - 
+
+######################################################################
+2026-03-23 17:54:18,324 - INFO - # BUSINESS 3/119
+2026-03-23 17:54:18,324 - INFO - ######################################################################
+2026-03-23 17:54:18,324 - INFO - 
+======================================================================
+2026-03-23 17:54:18,324 - INFO - SCRAPING: https://www.google.com/maps/place/GIW+Studios+%7C+Wedding+Films/data=!4m7!3m6!1s...
+2026-03-23 17:54:18,324 - INFO - ======================================================================
+2026-03-23 17:54:23,385 - INFO - Extracting basic info...
+2026-03-23 17:54:23,422 - INFO -   Name: GIW Studios | Wedding Films
+2026-03-23 17:54:23,441 - INFO -   Rating: 5.0
+2026-03-23 17:54:23,449 - INFO -   Total Reviews: 19
+2026-03-23 17:54:23,455 - INFO - Skipping - has website: https://www.instagram.com/thegr8indianwedding/?igsh=cWp3dTB4bXBjNGMz#https://www.facebook.com/share/1EHvMhxvHF/?mibextid=wwXIfr
+2026-03-23 17:54:25,461 - INFO - 
+
+######################################################################
+2026-03-23 17:54:25,461 - INFO - # BUSINESS 4/119
+2026-03-23 17:54:25,461 - INFO - ######################################################################
+2026-03-23 17:54:25,462 - INFO - 
+======================================================================
+2026-03-23 17:54:25,462 - INFO - SCRAPING: https://www.google.com/maps/place/Gautam+Gujar+Photography+%26+Videography/data=...
+2026-03-23 17:54:25,462 - INFO - ======================================================================
+2026-03-23 17:54:30,012 - INFO - Extracting basic info...
+2026-03-23 17:54:30,029 - INFO -   Name: Gautam Gujar Photography & Videography
+2026-03-23 17:54:30,040 - INFO -   Rating: 4.9
+2026-03-23 17:54:30,045 - INFO -   Total Reviews: 23
+2026-03-23 17:54:30,049 - INFO - Skipping - has website: https://instagram.com/gautam_gujar_photography?igshid=YmMyMTA2M2Y=
+2026-03-23 17:54:32,055 - INFO - 
+
+######################################################################
+2026-03-23 17:54:32,055 - INFO - # BUSINESS 5/119
+2026-03-23 17:54:32,055 - INFO - ######################################################################
+2026-03-23 17:54:32,055 - INFO - 
+======================================================================
+2026-03-23 17:54:32,056 - INFO - SCRAPING: https://www.google.com/maps/place/Manish+Punekar+Photography/data=!4m7!3m6!1s0x3...
+2026-03-23 17:54:32,056 - INFO - ======================================================================
+2026-03-23 17:54:36,527 - INFO - Extracting basic info...
+2026-03-23 17:54:36,563 - INFO -   Name: Manish Punekar Photography
+2026-03-23 17:54:36,579 - INFO -   Rating: 4.9
+2026-03-23 17:54:36,585 - INFO -   Total Reviews: 57
+2026-03-23 17:54:36,592 - INFO - Skipping - has website: http://manishpunekar.com/
+2026-03-23 17:54:38,597 - INFO - 
+
+######################################################################
+2026-03-23 17:54:38,597 - INFO - # BUSINESS 6/119
+2026-03-23 17:54:38,597 - INFO - ######################################################################
+2026-03-23 17:54:38,598 - INFO - 
+======================================================================
+2026-03-23 17:54:38,598 - INFO - SCRAPING: https://www.google.com/maps/place/Dazz+Photography/data=!4m7!3m6!1s0x3bc2bfb973b...
+2026-03-23 17:54:38,598 - INFO - ======================================================================
+2026-03-23 17:54:43,091 - INFO - Extracting basic info...
+2026-03-23 17:54:43,124 - INFO -   Name: Dazz Photography
+2026-03-23 17:54:43,141 - INFO -   Rating: 4.8
+2026-03-23 17:54:43,147 - INFO -   Total Reviews: 423
+2026-03-23 17:54:43,152 - INFO - Skipping - has website: http://www.dazzphotography.com/
+2026-03-23 17:54:45,158 - INFO - 
+
+######################################################################
+2026-03-23 17:54:45,158 - INFO - # BUSINESS 7/119
+2026-03-23 17:54:45,158 - INFO - ######################################################################
+2026-03-23 17:54:45,159 - INFO - 
+======================================================================
+2026-03-23 17:54:45,159 - INFO - SCRAPING: https://www.google.com/maps/place/Zeal+Photography+School+and+studio%27s/data=!4...
+2026-03-23 17:54:45,159 - INFO - ======================================================================
+2026-03-23 17:54:49,637 - INFO - Extracting basic info...
+2026-03-23 17:54:49,682 - INFO -   Name: Zeal Photography School and studio's
+2026-03-23 17:54:49,703 - INFO -   Rating: 4.9
+2026-03-23 17:54:49,710 - INFO -   Total Reviews: 111
+2026-03-23 17:54:49,716 - INFO - Skipping - has website: https://zeal.photography/
+2026-03-23 17:54:51,722 - INFO - 
+
+######################################################################
+2026-03-23 17:54:51,723 - INFO - # BUSINESS 8/119
+2026-03-23 17:54:51,723 - INFO - ######################################################################
+2026-03-23 17:54:51,723 - INFO - 
+======================================================================
+2026-03-23 17:54:51,723 - INFO - SCRAPING: https://www.google.com/maps/place/Wedlock+Blossom/data=!4m7!3m6!1s0x3bc29553d056...
+2026-03-23 17:54:51,723 - INFO - ======================================================================
+2026-03-23 17:54:56,207 - INFO - Extracting basic info...
+2026-03-23 17:54:56,238 - INFO -   Name: Wedlock Blossom
+2026-03-23 17:54:56,254 - INFO -   Rating: 5.0
+2026-03-23 17:54:56,259 - INFO -   Total Reviews: 62
+2026-03-23 17:54:56,270 - INFO -   Address: First Floor, Wedlock Blossom, 102, below Sky Kitch...
+2026-03-23 17:54:56,276 - INFO -   Phone: 093704 28762
+2026-03-23 17:54:56,283 - INFO - Extracting hours...
+2026-03-23 17:54:57,336 - INFO -   Using element directly: 'Closes soon'
+2026-03-23 17:54:57,341 - INFO -   Hours element text: 'Closes soon'
+2026-03-23 17:54:57,341 - INFO -   Clicking to expand hours...
+2026-03-23 17:54:57,350 - INFO -   Clicked via JS
+2026-03-23 17:54:59,856 - INFO -   Looking for hours table...
+2026-03-23 17:54:59,892 - INFO -   Found a table element
+2026-03-23 17:54:59,892 - INFO -   Parsing hours table...
+2026-03-23 17:54:59,944 - INFO -   Found 7 rows
+2026-03-23 17:54:59,949 - INFO -     Row: 'Monday
+11 am–6 pm'
+2026-03-23 17:54:59,957 - INFO -     ✓ Monday: 11 am–6 pm
+2026-03-23 17:54:59,961 - INFO -     Row: 'Tuesday
+11 am–6 pm'
+2026-03-23 17:54:59,967 - INFO -     ✓ Tuesday: 11 am–6 pm
+2026-03-23 17:54:59,971 - INFO -     Row: 'Wednesday
+11 am–6 pm'
+2026-03-23 17:54:59,977 - INFO -     ✓ Wednesday: 11 am–6 pm
+2026-03-23 17:54:59,980 - INFO -     Row: 'Thursday
+11 am–6 pm'
+2026-03-23 17:54:59,987 - INFO -     ✓ Thursday: 11 am–6 pm
+2026-03-23 17:54:59,991 - INFO -     Row: 'Friday
+(Rama Navami)
+11 am–6 pm
+Hours might differ'
+2026-03-23 17:54:59,998 - INFO -     ✓ Friday: 11 am–6 pm
+Hours might differ
+2026-03-23 17:55:00,001 - INFO -     Row: 'Saturday
+11 am–6 pm'
+2026-03-23 17:55:00,008 - INFO -     ✓ Saturday: 11 am–6 pm
+2026-03-23 17:55:00,012 - INFO -     Row: 'Sunday
+11 am–6 pm'
+2026-03-23 17:55:00,018 - INFO -     ✓ Sunday: 11 am–6 pm
+2026-03-23 17:55:00,018 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 17:55:00,018 - INFO - Extracting About section...
+2026-03-23 17:55:00,022 - INFO -   Found About tab
+2026-03-23 17:55:03,062 - INFO -   Clicked About tab
+2026-03-23 17:55:04,211 - INFO -   ✓ Total features extracted: 5
+2026-03-23 17:55:06,694 - INFO - Extracting all photos...
+2026-03-23 17:55:09,759 - INFO -   Opened photo gallery
+2026-03-23 17:55:09,787 - INFO -     Found 2 photos...
+2026-03-23 17:55:13,483 - INFO -     Found 12 photos...
+2026-03-23 17:55:17,023 - INFO -     Found 22 photos...
+2026-03-23 17:55:20,545 - INFO -     Found 32 photos...
+2026-03-23 17:55:24,077 - INFO -     Found 42 photos...
+2026-03-23 17:55:27,256 - INFO -   ✓ Found 46 photo URLs (stored, not downloaded)
+2026-03-23 17:55:29,723 - INFO - Extracting reviews...
+2026-03-23 17:55:32,799 - INFO -   Clicked Reviews tab
+2026-03-23 17:55:37,906 - INFO -   Found 20 review elements
+2026-03-23 17:55:40,518 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 17:55:40,518 - INFO - Extracting social media...
+2026-03-23 17:55:40,532 - INFO -   Written to new/: wedlock-blossom.json
+2026-03-23 17:55:40,532 - INFO - Added: Wedlock Blossom
+2026-03-23 17:55:42,538 - INFO - 
+
+######################################################################
+2026-03-23 17:55:42,538 - INFO - # BUSINESS 9/119
+2026-03-23 17:55:42,538 - INFO - ######################################################################
+2026-03-23 17:55:42,539 - INFO - 
+======================================================================
+2026-03-23 17:55:42,539 - INFO - SCRAPING: https://www.google.com/maps/place/Rahul+Deo+Photography/data=!4m7!3m6!1s0x3bc2c3...
+2026-03-23 17:55:42,539 - INFO - ======================================================================
+2026-03-23 17:55:47,052 - INFO - Extracting basic info...
+2026-03-23 17:55:47,088 - INFO -   Name: Rahul Deo Photography
+2026-03-23 17:55:47,117 - INFO -   Rating: 4.7
+2026-03-23 17:55:47,213 - INFO -   Total Reviews: 30
+2026-03-23 17:55:47,220 - INFO - Skipping - has website: http://rahuldeo.in/
+2026-03-23 17:55:49,225 - INFO - 
+
+######################################################################
+2026-03-23 17:55:49,226 - INFO - # BUSINESS 10/119
+2026-03-23 17:55:49,226 - INFO - ######################################################################
+2026-03-23 17:55:49,226 - INFO - 
+======================================================================
+2026-03-23 17:55:49,226 - INFO - SCRAPING: https://www.google.com/maps/place/Rakesh+Tatia+Photography/data=!4m7!3m6!1s0x3bc...
+2026-03-23 17:55:49,226 - INFO - ======================================================================
+2026-03-23 17:55:53,721 - INFO - Extracting basic info...
+2026-03-23 17:55:53,769 - INFO -   Name: Rakesh Tatia Photography
+2026-03-23 17:55:53,786 - INFO -   Rating: 4.9
+2026-03-23 17:55:53,792 - INFO -   Total Reviews: 263
+2026-03-23 17:55:53,797 - INFO - Skipping - has website: https://www.rakeshtatiaphotography.com/
+2026-03-23 17:55:55,803 - INFO - 
+
+######################################################################
+2026-03-23 17:55:55,803 - INFO - # BUSINESS 11/119
+2026-03-23 17:55:55,803 - INFO - ######################################################################
+2026-03-23 17:55:55,804 - INFO - 
+======================================================================
+2026-03-23 17:55:55,804 - INFO - SCRAPING: https://www.google.com/maps/place/Creative+Pad+Media/data=!4m7!3m6!1s0x3bc2bf2e8...
+2026-03-23 17:55:55,804 - INFO - ======================================================================
+2026-03-23 17:56:00,353 - INFO - Extracting basic info...
+2026-03-23 17:56:00,395 - INFO -   Name: Creative Pad Media
+2026-03-23 17:56:00,412 - INFO -   Rating: 4.8
+2026-03-23 17:56:00,418 - INFO -   Total Reviews: 435
+2026-03-23 17:56:00,424 - INFO - Skipping - has website: https://www.creativepadmedia.com/
+2026-03-23 17:56:02,429 - INFO - 
+
+######################################################################
+2026-03-23 17:56:02,429 - INFO - # BUSINESS 12/119
+2026-03-23 17:56:02,430 - INFO - ######################################################################
+2026-03-23 17:56:02,430 - INFO - 
+======================================================================
+2026-03-23 17:56:02,430 - INFO - SCRAPING: https://www.google.com/maps/place/Royal+Reelz/data=!4m7!3m6!1s0x3bc2bf656da15525...
+2026-03-23 17:56:02,430 - INFO - ======================================================================
+2026-03-23 17:56:06,934 - INFO - Extracting basic info...
+2026-03-23 17:56:06,975 - INFO -   Name: Royal Reelz
+2026-03-23 17:56:06,992 - INFO -   Rating: 4.9
+2026-03-23 17:56:06,998 - INFO -   Total Reviews: 75
+2026-03-23 17:56:07,003 - INFO - Skipping - has website: http://www.royalreelz.com/
+2026-03-23 17:56:09,009 - INFO - 
+
+######################################################################
+2026-03-23 17:56:09,009 - INFO - # BUSINESS 13/119
+2026-03-23 17:56:09,009 - INFO - ######################################################################
+2026-03-23 17:56:09,009 - INFO - 
+======================================================================
+2026-03-23 17:56:09,009 - INFO - SCRAPING: https://www.google.com/maps/place/Snappstory+Photography+%26+Films/data=!4m7!3m6...
+2026-03-23 17:56:09,010 - INFO - ======================================================================
+2026-03-23 17:56:13,546 - INFO - Extracting basic info...
+2026-03-23 17:56:13,590 - INFO -   Name: Snappstory Photography & Films
+2026-03-23 17:56:13,606 - INFO -   Rating: 4.9
+2026-03-23 17:56:13,612 - INFO -   Total Reviews: 64
+2026-03-23 17:56:13,618 - INFO - Skipping - has website: http://www.snappstory.com/
+2026-03-23 17:56:15,623 - INFO - 
+
+######################################################################
+2026-03-23 17:56:15,624 - INFO - # BUSINESS 14/119
+2026-03-23 17:56:15,624 - INFO - ######################################################################
+2026-03-23 17:56:15,624 - INFO - 
+======================================================================
+2026-03-23 17:56:15,624 - INFO - SCRAPING: https://www.google.com/maps/place/Sachin+Patil+Photo+%26+Videography/data=!4m7!3...
+2026-03-23 17:56:15,624 - INFO - ======================================================================
+2026-03-23 17:56:20,129 - INFO - Extracting basic info...
+2026-03-23 17:56:20,147 - INFO -   Name: Sachin Patil Photo & Videography
+2026-03-23 17:56:20,160 - INFO -   Rating: 4.6
+2026-03-23 17:56:20,166 - INFO -   Total Reviews: 75
+2026-03-23 17:56:20,171 - INFO - Skipping - has website: https://sites.google.com/view/sachin-patil-events?usp=sharing
+2026-03-23 17:56:22,176 - INFO - 
+
+######################################################################
+2026-03-23 17:56:22,176 - INFO - # BUSINESS 15/119
+2026-03-23 17:56:22,176 - INFO - ######################################################################
+2026-03-23 17:56:22,176 - INFO - 
+======================================================================
+2026-03-23 17:56:22,176 - INFO - SCRAPING: https://www.google.com/maps/place/Photography+by+Arjun+Shinde/data=!4m7!3m6!1s0x...
+2026-03-23 17:56:22,176 - INFO - ======================================================================
+2026-03-23 17:56:26,696 - INFO - Extracting basic info...
+2026-03-23 17:56:26,732 - INFO -   Name: Photography by Arjun Shinde
+2026-03-23 17:56:26,749 - INFO -   Rating: 4.9
+2026-03-23 17:56:26,757 - INFO -   Total Reviews: 29
+2026-03-23 17:56:26,763 - INFO - Skipping - has website: https://linktr.ee/photography_by_arjun_shinde
+2026-03-23 17:56:28,768 - INFO - 
+
+######################################################################
+2026-03-23 17:56:28,769 - INFO - # BUSINESS 16/119
+2026-03-23 17:56:28,769 - INFO - ######################################################################
+2026-03-23 17:56:28,769 - INFO - 
+======================================================================
+2026-03-23 17:56:28,769 - INFO - SCRAPING: https://www.google.com/maps/place/Rajat+Badhe+photographer/data=!4m7!3m6!1s0x3bc...
+2026-03-23 17:56:28,769 - INFO - ======================================================================
+2026-03-23 17:56:33,262 - INFO - Extracting basic info...
+2026-03-23 17:56:33,294 - INFO -   Name: Rajat Badhe photographer
+2026-03-23 17:56:33,312 - INFO -   Rating: 4.8
+2026-03-23 17:56:33,318 - INFO -   Total Reviews: 33
+2026-03-23 17:56:33,329 - INFO -   Address: G3 Flat, Sayali society indira Park, No 15, Chapek...
+2026-03-23 17:56:33,336 - INFO -   Phone: 092847 88622
+2026-03-23 17:56:33,342 - INFO - Extracting hours...
+2026-03-23 17:56:34,398 - INFO -   Using element directly: 'Open 24 hours'
+2026-03-23 17:56:34,403 - INFO -   Hours element text: 'Open 24 hours'
+2026-03-23 17:56:34,403 - INFO -   Clicking to expand hours...
+2026-03-23 17:56:34,409 - INFO -   Clicked via JS
+2026-03-23 17:56:36,914 - INFO -   Looking for hours table...
+2026-03-23 17:56:36,925 - INFO -   Found a table element
+2026-03-23 17:56:36,925 - INFO -   Parsing hours table...
+2026-03-23 17:56:36,934 - INFO -   Found 7 rows
+2026-03-23 17:56:36,940 - INFO -     Row: 'Monday
+Open 24 hours'
+2026-03-23 17:56:36,950 - INFO -     ✓ Monday: Open 24 hours
+2026-03-23 17:56:36,954 - INFO -     Row: 'Tuesday
+Open 24 hours'
+2026-03-23 17:56:36,962 - INFO -     ✓ Tuesday: Open 24 hours
+2026-03-23 17:56:36,966 - INFO -     Row: 'Wednesday
+Open 24 hours'
+2026-03-23 17:56:36,973 - INFO -     ✓ Wednesday: Open 24 hours
+2026-03-23 17:56:36,977 - INFO -     Row: 'Thursday
+Open 24 hours'
+2026-03-23 17:56:36,984 - INFO -     ✓ Thursday: Open 24 hours
+2026-03-23 17:56:36,987 - INFO -     Row: 'Friday
+(Rama Navami)
+Open 24 hours
+Hours might differ'
+2026-03-23 17:56:36,994 - INFO -     ✓ Friday: Open 24 hours
+Hours might differ
+2026-03-23 17:56:36,998 - INFO -     Row: 'Saturday
+Open 24 hours'
+2026-03-23 17:56:37,004 - INFO -     ✓ Saturday: Open 24 hours
+2026-03-23 17:56:37,008 - INFO -     Row: 'Sunday
+Open 24 hours'
+2026-03-23 17:56:37,014 - INFO -     ✓ Sunday: Open 24 hours
+2026-03-23 17:56:37,014 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 17:56:37,014 - INFO - Extracting About section...
+2026-03-23 17:56:37,032 - INFO -   ✓ Total features extracted: 0
+2026-03-23 17:56:39,520 - INFO - Extracting all photos...
+2026-03-23 17:56:42,615 - INFO -   Opened photo gallery
+2026-03-23 17:56:44,126 - WARNING -   ✗ No photos found
+2026-03-23 17:56:46,553 - INFO - Extracting reviews...
+2026-03-23 17:56:49,629 - INFO -   Clicked Reviews tab
+2026-03-23 17:56:54,752 - INFO -   Found 20 review elements
+2026-03-23 17:56:56,071 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 17:56:56,071 - INFO - Extracting social media...
+2026-03-23 17:56:56,083 - INFO -   Written to new/: rajat-badhe-photographer.json
+2026-03-23 17:56:56,084 - INFO - Added: Rajat Badhe photographer
+2026-03-23 17:56:58,089 - INFO - 
+
+######################################################################
+2026-03-23 17:56:58,091 - INFO - # BUSINESS 17/119
+2026-03-23 17:56:58,091 - INFO - ######################################################################
+2026-03-23 17:56:58,092 - INFO - 
+======================================================================
+2026-03-23 17:56:58,092 - INFO - SCRAPING: https://www.google.com/maps/place/PHOTOFINE+Photographer/data=!4m7!3m6!1s0x3bc2b...
+2026-03-23 17:56:58,092 - INFO - ======================================================================
+2026-03-23 17:57:02,706 - INFO - Extracting basic info...
+2026-03-23 17:57:02,733 - INFO -   Name: PHOTOFINE Photographer
+2026-03-23 17:57:02,747 - INFO -   Rating: 5.0
+2026-03-23 17:57:02,753 - INFO -   Total Reviews: 37
+2026-03-23 17:57:02,758 - INFO - Skipping - has website: https://www.weddingbazaar.com/wedding-photographers/pune/photofine
+2026-03-23 17:57:04,763 - INFO - 
+
+######################################################################
+2026-03-23 17:57:04,763 - INFO - # BUSINESS 18/119
+2026-03-23 17:57:04,763 - INFO - ######################################################################
+2026-03-23 17:57:04,763 - INFO - 
+======================================================================
+2026-03-23 17:57:04,764 - INFO - SCRAPING: https://www.google.com/maps/place/Gaikwad+Photo+Vision/data=!4m7!3m6!1s0x3bc295a...
+2026-03-23 17:57:04,764 - INFO - ======================================================================
+2026-03-23 17:57:09,232 - INFO - Extracting basic info...
+2026-03-23 17:57:09,271 - INFO -   Name: Gaikwad Photo Vision
+2026-03-23 17:57:09,292 - INFO -   Rating: 4.9
+2026-03-23 17:57:09,298 - INFO -   Total Reviews: 169
+2026-03-23 17:57:09,304 - INFO - Skipping - has website: https://instagram.com/gaikwadphotovision?utm_medium=copy_link
+2026-03-23 17:57:11,309 - INFO - 
+
+######################################################################
+2026-03-23 17:57:11,310 - INFO - # BUSINESS 19/119
+2026-03-23 17:57:11,310 - INFO - ######################################################################
+2026-03-23 17:57:11,311 - INFO - 
+======================================================================
+2026-03-23 17:57:11,311 - INFO - SCRAPING: https://www.google.com/maps/place/JS+Photography+%26+Films/data=!4m7!3m6!1s0x3bc...
+2026-03-23 17:57:11,311 - INFO - ======================================================================
+2026-03-23 17:57:15,779 - INFO - Extracting basic info...
+2026-03-23 17:57:15,806 - INFO -   Name: JS Photography & Films
+2026-03-23 17:57:15,822 - INFO -   Rating: 4.9
+2026-03-23 17:57:15,827 - INFO -   Total Reviews: 105
+2026-03-23 17:57:15,833 - INFO - Skipping - has website: http://www.jsphotographynfilms.com/
+2026-03-23 17:57:17,839 - INFO - 
+
+######################################################################
+2026-03-23 17:57:17,840 - INFO - # BUSINESS 20/119
+2026-03-23 17:57:17,840 - INFO - ######################################################################
+2026-03-23 17:57:17,840 - INFO - 
+======================================================================
+2026-03-23 17:57:17,840 - INFO - SCRAPING: https://www.google.com/maps/place/MZB+PHOTOGRAPHY+%7C+Wedding+Photography+,Birth...
+2026-03-23 17:57:17,841 - INFO - ======================================================================
+2026-03-23 17:57:22,342 - INFO - Extracting basic info...
+2026-03-23 17:57:22,377 - INFO -   Name: MZB PHOTOGRAPHY | Wedding Photography ,Birthday Photography, Maternity PhotoShoot, Candid Photography |
+2026-03-23 17:57:22,395 - INFO -   Rating: 4.9
+2026-03-23 17:57:22,402 - INFO -   Total Reviews: 111
+2026-03-23 17:57:22,407 - INFO - Skipping - has website: https://mzb-photography-wedding.grexa.site/
+2026-03-23 17:57:24,412 - INFO - 
+
+######################################################################
+2026-03-23 17:57:24,414 - INFO - # BUSINESS 21/119
+2026-03-23 17:57:24,414 - INFO - ######################################################################
+2026-03-23 17:57:24,414 - INFO - 
+======================================================================
+2026-03-23 17:57:24,414 - INFO - SCRAPING: https://www.google.com/maps/place/Weddings+By+Sid/data=!4m7!3m6!1s0x3bc2bfb0f45a...
+2026-03-23 17:57:24,414 - INFO - ======================================================================
+2026-03-23 17:57:28,806 - INFO - Extracting basic info...
+2026-03-23 17:57:28,848 - INFO -   Name: Weddings By Sid
+2026-03-23 17:57:28,863 - INFO -   Rating: 4.9
+2026-03-23 17:57:28,869 - INFO -   Total Reviews: 54
+2026-03-23 17:57:28,880 - INFO -   Address: Chintamani Nagar, Anand Park, Aundh, Pune, Maharas...
+2026-03-23 17:57:28,887 - INFO -   Phone: 099225 88995
+2026-03-23 17:57:28,893 - INFO - Extracting hours...
+2026-03-23 17:57:29,938 - INFO -   Using element directly: '· Closes 10 pm'
+2026-03-23 17:57:29,942 - INFO -   Hours element text: '· Closes 10 pm'
+2026-03-23 17:57:29,942 - INFO -   Clicking to expand hours...
+2026-03-23 17:57:29,951 - INFO -   Clicked via JS
+2026-03-23 17:57:32,456 - INFO -   Looking for hours table...
+2026-03-23 17:57:32,478 - INFO -   Found a table element
+2026-03-23 17:57:32,478 - INFO -   Parsing hours table...
+2026-03-23 17:57:32,490 - INFO -   Found 7 rows
+2026-03-23 17:57:32,498 - INFO -     Row: 'Monday
+8 am–10 pm'
+2026-03-23 17:57:32,510 - INFO -     ✓ Monday: 8 am–10 pm
+2026-03-23 17:57:32,516 - INFO -     Row: 'Tuesday
+8 am–10 pm'
+2026-03-23 17:57:32,523 - INFO -     ✓ Tuesday: 8 am–10 pm
+2026-03-23 17:57:32,527 - INFO -     Row: 'Wednesday
+8 am–10 pm'
+2026-03-23 17:57:32,534 - INFO -     ✓ Wednesday: 8 am–10 pm
+2026-03-23 17:57:32,538 - INFO -     Row: 'Thursday
+8 am–10 pm'
+2026-03-23 17:57:32,544 - INFO -     ✓ Thursday: 8 am–10 pm
+2026-03-23 17:57:32,549 - INFO -     Row: 'Friday
+(Rama Navami)
+8 am–10 pm
+Hours might differ'
+2026-03-23 17:57:32,555 - INFO -     ✓ Friday: 8 am–10 pm
+Hours might differ
+2026-03-23 17:57:32,559 - INFO -     Row: 'Saturday
+8 am–10 pm'
+2026-03-23 17:57:32,566 - INFO -     ✓ Saturday: 8 am–10 pm
+2026-03-23 17:57:32,569 - INFO -     Row: 'Sunday
+8 am–10 pm'
+2026-03-23 17:57:32,576 - INFO -     ✓ Sunday: 8 am–10 pm
+2026-03-23 17:57:32,576 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 17:57:32,576 - INFO - Extracting About section...
+2026-03-23 17:57:32,581 - INFO -   Found About tab
+2026-03-23 17:57:35,616 - INFO -   Clicked About tab
+2026-03-23 17:57:36,749 - INFO -   ✓ Total features extracted: 2
+2026-03-23 17:57:39,232 - INFO - Extracting all photos...
+2026-03-23 17:57:42,330 - INFO -   Opened photo gallery
+2026-03-23 17:57:42,359 - INFO -     Found 2 photos...
+2026-03-23 17:57:45,206 - INFO -   ✓ Found 5 photo URLs (stored, not downloaded)
+2026-03-23 17:57:47,675 - INFO - Extracting reviews...
+2026-03-23 17:57:50,775 - INFO -   Clicked Reviews tab
+2026-03-23 17:57:55,893 - INFO -   Found 20 review elements
+2026-03-23 17:57:58,261 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 17:57:58,261 - INFO - Extracting social media...
+2026-03-23 17:57:58,273 - INFO -   Written to new/: weddings-by-sid.json
+2026-03-23 17:57:58,273 - INFO - Added: Weddings By Sid
+2026-03-23 17:58:00,277 - INFO - 
+
+######################################################################
+2026-03-23 17:58:00,278 - INFO - # BUSINESS 22/119
+2026-03-23 17:58:00,278 - INFO - ######################################################################
+2026-03-23 17:58:00,278 - INFO - 
+======================================================================
+2026-03-23 17:58:00,278 - INFO - SCRAPING: https://www.google.com/maps/place/Nandan+Jha+Photography+and+film/data=!4m7!3m6!...
+2026-03-23 17:58:00,278 - INFO - ======================================================================
+2026-03-23 17:58:04,785 - INFO - Extracting basic info...
+2026-03-23 17:58:04,822 - INFO -   Name: Nandan Jha Photography and film
+2026-03-23 17:58:04,842 - INFO -   Rating: 5.0
+2026-03-23 17:58:04,850 - INFO -   Total Reviews: 29
+2026-03-23 17:58:04,862 - INFO -   Address: 405, Friendship Residency, Veerbhadra Nagar, Baner...
+2026-03-23 17:58:04,869 - INFO -   Phone: 079726 68445
+2026-03-23 17:58:04,876 - INFO - Extracting hours...
+2026-03-23 17:58:05,925 - INFO -   Using element directly: 'Open 24 hours'
+2026-03-23 17:58:05,930 - INFO -   Hours element text: 'Open 24 hours'
+2026-03-23 17:58:05,930 - INFO -   Clicking to expand hours...
+2026-03-23 17:58:05,936 - INFO -   Clicked via JS
+2026-03-23 17:58:08,441 - INFO -   Looking for hours table...
+2026-03-23 17:58:08,457 - INFO -   Found a table element
+2026-03-23 17:58:08,457 - INFO -   Parsing hours table...
+2026-03-23 17:58:08,470 - INFO -   Found 7 rows
+2026-03-23 17:58:08,478 - INFO -     Row: 'Monday
+Open 24 hours'
+2026-03-23 17:58:08,547 - INFO -     ✓ Monday: Open 24 hours
+2026-03-23 17:58:08,591 - INFO -     Row: 'Tuesday
+Open 24 hours'
+2026-03-23 17:58:08,598 - INFO -     ✓ Tuesday: Open 24 hours
+2026-03-23 17:58:08,602 - INFO -     Row: 'Wednesday
+Open 24 hours'
+2026-03-23 17:58:08,608 - INFO -     ✓ Wednesday: Open 24 hours
+2026-03-23 17:58:08,612 - INFO -     Row: 'Thursday
+Open 24 hours'
+2026-03-23 17:58:08,618 - INFO -     ✓ Thursday: Open 24 hours
+2026-03-23 17:58:08,622 - INFO -     Row: 'Friday
+(Rama Navami)
+Open 24 hours
+Hours might differ'
+2026-03-23 17:58:08,630 - INFO -     ✓ Friday: Open 24 hours
+Hours might differ
+2026-03-23 17:58:08,633 - INFO -     Row: 'Saturday
+Open 24 hours'
+2026-03-23 17:58:08,640 - INFO -     ✓ Saturday: Open 24 hours
+2026-03-23 17:58:08,643 - INFO -     Row: 'Sunday
+Open 24 hours'
+2026-03-23 17:58:08,650 - INFO -     ✓ Sunday: Open 24 hours
+2026-03-23 17:58:08,650 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 17:58:08,650 - INFO - Extracting About section...
+2026-03-23 17:58:08,668 - INFO -   ✓ Total features extracted: 0
+2026-03-23 17:58:11,155 - INFO - Extracting all photos...
+2026-03-23 17:58:14,241 - INFO -   Opened photo gallery
+2026-03-23 17:58:14,262 - INFO -     Found 2 photos...
+2026-03-23 17:58:17,860 - INFO -     Found 12 photos...
+2026-03-23 17:58:21,390 - INFO -     Found 21 photos...
+2026-03-23 17:58:24,913 - INFO -     Found 30 photos...
+2026-03-23 17:58:28,461 - INFO -     Found 40 photos...
+2026-03-23 17:58:30,649 - INFO -   ✓ Found 41 photo URLs (stored, not downloaded)
+2026-03-23 17:58:33,131 - INFO - Extracting reviews...
+2026-03-23 17:58:36,228 - INFO -   Clicked Reviews tab
+2026-03-23 17:58:41,347 - INFO -   Found 20 review elements
+2026-03-23 17:58:42,131 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 17:58:42,131 - INFO - Extracting social media...
+2026-03-23 17:58:42,143 - INFO -   Written to new/: nandan-jha-photography-and-film.json
+2026-03-23 17:58:42,144 - INFO - Added: Nandan Jha Photography and film
+2026-03-23 17:58:44,146 - INFO - 
+
+######################################################################
+2026-03-23 17:58:44,147 - INFO - # BUSINESS 23/119
+2026-03-23 17:58:44,147 - INFO - ######################################################################
+2026-03-23 17:58:44,147 - INFO - 
+======================================================================
+2026-03-23 17:58:44,147 - INFO - SCRAPING: https://www.google.com/maps/place/Deep+Focus+Production+%2F+Video+Shoot+and+Edit...
+2026-03-23 17:58:44,148 - INFO - ======================================================================
+2026-03-23 17:58:48,646 - INFO - Extracting basic info...
+2026-03-23 17:58:48,685 - INFO -   Name: Deep Focus Production / Video Shoot and Editing Services in Pune
+2026-03-23 17:58:48,706 - INFO -   Rating: 5.0
+2026-03-23 17:58:48,713 - INFO -   Total Reviews: 27
+2026-03-23 17:58:48,720 - INFO - Skipping - has website: https://deepfocusproduction.pixieset.com/deepfocusproduction/
+2026-03-23 17:58:50,726 - INFO - 
+
+######################################################################
+2026-03-23 17:58:50,726 - INFO - # BUSINESS 24/119
+2026-03-23 17:58:50,726 - INFO - ######################################################################
+2026-03-23 17:58:50,727 - INFO - 
+======================================================================
+2026-03-23 17:58:50,727 - INFO - SCRAPING: https://www.google.com/maps/place/The+Pune+Photo+Films/data=!4m7!3m6!1s0x3bc2b9c...
+2026-03-23 17:58:50,727 - INFO - ======================================================================
+2026-03-23 17:58:55,219 - INFO - Extracting basic info...
+2026-03-23 17:58:55,236 - INFO -   Name: The Pune Photo Films
+2026-03-23 17:58:55,248 - INFO -   Rating: 4.9
+2026-03-23 17:58:55,253 - INFO -   Total Reviews: 35
+2026-03-23 17:58:55,263 - INFO -   Address: Ashish Banglow, Kshitij Colony, Lane, N. 2, Chowk,...
+2026-03-23 17:58:55,269 - INFO -   Phone: 094219 26055
+2026-03-23 17:58:55,275 - INFO - Extracting hours...
+2026-03-23 17:58:56,325 - INFO -   Using element directly: '· Closes 11 pm'
+2026-03-23 17:58:56,332 - INFO -   Hours element text: '· Closes 11 pm'
+2026-03-23 17:58:56,332 - INFO -   Clicking to expand hours...
+2026-03-23 17:58:56,385 - INFO -   Clicked via JS
+2026-03-23 17:58:58,890 - INFO -   Looking for hours table...
+2026-03-23 17:58:58,907 - INFO -   Found a table element
+2026-03-23 17:58:58,907 - INFO -   Parsing hours table...
+2026-03-23 17:58:58,918 - INFO -   Found 7 rows
+2026-03-23 17:58:58,925 - INFO -     Row: 'Monday
+9 am–11 pm'
+2026-03-23 17:58:58,937 - INFO -     ✓ Monday: 9 am–11 pm
+2026-03-23 17:58:58,942 - INFO -     Row: 'Tuesday
+9 am–11 pm'
+2026-03-23 17:58:58,949 - INFO -     ✓ Tuesday: 9 am–11 pm
+2026-03-23 17:58:58,954 - INFO -     Row: 'Wednesday
+9 am–11 pm'
+2026-03-23 17:58:58,961 - INFO -     ✓ Wednesday: 9 am–11 pm
+2026-03-23 17:58:58,965 - INFO -     Row: 'Thursday
+9 am–11 pm'
+2026-03-23 17:58:58,971 - INFO -     ✓ Thursday: 9 am–11 pm
+2026-03-23 17:58:58,975 - INFO -     Row: 'Friday
+(Rama Navami)
+9 am–11 pm
+Hours might differ'
+2026-03-23 17:58:58,982 - INFO -     ✓ Friday: 9 am–11 pm
+Hours might differ
+2026-03-23 17:58:58,985 - INFO -     Row: 'Saturday
+9 am–11 pm'
+2026-03-23 17:58:58,992 - INFO -     ✓ Saturday: 9 am–11 pm
+2026-03-23 17:58:58,996 - INFO -     Row: 'Sunday
+9 am–11 pm'
+2026-03-23 17:58:59,002 - INFO -     ✓ Sunday: 9 am–11 pm
+2026-03-23 17:58:59,002 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 17:58:59,002 - INFO - Extracting About section...
+2026-03-23 17:58:59,020 - INFO -   ✓ Total features extracted: 0
+2026-03-23 17:59:01,503 - INFO - Extracting all photos...
+2026-03-23 17:59:04,593 - INFO -   Opened photo gallery
+2026-03-23 17:59:04,619 - INFO -     Found 2 photos...
+2026-03-23 17:59:08,160 - INFO -     Found 12 photos...
+2026-03-23 17:59:11,660 - INFO -     Found 22 photos...
+2026-03-23 17:59:15,174 - INFO -     Found 32 photos...
+2026-03-23 17:59:18,696 - INFO -     Found 42 photos...
+2026-03-23 17:59:22,675 - INFO -   ✓ Found 48 photo URLs (stored, not downloaded)
+2026-03-23 17:59:25,219 - INFO - Extracting reviews...
+2026-03-23 17:59:28,299 - INFO -   Clicked Reviews tab
+2026-03-23 17:59:33,446 - INFO -   Found 20 review elements
+2026-03-23 17:59:34,297 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 17:59:34,298 - INFO - Extracting social media...
+2026-03-23 17:59:34,314 - INFO -   Written to new/: the-pune-photo-films.json
+2026-03-23 17:59:34,316 - INFO - Added: The Pune Photo Films
+2026-03-23 17:59:36,327 - INFO - 
+
+######################################################################
+2026-03-23 17:59:36,330 - INFO - # BUSINESS 25/119
+2026-03-23 17:59:36,330 - INFO - ######################################################################
+2026-03-23 17:59:36,330 - INFO - 
+======================================================================
+2026-03-23 17:59:36,330 - INFO - SCRAPING: https://www.google.com/maps/place/Anshum+M+Photography/data=!4m7!3m6!1s0x3bc2bf2...
+2026-03-23 17:59:36,330 - INFO - ======================================================================
+2026-03-23 17:59:40,763 - INFO - Extracting basic info...
+2026-03-23 17:59:40,804 - INFO -   Name: Anshum M Photography
+2026-03-23 17:59:40,824 - INFO -   Rating: 4.9
+2026-03-23 17:59:40,832 - INFO -   Total Reviews: 141
+2026-03-23 17:59:40,839 - INFO - Skipping - has website: http://www.anshumm.com/
+2026-03-23 17:59:42,849 - INFO - 
+
+######################################################################
+2026-03-23 17:59:42,850 - INFO - # BUSINESS 26/119
+2026-03-23 17:59:42,850 - INFO - ######################################################################
+2026-03-23 17:59:42,850 - INFO - 
+======================================================================
+2026-03-23 17:59:42,850 - INFO - SCRAPING: https://www.google.com/maps/place/Wedding+Kraft/data=!4m7!3m6!1s0x3bc2956c7d65bc...
+2026-03-23 17:59:42,850 - INFO - ======================================================================
+2026-03-23 17:59:47,265 - INFO - Extracting basic info...
+2026-03-23 17:59:47,300 - INFO -   Name: Wedding Kraft
+2026-03-23 17:59:47,319 - INFO -   Rating: 4.3
+2026-03-23 17:59:47,324 - INFO -   Total Reviews: 21
+2026-03-23 17:59:47,330 - INFO - Skipping - has website: http://www.weddingkraft.in/
+2026-03-23 17:59:49,331 - INFO - 
+
+######################################################################
+2026-03-23 17:59:49,331 - INFO - # BUSINESS 27/119
+2026-03-23 17:59:49,332 - INFO - ######################################################################
+2026-03-23 17:59:49,332 - INFO - 
+======================================================================
+2026-03-23 17:59:49,332 - INFO - SCRAPING: https://www.google.com/maps/place/Ketan+sutar+photography+%26+creations/data=!4m...
+2026-03-23 17:59:49,332 - INFO - ======================================================================
+2026-03-23 17:59:53,733 - INFO - Extracting basic info...
+2026-03-23 17:59:53,770 - INFO -   Name: Ketan sutar photography & creations
+2026-03-23 17:59:53,786 - INFO -   Rating: 4.9
+2026-03-23 17:59:53,792 - INFO -   Total Reviews: 343
+2026-03-23 17:59:53,797 - INFO - Skipping - has website: https://instagram.com/ketansutarphotography?igshid=1q8upm8hgcuw1
+2026-03-23 17:59:55,807 - INFO - 
+
+######################################################################
+2026-03-23 17:59:55,808 - INFO - # BUSINESS 28/119
+2026-03-23 17:59:55,808 - INFO - ######################################################################
+2026-03-23 17:59:55,808 - INFO - 
+======================================================================
+2026-03-23 17:59:55,808 - INFO - SCRAPING: https://www.google.com/maps/place/photography+THIRD+EYE+VISION/data=!4m7!3m6!1s0...
+2026-03-23 17:59:55,808 - INFO - ======================================================================
+2026-03-23 18:00:00,211 - INFO - Extracting basic info...
+2026-03-23 18:00:00,258 - INFO -   Name: photography THIRD EYE VISION
+2026-03-23 18:00:00,271 - INFO -   Rating: 5.0
+2026-03-23 18:00:00,278 - INFO -   Total Reviews: 23
+2026-03-23 18:00:00,284 - INFO - Skipping - has website: https://instagram.com/shaileshthakre?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D
+2026-03-23 18:00:02,291 - INFO - 
+
+######################################################################
+2026-03-23 18:00:02,291 - INFO - # BUSINESS 29/119
+2026-03-23 18:00:02,291 - INFO - ######################################################################
+2026-03-23 18:00:02,291 - INFO - 
+======================================================================
+2026-03-23 18:00:02,291 - INFO - SCRAPING: https://www.google.com/maps/place/TimeFrame%C2%AE+Studios/data=!4m7!3m6!1s0x3bc2...
+2026-03-23 18:00:02,291 - INFO - ======================================================================
+2026-03-23 18:00:06,685 - INFO - Extracting basic info...
+2026-03-23 18:00:06,721 - INFO -   Name: TimeFrame® Studios
+2026-03-23 18:00:06,738 - INFO -   Rating: 4.9
+2026-03-23 18:00:06,743 - INFO -   Total Reviews: 105
+2026-03-23 18:00:06,749 - INFO - Skipping - has website: https://www.timeframestudios.in/profile-links
+2026-03-23 18:00:08,759 - INFO - 
+
+######################################################################
+2026-03-23 18:00:08,759 - INFO - # BUSINESS 30/119
+2026-03-23 18:00:08,760 - INFO - ######################################################################
+2026-03-23 18:00:08,760 - INFO - 
+======================================================================
+2026-03-23 18:00:08,760 - INFO - SCRAPING: https://www.google.com/maps/place/Wolfhead+Photography+Service/data=!4m7!3m6!1s0...
+2026-03-23 18:00:08,760 - INFO - ======================================================================
+2026-03-23 18:00:13,172 - INFO - Extracting basic info...
+2026-03-23 18:00:13,216 - INFO -   Name: Wolfhead Photography Service
+2026-03-23 18:00:13,233 - INFO -   Rating: 4.9
+2026-03-23 18:00:13,238 - INFO -   Total Reviews: 410
+2026-03-23 18:00:13,244 - INFO - Skipping - has website: https://wolfhead.in/
+2026-03-23 18:00:15,255 - INFO - 
+
+######################################################################
+2026-03-23 18:00:15,255 - INFO - # BUSINESS 31/119
+2026-03-23 18:00:15,255 - INFO - ######################################################################
+2026-03-23 18:00:15,255 - INFO - 
+======================================================================
+2026-03-23 18:00:15,255 - INFO - SCRAPING: https://www.google.com/maps/place/%E0%A4%AA%E0%A4%BF%E0%A4%95%E0%A5%8D%E0%A4%B8%...
+2026-03-23 18:00:15,255 - INFO - ======================================================================
+2026-03-23 18:00:19,638 - INFO - Extracting basic info...
+2026-03-23 18:00:19,677 - INFO -   Name: पिक्सेल पॅराडाईज फोटो स्टुडिओ | Pixel Paradise Photo Studio
+2026-03-23 18:00:19,694 - INFO -   Rating: 4.8
+2026-03-23 18:00:19,700 - INFO -   Total Reviews: 87
+2026-03-23 18:00:19,705 - INFO - Skipping - has website: https://www.instagram.com/pixelparadisestudio/
+2026-03-23 18:00:21,715 - INFO - 
+
+######################################################################
+2026-03-23 18:00:21,715 - INFO - # BUSINESS 32/119
+2026-03-23 18:00:21,715 - INFO - ######################################################################
+2026-03-23 18:00:21,716 - INFO - 
+======================================================================
+2026-03-23 18:00:21,716 - INFO - SCRAPING: https://www.google.com/maps/place/Shades+of+A%C5%9Fk+Photography/data=!4m7!3m6!1...
+2026-03-23 18:00:21,716 - INFO - ======================================================================
+2026-03-23 18:00:26,131 - INFO - Extracting basic info...
+2026-03-23 18:00:26,167 - INFO -   Name: Shades of Aşk Photography
+2026-03-23 18:00:26,185 - INFO -   Rating: 4.8
+2026-03-23 18:00:26,190 - INFO -   Total Reviews: 87
+2026-03-23 18:00:26,195 - INFO - Skipping - has website: http://www.shadesofaskphotography.com/
+2026-03-23 18:00:28,206 - INFO - 
+
+######################################################################
+2026-03-23 18:00:28,206 - INFO - # BUSINESS 33/119
+2026-03-23 18:00:28,206 - INFO - ######################################################################
+2026-03-23 18:00:28,206 - INFO - 
+======================================================================
+2026-03-23 18:00:28,206 - INFO - SCRAPING: https://www.google.com/maps/place/Clickography/data=!4m7!3m6!1s0x3bc2bf65dfec810...
+2026-03-23 18:00:28,206 - INFO - ======================================================================
+2026-03-23 18:00:32,628 - INFO - Extracting basic info...
+2026-03-23 18:00:32,676 - INFO -   Name: Clickography
+2026-03-23 18:00:32,692 - INFO -   Rating: 4.9
+2026-03-23 18:00:32,699 - INFO -   Total Reviews: 42
+2026-03-23 18:00:32,705 - INFO - Skipping - has website: https://www.instagram.com/clickography/
+2026-03-23 18:00:34,715 - INFO - 
+
+######################################################################
+2026-03-23 18:00:34,715 - INFO - # BUSINESS 34/119
+2026-03-23 18:00:34,716 - INFO - ######################################################################
+2026-03-23 18:00:34,716 - INFO - 
+======================================================================
+2026-03-23 18:00:34,716 - INFO - SCRAPING: https://www.google.com/maps/place/Cubic+Studio/data=!4m7!3m6!1s0x3bc295e5f0ca53f...
+2026-03-23 18:00:34,716 - INFO - ======================================================================
+2026-03-23 18:00:39,092 - INFO - Extracting basic info...
+2026-03-23 18:00:39,134 - INFO -   Name: Cubic Studio
+2026-03-23 18:00:39,150 - INFO -   Rating: 4.8
+2026-03-23 18:00:39,156 - INFO -   Total Reviews: 216
+2026-03-23 18:00:39,161 - INFO - Skipping - has website: http://cubicstudio.in/
+2026-03-23 18:00:41,165 - INFO - 
+
+######################################################################
+2026-03-23 18:00:41,165 - INFO - # BUSINESS 35/119
+2026-03-23 18:00:41,165 - INFO - ######################################################################
+2026-03-23 18:00:41,165 - INFO - 
+======================================================================
+2026-03-23 18:00:41,165 - INFO - SCRAPING: https://www.google.com/maps/place/Marry+Miingle+Wedding+Photographer+in+Pune/dat...
+2026-03-23 18:00:41,166 - INFO - ======================================================================
+2026-03-23 18:00:45,550 - INFO - Extracting basic info...
+2026-03-23 18:00:45,586 - INFO -   Name: Marry Miingle Wedding Photographer in Pune
+2026-03-23 18:00:45,602 - INFO -   Rating: 4.9
+2026-03-23 18:00:45,608 - INFO -   Total Reviews: 15
+2026-03-23 18:00:45,613 - INFO - Skipping - has website: https://marrymiingle.com/
+2026-03-23 18:00:47,619 - INFO - 
+
+######################################################################
+2026-03-23 18:00:47,620 - INFO - # BUSINESS 36/119
+2026-03-23 18:00:47,620 - INFO - ######################################################################
+2026-03-23 18:00:47,620 - INFO - 
+======================================================================
+2026-03-23 18:00:47,620 - INFO - SCRAPING: https://www.google.com/maps/place/The+Photo+Company+Studio/data=!4m7!3m6!1s0x3bc...
+2026-03-23 18:00:47,620 - INFO - ======================================================================
+2026-03-23 18:00:52,136 - INFO - Extracting basic info...
+2026-03-23 18:00:52,170 - INFO -   Name: The Photo Company Studio
+2026-03-23 18:00:52,187 - INFO -   Rating: 4.6
+2026-03-23 18:00:52,193 - INFO -   Total Reviews: 43
+2026-03-23 18:00:52,206 - INFO -   Address: sakshi park, plot no 14, Lavale- Nande Rd, Gaikwad...
+2026-03-23 18:00:52,212 - INFO -   Phone: 099704 70620
+2026-03-23 18:00:52,219 - INFO - Extracting hours...
+2026-03-23 18:00:53,278 - INFO -   Using element directly: '· Opens 10 am Tue'
+2026-03-23 18:00:53,283 - INFO -   Hours element text: '· Opens 10 am Tue'
+2026-03-23 18:00:53,283 - INFO -   Clicking to expand hours...
+2026-03-23 18:00:53,290 - INFO -   Clicked via JS
+2026-03-23 18:00:55,800 - INFO -   Looking for hours table...
+2026-03-23 18:00:55,816 - INFO -   Found a table element
+2026-03-23 18:00:55,816 - INFO -   Parsing hours table...
+2026-03-23 18:00:55,826 - INFO -   Found 7 rows
+2026-03-23 18:00:55,833 - INFO -     Row: 'Monday
+10 am–6 pm'
+2026-03-23 18:00:55,845 - INFO -     ✓ Monday: 10 am–6 pm
+2026-03-23 18:00:55,851 - INFO -     Row: 'Tuesday
+10 am–6 pm'
+2026-03-23 18:00:55,858 - INFO -     ✓ Tuesday: 10 am–6 pm
+2026-03-23 18:00:55,862 - INFO -     Row: 'Wednesday
+10 am–6 pm'
+2026-03-23 18:00:55,869 - INFO -     ✓ Wednesday: 10 am–6 pm
+2026-03-23 18:00:55,873 - INFO -     Row: 'Thursday
+10 am–6 pm'
+2026-03-23 18:00:55,879 - INFO -     ✓ Thursday: 10 am–6 pm
+2026-03-23 18:00:55,883 - INFO -     Row: 'Friday
+(Rama Navami)
+10 am–6 pm
+Hours might differ'
+2026-03-23 18:00:55,890 - INFO -     ✓ Friday: 10 am–6 pm
+Hours might differ
+2026-03-23 18:00:55,894 - INFO -     Row: 'Saturday
+10 am–6 pm'
+2026-03-23 18:00:55,901 - INFO -     ✓ Saturday: 10 am–6 pm
+2026-03-23 18:00:55,904 - INFO -     Row: 'Sunday
+Closed'
+2026-03-23 18:00:55,910 - INFO -     ✓ Sunday: Closed
+2026-03-23 18:00:55,910 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 18:00:55,911 - INFO - Extracting About section...
+2026-03-23 18:00:55,916 - INFO -   Found About tab
+2026-03-23 18:00:58,974 - INFO -   Clicked About tab
+2026-03-23 18:01:00,122 - INFO -   ✓ Total features extracted: 5
+2026-03-23 18:01:02,513 - INFO - Extracting all photos...
+2026-03-23 18:01:05,601 - INFO -   Opened photo gallery
+2026-03-23 18:01:05,629 - INFO -     Found 2 photos...
+2026-03-23 18:01:09,249 - INFO -     Found 10 photos...
+2026-03-23 18:01:12,855 - INFO -     Found 20 photos...
+2026-03-23 18:01:16,802 - INFO -   ✓ Found 26 photo URLs (stored, not downloaded)
+2026-03-23 18:01:19,273 - INFO - Extracting reviews...
+2026-03-23 18:01:22,381 - INFO -   Clicked Reviews tab
+2026-03-23 18:01:27,519 - INFO -   Found 20 review elements
+2026-03-23 18:01:28,121 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 18:01:28,121 - INFO - Extracting social media...
+2026-03-23 18:01:28,136 - INFO -   Written to new/: the-photo-company-studio.json
+2026-03-23 18:01:28,137 - INFO - Added: The Photo Company Studio
+2026-03-23 18:01:30,149 - INFO - 
+
+######################################################################
+2026-03-23 18:01:30,150 - INFO - # BUSINESS 37/119
+2026-03-23 18:01:30,150 - INFO - ######################################################################
+2026-03-23 18:01:30,150 - INFO - 
+======================================================================
+2026-03-23 18:01:30,150 - INFO - SCRAPING: https://www.google.com/maps/place/Red+Cherry+Pictures+%7C+Best+Wedding+%26+Top+W...
+2026-03-23 18:01:30,150 - INFO - ======================================================================
+2026-03-23 18:01:34,583 - INFO - Extracting basic info...
+2026-03-23 18:01:34,619 - INFO -   Name: Red Cherry Pictures | Best Wedding & Top Wedding , Pre-Wedding & Wedding Photographer in Pune
+2026-03-23 18:01:34,714 - INFO -   Rating: 4.8
+2026-03-23 18:01:34,722 - INFO -   Total Reviews: 36
+2026-03-23 18:01:34,728 - INFO - Skipping - has website: https://redcherrypictures.in/
+2026-03-23 18:01:36,738 - INFO - 
+
+######################################################################
+2026-03-23 18:01:36,739 - INFO - # BUSINESS 38/119
+2026-03-23 18:01:36,739 - INFO - ######################################################################
+2026-03-23 18:01:36,739 - INFO - 
+======================================================================
+2026-03-23 18:01:36,739 - INFO - SCRAPING: https://www.google.com/maps/place/Arhant+Multimedia+%E2%80%93+Wedding+%26+Event+...
+2026-03-23 18:01:36,739 - INFO - ======================================================================
+2026-03-23 18:01:41,114 - INFO - Extracting basic info...
+2026-03-23 18:01:41,145 - INFO -   Name: Arhant Multimedia – Wedding & Event Photographer in Pune
+2026-03-23 18:01:41,161 - INFO -   Rating: 4.9
+2026-03-23 18:01:41,167 - INFO -   Total Reviews: 55
+2026-03-23 18:01:41,173 - INFO - Skipping - has website: https://www.instagram.com/arhant_multimedia?igsh=MWRhMWVnZ2J6ZndjMw==
+2026-03-23 18:01:43,183 - INFO - 
+
+######################################################################
+2026-03-23 18:01:43,184 - INFO - # BUSINESS 39/119
+2026-03-23 18:01:43,184 - INFO - ######################################################################
+2026-03-23 18:01:43,185 - INFO - 
+======================================================================
+2026-03-23 18:01:43,185 - INFO - SCRAPING: https://www.google.com/maps/place/Redefine+Your+Moments/data=!4m7!3m6!1s0x3bc2bf...
+2026-03-23 18:01:43,185 - INFO - ======================================================================
+2026-03-23 18:01:47,584 - INFO - Extracting basic info...
+2026-03-23 18:01:47,617 - INFO -   Name: Redefine Your Moments
+2026-03-23 18:01:47,634 - INFO -   Rating: 5.0
+2026-03-23 18:01:47,640 - INFO -   Total Reviews: 66
+2026-03-23 18:01:47,645 - INFO - Skipping - has website: https://redefineyourmoments.my.canva.site/
+2026-03-23 18:01:49,655 - INFO - 
+
+######################################################################
+2026-03-23 18:01:49,656 - INFO - # BUSINESS 40/119
+2026-03-23 18:01:49,656 - INFO - ######################################################################
+2026-03-23 18:01:49,656 - INFO - 
+======================================================================
+2026-03-23 18:01:49,656 - INFO - SCRAPING: https://www.google.com/maps/place/Photo+Darpan/data=!4m7!3m6!1s0x3bc2b9467149e16...
+2026-03-23 18:01:49,656 - INFO - ======================================================================
+2026-03-23 18:01:54,067 - INFO - Extracting basic info...
+2026-03-23 18:01:54,098 - INFO -   Name: Photo Darpan
+2026-03-23 18:01:54,115 - INFO -   Rating: 4.7
+2026-03-23 18:01:54,121 - INFO -   Total Reviews: 17
+2026-03-23 18:01:54,127 - INFO - Skipping - has website: http://www.photodarpan.com/
+2026-03-23 18:01:56,137 - INFO - 
+
+######################################################################
+2026-03-23 18:01:56,138 - INFO - # BUSINESS 41/119
+2026-03-23 18:01:56,138 - INFO - ######################################################################
+2026-03-23 18:01:56,138 - INFO - 
+======================================================================
+2026-03-23 18:01:56,138 - INFO - SCRAPING: https://www.google.com/maps/place/Studio+On+Rent+%E2%80%93+Best+Photography+%26+...
+2026-03-23 18:01:56,138 - INFO - ======================================================================
+2026-03-23 18:02:00,578 - INFO - Extracting basic info...
+2026-03-23 18:02:00,604 - INFO -   Name: Studio On Rent – Best Photography & Video Studio Erandwane, Pune
+2026-03-23 18:02:00,619 - INFO -   Rating: 4.5
+2026-03-23 18:02:00,625 - INFO -   Total Reviews: 22
+2026-03-23 18:02:00,630 - INFO - Skipping - has website: http://www.studioonrent.in/
+2026-03-23 18:02:02,640 - INFO - 
+
+######################################################################
+2026-03-23 18:02:02,641 - INFO - # BUSINESS 42/119
+2026-03-23 18:02:02,641 - INFO - ######################################################################
+2026-03-23 18:02:02,641 - INFO - 
+======================================================================
+2026-03-23 18:02:02,641 - INFO - SCRAPING: https://www.google.com/maps/place/The+Wedding+Wardens/data=!4m7!3m6!1s0x3bc2c148...
+2026-03-23 18:02:02,641 - INFO - ======================================================================
+2026-03-23 18:02:07,138 - INFO - Extracting basic info...
+2026-03-23 18:02:07,173 - INFO -   Name: The Wedding Wardens
+2026-03-23 18:02:07,190 - INFO -   Rating: 4.2
+2026-03-23 18:02:07,196 - INFO -   Total Reviews: 57
+2026-03-23 18:02:07,201 - INFO - Skipping - has website: http://theweddingwardens.in/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=8947804124939796129
+2026-03-23 18:02:09,212 - INFO - 
+
+######################################################################
+2026-03-23 18:02:09,212 - INFO - # BUSINESS 43/119
+2026-03-23 18:02:09,213 - INFO - ######################################################################
+2026-03-23 18:02:09,215 - INFO - 
+======================================================================
+2026-03-23 18:02:09,215 - INFO - SCRAPING: https://www.google.com/maps/place/Pixelworks+Photography/data=!4m7!3m6!1s0x3bc2b...
+2026-03-23 18:02:09,215 - INFO - ======================================================================
+2026-03-23 18:02:13,626 - INFO - Extracting basic info...
+2026-03-23 18:02:13,663 - INFO -   Name: Pixelworks Photography
+2026-03-23 18:02:13,680 - INFO -   Rating: 4.7
+2026-03-23 18:02:13,686 - INFO -   Total Reviews: 271
+2026-03-23 18:02:13,692 - INFO - Skipping - has website: https://www.pixelworks.in/
+2026-03-23 18:02:15,702 - INFO - 
+
+######################################################################
+2026-03-23 18:02:15,702 - INFO - # BUSINESS 44/119
+2026-03-23 18:02:15,703 - INFO - ######################################################################
+2026-03-23 18:02:15,703 - INFO - 
+======================================================================
+2026-03-23 18:02:15,703 - INFO - SCRAPING: https://www.google.com/maps/place/A.S.G.+Films+%26+Photography/data=!4m7!3m6!1s0...
+2026-03-23 18:02:15,703 - INFO - ======================================================================
+2026-03-23 18:02:20,110 - INFO - Extracting basic info...
+2026-03-23 18:02:20,147 - INFO -   Name: A.S.G. Films & Photography
+2026-03-23 18:02:20,165 - INFO -   Rating: 4.7
+2026-03-23 18:02:20,170 - INFO -   Total Reviews: 52
+2026-03-23 18:02:20,181 - INFO -   Address: 619, K. Ramchandra Sonaba Karpe Rd, Pulachi Wadi, ...
+2026-03-23 18:02:20,188 - INFO -   Phone: 086682 89035
+2026-03-23 18:02:20,194 - INFO - Extracting hours...
+2026-03-23 18:02:21,251 - INFO -   Using element directly: 'Open 24 hours'
+2026-03-23 18:02:21,255 - INFO -   Hours element text: 'Open 24 hours'
+2026-03-23 18:02:21,255 - INFO -   Clicking to expand hours...
+2026-03-23 18:02:21,261 - INFO -   Clicked via JS
+2026-03-23 18:02:23,771 - INFO -   Looking for hours table...
+2026-03-23 18:02:23,785 - INFO -   Found a table element
+2026-03-23 18:02:23,785 - INFO -   Parsing hours table...
+2026-03-23 18:02:23,794 - INFO -   Found 7 rows
+2026-03-23 18:02:23,801 - INFO -     Row: 'Monday
+Open 24 hours'
+2026-03-23 18:02:23,812 - INFO -     ✓ Monday: Open 24 hours
+2026-03-23 18:02:23,817 - INFO -     Row: 'Tuesday
+Open 24 hours'
+2026-03-23 18:02:23,825 - INFO -     ✓ Tuesday: Open 24 hours
+2026-03-23 18:02:23,829 - INFO -     Row: 'Wednesday
+Open 24 hours'
+2026-03-23 18:02:23,836 - INFO -     ✓ Wednesday: Open 24 hours
+2026-03-23 18:02:23,840 - INFO -     Row: 'Thursday
+Open 24 hours'
+2026-03-23 18:02:23,846 - INFO -     ✓ Thursday: Open 24 hours
+2026-03-23 18:02:23,850 - INFO -     Row: 'Friday
+(Rama Navami)
+Open 24 hours
+Hours might differ'
+2026-03-23 18:02:23,857 - INFO -     ✓ Friday: Open 24 hours
+Hours might differ
+2026-03-23 18:02:23,861 - INFO -     Row: 'Saturday
+Open 24 hours'
+2026-03-23 18:02:23,868 - INFO -     ✓ Saturday: Open 24 hours
+2026-03-23 18:02:23,871 - INFO -     Row: 'Sunday
+Open 24 hours'
+2026-03-23 18:02:23,878 - INFO -     ✓ Sunday: Open 24 hours
+2026-03-23 18:02:23,878 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 18:02:23,878 - INFO - Extracting About section...
+2026-03-23 18:02:23,897 - INFO -   ✓ Total features extracted: 0
+2026-03-23 18:02:26,289 - INFO - Extracting all photos...
+2026-03-23 18:02:29,371 - INFO -   Opened photo gallery
+2026-03-23 18:02:29,397 - INFO -     Found 2 photos...
+2026-03-23 18:02:33,034 - INFO -     Found 12 photos...
+2026-03-23 18:02:36,613 - INFO -     Found 22 photos...
+2026-03-23 18:02:40,180 - INFO -     Found 32 photos...
+2026-03-23 18:02:43,761 - INFO -     Found 42 photos...
+2026-03-23 18:02:47,268 - INFO -     Found 52 photos...
+2026-03-23 18:02:49,146 - INFO -   ✓ Found 52 photo URLs (stored, not downloaded)
+2026-03-23 18:02:51,546 - INFO - Extracting reviews...
+2026-03-23 18:02:54,642 - INFO -   Clicked Reviews tab
+2026-03-23 18:02:59,789 - INFO -   Found 20 review elements
+2026-03-23 18:03:00,551 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 18:03:00,551 - INFO - Extracting social media...
+2026-03-23 18:03:00,565 - INFO -   Written to new/: a-s-g-films-photography.json
+2026-03-23 18:03:00,567 - INFO - Added: A.S.G. Films & Photography
+2026-03-23 18:03:02,577 - INFO - 
+
+######################################################################
+2026-03-23 18:03:02,578 - INFO - # BUSINESS 45/119
+2026-03-23 18:03:02,578 - INFO - ######################################################################
+2026-03-23 18:03:02,578 - INFO - 
+======================================================================
+2026-03-23 18:03:02,578 - INFO - SCRAPING: https://www.google.com/maps/place/The+Wedding+Drishya/data=!4m7!3m6!1s0x87a21f91...
+2026-03-23 18:03:02,578 - INFO - ======================================================================
+2026-03-23 18:03:06,982 - INFO - Extracting basic info...
+2026-03-23 18:03:07,020 - INFO -   Name: The Wedding Drishya
+2026-03-23 18:03:07,039 - INFO -   Rating: 5.0
+2026-03-23 18:03:07,047 - INFO -   Total Reviews: 45
+2026-03-23 18:03:07,054 - INFO - Skipping - has website: https://sites.google.com/view/theweddingdrishya/wedding
+2026-03-23 18:03:09,064 - INFO - 
+
+######################################################################
+2026-03-23 18:03:09,065 - INFO - # BUSINESS 46/119
+2026-03-23 18:03:09,065 - INFO - ######################################################################
+2026-03-23 18:03:09,065 - INFO - 
+======================================================================
+2026-03-23 18:03:09,065 - INFO - SCRAPING: https://www.google.com/maps/place/Hemit+Modha+Photography/data=!4m7!3m6!1s0x3bc2...
+2026-03-23 18:03:09,065 - INFO - ======================================================================
+2026-03-23 18:03:13,474 - INFO - Extracting basic info...
+2026-03-23 18:03:13,512 - INFO -   Name: Hemit Modha Photography
+2026-03-23 18:03:13,531 - INFO -   Rating: 4.9
+2026-03-23 18:03:13,537 - INFO -   Total Reviews: 72
+2026-03-23 18:03:13,542 - INFO - Skipping - has website: https://www.behance.net/hemitphotography
+2026-03-23 18:03:15,552 - INFO - 
+
+######################################################################
+2026-03-23 18:03:15,552 - INFO - # BUSINESS 47/119
+2026-03-23 18:03:15,552 - INFO - ######################################################################
+2026-03-23 18:03:15,552 - INFO - 
+======================================================================
+2026-03-23 18:03:15,552 - INFO - SCRAPING: https://www.google.com/maps/place/Mazel+Tov+Studio/data=!4m7!3m6!1s0x3bc2b918c96...
+2026-03-23 18:03:15,553 - INFO - ======================================================================
+2026-03-23 18:03:19,919 - INFO - Extracting basic info...
+2026-03-23 18:03:19,949 - INFO -   Name: Mazel Tov Studio
+2026-03-23 18:03:19,963 - INFO -   Rating: 4.9
+2026-03-23 18:03:19,970 - INFO -   Total Reviews: 47
+2026-03-23 18:03:19,976 - INFO - Skipping - has website: https://www.mazeltovstudio.in/
+2026-03-23 18:03:21,983 - INFO - 
+
+######################################################################
+2026-03-23 18:03:21,983 - INFO - # BUSINESS 48/119
+2026-03-23 18:03:21,984 - INFO - ######################################################################
+2026-03-23 18:03:21,984 - INFO - 
+======================================================================
+2026-03-23 18:03:21,984 - INFO - SCRAPING: https://www.google.com/maps/place/Girish+Joshi+Photography/data=!4m7!3m6!1s0x3bc...
+2026-03-23 18:03:21,984 - INFO - ======================================================================
+2026-03-23 18:03:26,411 - INFO - Extracting basic info...
+2026-03-23 18:03:26,449 - INFO -   Name: Girish Joshi Photography
+2026-03-23 18:03:26,466 - INFO -   Rating: 4.8
+2026-03-23 18:03:26,472 - INFO -   Total Reviews: 22
+2026-03-23 18:03:26,477 - INFO - Skipping - has website: http://www.girish-joshi.com/
+2026-03-23 18:03:28,488 - INFO - 
+
+######################################################################
+2026-03-23 18:03:28,488 - INFO - # BUSINESS 49/119
+2026-03-23 18:03:28,488 - INFO - ######################################################################
+2026-03-23 18:03:28,488 - INFO - 
+======================================================================
+2026-03-23 18:03:28,488 - INFO - SCRAPING: https://www.google.com/maps/place/VL+Entertainment+Best+Photographer+in+Pune/dat...
+2026-03-23 18:03:28,489 - INFO - ======================================================================
+2026-03-23 18:03:33,628 - INFO - Extracting basic info...
+2026-03-23 18:03:33,657 - INFO -   Name: VL Entertainment Best Photographer in Pune
+2026-03-23 18:03:33,671 - INFO -   Rating: 5.0
+2026-03-23 18:03:33,677 - INFO -   Total Reviews: 31
+2026-03-23 18:03:33,683 - INFO - Skipping - has website: http://vlentertainment.in/
+2026-03-23 18:03:35,693 - INFO - 
+
+######################################################################
+2026-03-23 18:03:35,693 - INFO - # BUSINESS 50/119
+2026-03-23 18:03:35,694 - INFO - ######################################################################
+2026-03-23 18:03:35,694 - INFO - 
+======================================================================
+2026-03-23 18:03:35,694 - INFO - SCRAPING: https://www.google.com/maps/place/Art+And+Soul+Photography/data=!4m7!3m6!1s0x3bc...
+2026-03-23 18:03:35,694 - INFO - ======================================================================
+2026-03-23 18:03:40,091 - INFO - Extracting basic info...
+2026-03-23 18:03:40,126 - INFO -   Name: Art And Soul Photography
+2026-03-23 18:03:40,141 - INFO -   Rating: 5.0
+2026-03-23 18:03:40,147 - INFO -   Total Reviews: 59
+2026-03-23 18:03:40,153 - INFO - Skipping - has website: https://www.instagram.com/artandsoulphotography.in/
+2026-03-23 18:03:42,163 - INFO - 
+
+######################################################################
+2026-03-23 18:03:42,163 - INFO - # BUSINESS 51/119
+2026-03-23 18:03:42,164 - INFO - ######################################################################
+2026-03-23 18:03:42,164 - INFO - 
+======================================================================
+2026-03-23 18:03:42,164 - INFO - SCRAPING: https://www.google.com/maps/place/Utkarsh+Kelkar+Photography/data=!4m7!3m6!1s0x3...
+2026-03-23 18:03:42,164 - INFO - ======================================================================
+2026-03-23 18:03:46,950 - INFO - Extracting basic info...
+2026-03-23 18:03:47,001 - INFO -   Name: Utkarsh Kelkar Photography
+2026-03-23 18:03:47,020 - INFO -   Rating: 4.8
+2026-03-23 18:03:47,026 - INFO -   Total Reviews: 49
+2026-03-23 18:03:47,031 - INFO - Skipping - has website: https://www.utkarshkelkar.com/
+2026-03-23 18:03:49,042 - INFO - 
+
+######################################################################
+2026-03-23 18:03:49,042 - INFO - # BUSINESS 52/119
+2026-03-23 18:03:49,042 - INFO - ######################################################################
+2026-03-23 18:03:49,043 - INFO - 
+======================================================================
+2026-03-23 18:03:49,043 - INFO - SCRAPING: https://www.google.com/maps/place/Frozen+Memories/data=!4m7!3m6!1s0x3bc2c3e63fc3...
+2026-03-23 18:03:49,043 - INFO - ======================================================================
+2026-03-23 18:03:53,423 - INFO - Extracting basic info...
+2026-03-23 18:03:53,457 - INFO -   Name: Frozen Memories
+2026-03-23 18:03:53,474 - INFO -   Rating: 5.0
+2026-03-23 18:03:53,480 - INFO -   Total Reviews: 59
+2026-03-23 18:03:53,485 - INFO - Skipping - has website: https://frozenmemories.co.in/
+2026-03-23 18:03:55,496 - INFO - 
+
+######################################################################
+2026-03-23 18:03:55,496 - INFO - # BUSINESS 53/119
+2026-03-23 18:03:55,496 - INFO - ######################################################################
+2026-03-23 18:03:55,497 - INFO - 
+======================================================================
+2026-03-23 18:03:55,497 - INFO - SCRAPING: https://www.google.com/maps/place/Abhi+Borhade+Photography/data=!4m7!3m6!1s0x3bc...
+2026-03-23 18:03:55,497 - INFO - ======================================================================
+2026-03-23 18:04:00,002 - INFO - Extracting basic info...
+2026-03-23 18:04:00,039 - INFO -   Name: Abhi Borhade Photography
+2026-03-23 18:04:00,057 - INFO -   Rating: 4.9
+2026-03-23 18:04:00,063 - INFO -   Total Reviews: 104
+2026-03-23 18:04:00,068 - INFO - Skipping - has website: https://www.instagram.com/abhiborhade_photography
+2026-03-23 18:04:02,079 - INFO - 
+
+######################################################################
+2026-03-23 18:04:02,079 - INFO - # BUSINESS 54/119
+2026-03-23 18:04:02,079 - INFO - ######################################################################
+2026-03-23 18:04:02,079 - INFO - 
+======================================================================
+2026-03-23 18:04:02,079 - INFO - SCRAPING: https://www.google.com/maps/place/Rathod+Photography+Studio/data=!4m7!3m6!1s0x3b...
+2026-03-23 18:04:02,079 - INFO - ======================================================================
+2026-03-23 18:04:06,471 - INFO - Extracting basic info...
+2026-03-23 18:04:06,589 - INFO -   Name: Rathod Photography Studio
+2026-03-23 18:04:06,602 - INFO -   Rating: 4.7
+2026-03-23 18:04:06,607 - INFO -   Total Reviews: 98
+2026-03-23 18:04:06,612 - INFO - Skipping - has website: https://youtu.be/M6yBZw-8bWs
+2026-03-23 18:04:08,622 - INFO - 
+
+######################################################################
+2026-03-23 18:04:08,623 - INFO - # BUSINESS 55/119
+2026-03-23 18:04:08,623 - INFO - ######################################################################
+2026-03-23 18:04:08,623 - INFO - 
+======================================================================
+2026-03-23 18:04:08,623 - INFO - SCRAPING: https://www.google.com/maps/place/Ajinkya+Jadhav+Photography+%7C+Top+Wedding,+Pr...
+2026-03-23 18:04:08,623 - INFO - ======================================================================
+2026-03-23 18:04:13,048 - INFO - Extracting basic info...
+2026-03-23 18:04:13,085 - INFO -   Name: Ajinkya Jadhav Photography | Top Wedding, Pre Wedding, and Destination Photographer in Pune
+2026-03-23 18:04:13,100 - INFO -   Rating: 4.9
+2026-03-23 18:04:13,106 - INFO -   Total Reviews: 890
+2026-03-23 18:04:13,111 - INFO - Skipping - has website: https://ajinkyajadhav.co.in/
+2026-03-23 18:04:15,122 - INFO - 
+
+######################################################################
+2026-03-23 18:04:15,123 - INFO - # BUSINESS 56/119
+2026-03-23 18:04:15,123 - INFO - ######################################################################
+2026-03-23 18:04:15,123 - INFO - 
+======================================================================
+2026-03-23 18:04:15,123 - INFO - SCRAPING: https://www.google.com/maps/place/Kartik+Media+Photography/data=!4m7!3m6!1s0x3bc...
+2026-03-23 18:04:15,123 - INFO - ======================================================================
+2026-03-23 18:04:19,519 - INFO - Extracting basic info...
+2026-03-23 18:04:19,562 - INFO -   Name: Kartik Media Photography
+2026-03-23 18:04:19,577 - INFO -   Rating: 4.9
+2026-03-23 18:04:19,584 - INFO -   Total Reviews: 120
+2026-03-23 18:04:19,599 - INFO -   Address: Sinhagd road, Mayur Colony, Kothrud, Pune, Maharas...
+2026-03-23 18:04:19,606 - INFO -   Phone: 080070 00353
+2026-03-23 18:04:19,612 - INFO - Extracting hours...
+2026-03-23 18:04:20,648 - INFO -   Using element directly: '· Closes 5 am Tue'
+2026-03-23 18:04:20,652 - INFO -   Hours element text: '· Closes 5 am Tue'
+2026-03-23 18:04:20,652 - INFO -   Clicking to expand hours...
+2026-03-23 18:04:20,658 - INFO -   Clicked via JS
+2026-03-23 18:04:23,168 - INFO -   Looking for hours table...
+2026-03-23 18:04:23,183 - INFO -   Found a table element
+2026-03-23 18:04:23,183 - INFO -   Parsing hours table...
+2026-03-23 18:04:23,193 - INFO -   Found 7 rows
+2026-03-23 18:04:23,201 - INFO -     Row: 'Monday
+10 am–5 am'
+2026-03-23 18:04:23,212 - INFO -     ✓ Monday: 10 am–5 am
+2026-03-23 18:04:23,218 - INFO -     Row: 'Tuesday
+10 am–5 am'
+2026-03-23 18:04:23,225 - INFO -     ✓ Tuesday: 10 am–5 am
+2026-03-23 18:04:23,229 - INFO -     Row: 'Wednesday
+10 am–5 am'
+2026-03-23 18:04:23,237 - INFO -     ✓ Wednesday: 10 am–5 am
+2026-03-23 18:04:23,241 - INFO -     Row: 'Thursday
+10 am–5 am'
+2026-03-23 18:04:23,247 - INFO -     ✓ Thursday: 10 am–5 am
+2026-03-23 18:04:23,252 - INFO -     Row: 'Friday
+(Rama Navami)
+10 am–5 am
+Hours might differ'
+2026-03-23 18:04:23,258 - INFO -     ✓ Friday: 10 am–5 am
+Hours might differ
+2026-03-23 18:04:23,262 - INFO -     Row: 'Saturday
+10 am–5 am'
+2026-03-23 18:04:23,269 - INFO -     ✓ Saturday: 10 am–5 am
+2026-03-23 18:04:23,272 - INFO -     Row: 'Sunday
+11 am–3 am'
+2026-03-23 18:04:23,278 - INFO -     ✓ Sunday: 11 am–3 am
+2026-03-23 18:04:23,278 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 18:04:23,278 - INFO - Extracting About section...
+2026-03-23 18:04:23,284 - INFO -   Found About tab
+2026-03-23 18:04:26,341 - INFO -   Clicked About tab
+2026-03-23 18:04:27,469 - INFO -   ✓ Total features extracted: 2
+2026-03-23 18:04:29,842 - INFO - Extracting all photos...
+2026-03-23 18:04:32,940 - INFO -   Opened photo gallery
+2026-03-23 18:04:32,972 - INFO -     Found 2 photos...
+2026-03-23 18:04:36,562 - INFO -     Found 12 photos...
+2026-03-23 18:04:40,189 - INFO -     Found 22 photos...
+2026-03-23 18:04:43,728 - INFO -     Found 32 photos...
+2026-03-23 18:04:47,264 - INFO -     Found 41 photos...
+2026-03-23 18:04:50,819 - INFO -     Found 51 photos...
+2026-03-23 18:04:54,390 - INFO -     Found 61 photos...
+2026-03-23 18:04:58,067 - INFO -     Found 71 photos...
+2026-03-23 18:05:01,655 - INFO -     Found 81 photos...
+2026-03-23 18:05:05,251 - INFO -     Found 91 photos...
+2026-03-23 18:05:08,854 - INFO -   ✓ Found 100 photo URLs (stored, not downloaded)
+2026-03-23 18:05:11,232 - INFO - Extracting reviews...
+2026-03-23 18:05:14,358 - INFO -   Clicked Reviews tab
+2026-03-23 18:05:19,512 - INFO -   Found 20 review elements
+2026-03-23 18:05:21,642 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 18:05:21,642 - INFO - Extracting social media...
+2026-03-23 18:05:21,657 - INFO -   Written to new/: kartik-media-photography.json
+2026-03-23 18:05:21,659 - INFO - Added: Kartik Media Photography
+2026-03-23 18:05:23,669 - INFO - 
+
+######################################################################
+2026-03-23 18:05:23,669 - INFO - # BUSINESS 57/119
+2026-03-23 18:05:23,669 - INFO - ######################################################################
+2026-03-23 18:05:23,670 - INFO - 
+======================================================================
+2026-03-23 18:05:23,670 - INFO - SCRAPING: https://www.google.com/maps/place/Abhijeet+Matkar+Photography/data=!4m7!3m6!1s0x...
+2026-03-23 18:05:23,670 - INFO - ======================================================================
+2026-03-23 18:05:28,087 - INFO - Extracting basic info...
+2026-03-23 18:05:28,126 - INFO -   Name: Abhijeet Matkar Photography
+2026-03-23 18:05:28,145 - INFO -   Rating: 4.9
+2026-03-23 18:05:28,153 - INFO -   Total Reviews: 154
+2026-03-23 18:05:28,161 - INFO - Skipping - has website: http://www.abhijeetmatkar.com/
+2026-03-23 18:05:30,171 - INFO - 
+
+######################################################################
+2026-03-23 18:05:30,172 - INFO - # BUSINESS 58/119
+2026-03-23 18:05:30,172 - INFO - ######################################################################
+2026-03-23 18:05:30,172 - INFO - 
+======================================================================
+2026-03-23 18:05:30,172 - INFO - SCRAPING: https://www.google.com/maps/place/The+Picture+Talk+Photography+%7C+Best+Photogra...
+2026-03-23 18:05:30,172 - INFO - ======================================================================
+2026-03-23 18:05:34,694 - INFO - Extracting basic info...
+2026-03-23 18:05:34,731 - INFO -   Name: The Picture Talk Photography | Best Photographer In Pune
+2026-03-23 18:05:34,748 - INFO -   Rating: 4.9
+2026-03-23 18:05:34,755 - INFO -   Total Reviews: 125
+2026-03-23 18:05:34,760 - INFO - Skipping - has website: https://thepicturetalk.myportfolio.com/
+2026-03-23 18:05:36,770 - INFO - 
+
+######################################################################
+2026-03-23 18:05:36,771 - INFO - # BUSINESS 59/119
+2026-03-23 18:05:36,771 - INFO - ######################################################################
+2026-03-23 18:05:36,771 - INFO - 
+======================================================================
+2026-03-23 18:05:36,771 - INFO - SCRAPING: https://www.google.com/maps/place/DB+ARTWORKS+PHOTOGRAPHY+STUDIO/data=!4m7!3m6!1...
+2026-03-23 18:05:36,771 - INFO - ======================================================================
+2026-03-23 18:05:41,154 - INFO - Extracting basic info...
+2026-03-23 18:05:41,190 - INFO -   Name: DB ARTWORKS PHOTOGRAPHY STUDIO
+2026-03-23 18:05:41,206 - INFO -   Rating: 4.8
+2026-03-23 18:05:41,212 - INFO -   Total Reviews: 1749
+2026-03-23 18:05:41,217 - INFO - Skipping - has website: http://www.dbartworks.in/
+2026-03-23 18:05:43,228 - INFO - 
+
+######################################################################
+2026-03-23 18:05:43,229 - INFO - # BUSINESS 60/119
+2026-03-23 18:05:43,229 - INFO - ######################################################################
+2026-03-23 18:05:43,229 - INFO - 
+======================================================================
+2026-03-23 18:05:43,229 - INFO - SCRAPING: https://www.google.com/maps/place/MH12Weddings+-+Best+Wedding+Photographer+in+Pu...
+2026-03-23 18:05:43,229 - INFO - ======================================================================
+2026-03-23 18:05:47,632 - INFO - Extracting basic info...
+2026-03-23 18:05:47,659 - INFO -   Name: MH12Weddings - Best Wedding Photographer in Pune / Pre Wedding Photographer in Pune / Pre Wedding Photoshoot Pune
+2026-03-23 18:05:47,674 - INFO -   Rating: 5.0
+2026-03-23 18:05:47,680 - INFO -   Total Reviews: 349
+2026-03-23 18:05:47,685 - INFO - Skipping - has website: https://www.mh12weddings.com/
+2026-03-23 18:05:49,695 - INFO - 
+
+######################################################################
+2026-03-23 18:05:49,695 - INFO - # BUSINESS 61/119
+2026-03-23 18:05:49,695 - INFO - ######################################################################
+2026-03-23 18:05:49,695 - INFO - 
+======================================================================
+2026-03-23 18:05:49,695 - INFO - SCRAPING: https://www.google.com/maps/place/SMART+Photography+Pune/data=!4m7!3m6!1s0x3bc2c...
+2026-03-23 18:05:49,696 - INFO - ======================================================================
+2026-03-23 18:05:54,070 - INFO - Extracting basic info...
+2026-03-23 18:05:54,109 - INFO -   Name: SMART Photography Pune
+2026-03-23 18:05:54,126 - INFO -   Rating: 5.0
+2026-03-23 18:05:54,131 - INFO -   Total Reviews: 33
+2026-03-23 18:05:54,137 - INFO - Skipping - has website: https://www.instagram.com/shailendra_v_1?igsh=Z3pvNmd2amE2N3ky
+2026-03-23 18:05:56,138 - INFO - 
+
+######################################################################
+2026-03-23 18:05:56,138 - INFO - # BUSINESS 62/119
+2026-03-23 18:05:56,138 - INFO - ######################################################################
+2026-03-23 18:05:56,138 - INFO - 
+======================================================================
+2026-03-23 18:05:56,138 - INFO - SCRAPING: https://www.google.com/maps/place/Ram+Ghodke+Photography+%26+Films/data=!4m7!3m6...
+2026-03-23 18:05:56,138 - INFO - ======================================================================
+2026-03-23 18:06:00,544 - INFO - Extracting basic info...
+2026-03-23 18:06:00,572 - INFO -   Name: Ram Ghodke Photography & Films
+2026-03-23 18:06:00,588 - INFO -   Rating: 4.8
+2026-03-23 18:06:00,594 - INFO -   Total Reviews: 191
+2026-03-23 18:06:00,605 - INFO -   Address: Kasturi chowk, Hinjawadi Rd, behind Draupada Lawns...
+2026-03-23 18:06:00,611 - INFO -   Phone: 097664 16080
+2026-03-23 18:06:00,618 - INFO - Extracting hours...
+2026-03-23 18:06:01,675 - INFO -   Using element directly: '· Closes 9 pm'
+2026-03-23 18:06:01,681 - INFO -   Hours element text: '· Closes 9 pm'
+2026-03-23 18:06:01,682 - INFO -   Clicking to expand hours...
+2026-03-23 18:06:01,689 - INFO -   Clicked via JS
+2026-03-23 18:06:04,199 - INFO -   Looking for hours table...
+2026-03-23 18:06:04,220 - INFO -   Found a table element
+2026-03-23 18:06:04,220 - INFO -   Parsing hours table...
+2026-03-23 18:06:04,230 - INFO -   Found 7 rows
+2026-03-23 18:06:04,238 - INFO -     Row: 'Monday
+10 am–9 pm'
+2026-03-23 18:06:04,250 - INFO -     ✓ Monday: 10 am–9 pm
+2026-03-23 18:06:04,255 - INFO -     Row: 'Tuesday
+10 am–9 pm'
+2026-03-23 18:06:04,262 - INFO -     ✓ Tuesday: 10 am–9 pm
+2026-03-23 18:06:04,267 - INFO -     Row: 'Wednesday
+10 am–9 pm'
+2026-03-23 18:06:04,273 - INFO -     ✓ Wednesday: 10 am–9 pm
+2026-03-23 18:06:04,277 - INFO -     Row: 'Thursday
+10 am–9 pm'
+2026-03-23 18:06:04,284 - INFO -     ✓ Thursday: 10 am–9 pm
+2026-03-23 18:06:04,287 - INFO -     Row: 'Friday
+(Rama Navami)
+10 am–9 pm
+Hours might differ'
+2026-03-23 18:06:04,293 - INFO -     ✓ Friday: 10 am–9 pm
+Hours might differ
+2026-03-23 18:06:04,297 - INFO -     Row: 'Saturday
+10 am–9 pm'
+2026-03-23 18:06:04,365 - INFO -     ✓ Saturday: 10 am–9 pm
+2026-03-23 18:06:04,378 - INFO -     Row: 'Sunday
+10 am–9 pm'
+2026-03-23 18:06:04,385 - INFO -     ✓ Sunday: 10 am–9 pm
+2026-03-23 18:06:04,385 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 18:06:04,385 - INFO - Extracting About section...
+2026-03-23 18:06:04,390 - INFO -   Found About tab
+2026-03-23 18:06:07,435 - INFO -   Clicked About tab
+2026-03-23 18:06:08,584 - INFO -   ✓ Total features extracted: 2
+2026-03-23 18:06:11,081 - INFO - Extracting all photos...
+2026-03-23 18:06:14,157 - INFO -   Opened photo gallery
+2026-03-23 18:06:14,175 - INFO -     Found 2 photos...
+2026-03-23 18:06:17,747 - INFO -     Found 10 photos...
+2026-03-23 18:06:24,905 - INFO -     Found 25 photos...
+2026-03-23 18:06:32,098 - INFO -     Found 42 photos...
+2026-03-23 18:06:35,645 - INFO -     Found 52 photos...
+2026-03-23 18:06:39,227 - INFO -     Found 62 photos...
+2026-03-23 18:06:42,794 - INFO -     Found 72 photos...
+2026-03-23 18:06:46,363 - INFO -     Found 82 photos...
+2026-03-23 18:06:49,910 - INFO -   ✓ Found 91 photo URLs (stored, not downloaded)
+2026-03-23 18:06:52,351 - INFO - Extracting reviews...
+2026-03-23 18:06:55,451 - INFO -   Clicked Reviews tab
+2026-03-23 18:07:00,586 - INFO -   Found 20 review elements
+2026-03-23 18:07:01,669 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 18:07:01,669 - INFO - Extracting social media...
+2026-03-23 18:07:01,681 - INFO -   Written to new/: ram-ghodke-photography-films.json
+2026-03-23 18:07:01,683 - INFO - Added: Ram Ghodke Photography & Films
+2026-03-23 18:07:03,685 - INFO - 
+
+######################################################################
+2026-03-23 18:07:03,686 - INFO - # BUSINESS 63/119
+2026-03-23 18:07:03,686 - INFO - ######################################################################
+2026-03-23 18:07:03,686 - INFO - 
+======================================================================
+2026-03-23 18:07:03,686 - INFO - SCRAPING: https://www.google.com/maps/place/WeddingVows+Films/data=!4m7!3m6!1s0x3bc2ebcfd2...
+2026-03-23 18:07:03,686 - INFO - ======================================================================
+2026-03-23 18:07:08,079 - INFO - Extracting basic info...
+2026-03-23 18:07:08,117 - INFO -   Name: WeddingVows Films
+2026-03-23 18:07:08,138 - INFO -   Rating: 5.0
+2026-03-23 18:07:08,145 - INFO -   Total Reviews: 94
+2026-03-23 18:07:08,153 - INFO - Skipping - has website: https://www.setmywed.com/service/wedding-photographer.php?city=5
+2026-03-23 18:07:10,164 - INFO - 
+
+######################################################################
+2026-03-23 18:07:10,164 - INFO - # BUSINESS 64/119
+2026-03-23 18:07:10,164 - INFO - ######################################################################
+2026-03-23 18:07:10,164 - INFO - 
+======================================================================
+2026-03-23 18:07:10,164 - INFO - SCRAPING: https://www.google.com/maps/place/Happy+Photography+%26+Film%27s/data=!4m7!3m6!1...
+2026-03-23 18:07:10,165 - INFO - ======================================================================
+2026-03-23 18:07:14,574 - INFO - Extracting basic info...
+2026-03-23 18:07:14,608 - INFO -   Name: Happy Photography & Film's
+2026-03-23 18:07:14,625 - INFO -   Rating: 4.9
+2026-03-23 18:07:14,630 - INFO -   Total Reviews: 299
+2026-03-23 18:07:14,635 - INFO - Skipping - has website: https://happyphotographyfilms.com/
+2026-03-23 18:07:16,645 - INFO - 
+
+######################################################################
+2026-03-23 18:07:16,646 - INFO - # BUSINESS 65/119
+2026-03-23 18:07:16,646 - INFO - ######################################################################
+2026-03-23 18:07:16,646 - INFO - 
+======================================================================
+2026-03-23 18:07:16,646 - INFO - SCRAPING: https://www.google.com/maps/place/Film+Photography/data=!4m7!3m6!1s0x3bc2b983f97...
+2026-03-23 18:07:16,646 - INFO - ======================================================================
+2026-03-23 18:07:21,035 - INFO - Extracting basic info...
+2026-03-23 18:07:21,068 - INFO -   Name: Film Photography
+2026-03-23 18:07:21,084 - INFO -   Rating: 4.8
+2026-03-23 18:07:21,090 - INFO -   Total Reviews: 135
+2026-03-23 18:07:21,095 - INFO - Skipping - has website: https://www.behance.net/filmphotography
+2026-03-23 18:07:23,105 - INFO - 
+
+######################################################################
+2026-03-23 18:07:23,106 - INFO - # BUSINESS 66/119
+2026-03-23 18:07:23,106 - INFO - ######################################################################
+2026-03-23 18:07:23,106 - INFO - 
+======================================================================
+2026-03-23 18:07:23,106 - INFO - SCRAPING: https://www.google.com/maps/place/Manjiri+Production/data=!4m7!3m6!1s0x3bc2b9cfe...
+2026-03-23 18:07:23,107 - INFO - ======================================================================
+2026-03-23 18:07:27,512 - INFO - Extracting basic info...
+2026-03-23 18:07:27,554 - INFO -   Name: Manjiri Production
+2026-03-23 18:07:27,570 - INFO -   Rating: 4.8
+2026-03-23 18:07:27,576 - INFO -   Total Reviews: 87
+2026-03-23 18:07:27,581 - INFO - Skipping - has website: https://www.manjiriphotography.com/
+2026-03-23 18:07:29,586 - INFO - 
+
+######################################################################
+2026-03-23 18:07:29,587 - INFO - # BUSINESS 67/119
+2026-03-23 18:07:29,587 - INFO - ######################################################################
+2026-03-23 18:07:29,587 - INFO - 
+======================================================================
+2026-03-23 18:07:29,587 - INFO - SCRAPING: https://www.google.com/maps/place/Photographs+By+Ishan/data=!4m7!3m6!1s0x3bc2c04...
+2026-03-23 18:07:29,587 - INFO - ======================================================================
+2026-03-23 18:07:33,982 - INFO - Extracting basic info...
+2026-03-23 18:07:34,007 - INFO -   Name: Photographs By Ishan
+2026-03-23 18:07:34,022 - INFO -   Rating: 4.5
+2026-03-23 18:07:34,027 - INFO -   Total Reviews: 31
+2026-03-23 18:07:34,033 - INFO - Skipping - has website: https://www.instagram.com/photographsbyishan/
+2026-03-23 18:07:36,043 - INFO - 
+
+######################################################################
+2026-03-23 18:07:36,043 - INFO - # BUSINESS 68/119
+2026-03-23 18:07:36,043 - INFO - ######################################################################
+2026-03-23 18:07:36,043 - INFO - 
+======================================================================
+2026-03-23 18:07:36,043 - INFO - SCRAPING: https://www.google.com/maps/place/Wedding+%7C+Pre+Wedding+Photographer+%7C+Video...
+2026-03-23 18:07:36,043 - INFO - ======================================================================
+2026-03-23 18:07:40,434 - INFO - Extracting basic info...
+2026-03-23 18:07:40,467 - INFO -   Name: Wedding | Pre Wedding Photographer | Videographer | Cinematography | Pune: Tasveer Photography
+2026-03-23 18:07:40,484 - INFO -   Rating: 4.5
+2026-03-23 18:07:40,490 - INFO -   Total Reviews: 34
+2026-03-23 18:07:40,503 - INFO -   Address: plot no.-404, M Corp, Shreeyash Garden, Mohan Naga...
+2026-03-23 18:07:40,509 - INFO -   Phone: 095459 91414
+2026-03-23 18:07:40,516 - INFO - Extracting hours...
+2026-03-23 18:07:41,548 - INFO -   Found hours via data-item-id='oh'
+2026-03-23 18:07:41,559 - INFO -   Hours element text: '
+Open 24 hours
+See more hours
+'
+2026-03-23 18:07:41,559 - INFO -   Clicking to expand hours...
+2026-03-23 18:07:41,579 - INFO -   Clicked via JS
+2026-03-23 18:07:44,081 - INFO -   Looking for hours table...
+2026-03-23 18:07:44,092 - INFO -   Found a table element
+2026-03-23 18:07:44,092 - INFO -   Parsing hours table...
+2026-03-23 18:07:44,100 - INFO -   Found 7 rows
+2026-03-23 18:07:44,106 - INFO -     Row: 'Monday
+Open 24 hours'
+2026-03-23 18:07:44,116 - INFO -     ✓ Monday: Open 24 hours
+2026-03-23 18:07:44,120 - INFO -     Row: 'Tuesday
+Open 24 hours'
+2026-03-23 18:07:44,127 - INFO -     ✓ Tuesday: Open 24 hours
+2026-03-23 18:07:44,131 - INFO -     Row: 'Wednesday
+Open 24 hours'
+2026-03-23 18:07:44,138 - INFO -     ✓ Wednesday: Open 24 hours
+2026-03-23 18:07:44,142 - INFO -     Row: 'Thursday
+Open 24 hours'
+2026-03-23 18:07:44,148 - INFO -     ✓ Thursday: Open 24 hours
+2026-03-23 18:07:44,153 - INFO -     Row: 'Friday
+(Rama Navami)
+Open 24 hours
+Hours might differ'
+2026-03-23 18:07:44,159 - INFO -     ✓ Friday: Open 24 hours
+Hours might differ
+2026-03-23 18:07:44,163 - INFO -     Row: 'Saturday
+Open 24 hours'
+2026-03-23 18:07:44,169 - INFO -     ✓ Saturday: Open 24 hours
+2026-03-23 18:07:44,173 - INFO -     Row: 'Sunday
+Open 24 hours'
+2026-03-23 18:07:44,180 - INFO -     ✓ Sunday: Open 24 hours
+2026-03-23 18:07:44,180 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 18:07:44,180 - INFO - Extracting About section...
+2026-03-23 18:07:44,199 - INFO -   ✓ Total features extracted: 0
+2026-03-23 18:07:46,594 - INFO - Extracting all photos...
+2026-03-23 18:07:49,675 - INFO -   Opened photo gallery
+2026-03-23 18:07:49,704 - INFO -     Found 2 photos...
+2026-03-23 18:07:53,331 - INFO -     Found 12 photos...
+2026-03-23 18:07:58,423 - INFO -   ✓ Found 20 photo URLs (stored, not downloaded)
+2026-03-23 18:08:00,806 - INFO - Extracting reviews...
+2026-03-23 18:08:03,899 - INFO -   Clicked Reviews tab
+2026-03-23 18:08:09,050 - INFO -   Found 20 review elements
+2026-03-23 18:08:09,762 - INFO -   ✓ Extracted 14 quality reviews
+2026-03-23 18:08:09,762 - INFO - Extracting social media...
+2026-03-23 18:08:09,777 - INFO -   Written to new/: wedding-pre-wedding-photographer-videographer-cinematography-pune-tasveer-photography.json
+2026-03-23 18:08:09,779 - INFO - Added: Wedding | Pre Wedding Photographer | Videographer | Cinematography | Pune: Tasveer Photography
+2026-03-23 18:08:11,789 - INFO - 
+
+######################################################################
+2026-03-23 18:08:11,790 - INFO - # BUSINESS 69/119
+2026-03-23 18:08:11,790 - INFO - ######################################################################
+2026-03-23 18:08:11,790 - INFO - 
+======================================================================
+2026-03-23 18:08:11,790 - INFO - SCRAPING: https://www.google.com/maps/place/The+Ritzography+%7C+Pune+%7C+Photo+%26+Video/d...
+2026-03-23 18:08:11,790 - INFO - ======================================================================
+2026-03-23 18:08:16,190 - INFO - Extracting basic info...
+2026-03-23 18:08:16,230 - INFO -   Name: The Ritzography | Pune | Photo & Video
+2026-03-23 18:08:16,315 - INFO -   Rating: 4.8
+2026-03-23 18:08:16,322 - INFO -   Total Reviews: 17
+2026-03-23 18:08:16,333 - INFO -   Address: Bhagwan Tatyasaheb Kawade Rd, Nigade Nagar, Ghorpa...
+2026-03-23 18:08:16,339 - INFO -   Phone: 070204 77012
+2026-03-23 18:08:16,345 - INFO - Extracting hours...
+2026-03-23 18:08:17,405 - INFO -   Using element directly: '· Closes 7 am Tue'
+2026-03-23 18:08:17,409 - INFO -   Hours element text: '· Closes 7 am Tue'
+2026-03-23 18:08:17,410 - INFO -   Clicking to expand hours...
+2026-03-23 18:08:17,416 - INFO -   Clicked via JS
+2026-03-23 18:08:19,926 - INFO -   Looking for hours table...
+2026-03-23 18:08:19,943 - INFO -   Found a table element
+2026-03-23 18:08:19,943 - INFO -   Parsing hours table...
+2026-03-23 18:08:19,954 - INFO -   Found 7 rows
+2026-03-23 18:08:19,961 - INFO -     Row: 'Monday
+10 am–12 am'
+2026-03-23 18:08:19,975 - INFO -     ✓ Monday: 10 am–12 am
+2026-03-23 18:08:19,980 - INFO -     Row: 'Tuesday
+12–7 am
+10 am–12 am'
+2026-03-23 18:08:19,988 - INFO -     ✓ Tuesday: 12–7 am
+10 am–12 am
+2026-03-23 18:08:19,992 - INFO -     Row: 'Wednesday
+12–7 am
+10 am–12 am'
+2026-03-23 18:08:20,000 - INFO -     ✓ Wednesday: 12–7 am
+10 am–12 am
+2026-03-23 18:08:20,004 - INFO -     Row: 'Thursday
+12–7 am
+10 am–12 am'
+2026-03-23 18:08:20,011 - INFO -     ✓ Thursday: 12–7 am
+10 am–12 am
+2026-03-23 18:08:20,015 - INFO -     Row: 'Friday
+(Rama Navami)
+12–7 am
+10 am–12 am
+Hours might differ'
+2026-03-23 18:08:20,022 - INFO -     ✓ Friday: 12–7 am
+10 am–12 am
+Hours might differ
+2026-03-23 18:08:20,025 - INFO -     Row: 'Saturday
+12–7 am
+10 am–12 am'
+2026-03-23 18:08:20,031 - INFO -     ✓ Saturday: 12–7 am
+10 am–12 am
+2026-03-23 18:08:20,035 - INFO -     Row: 'Sunday
+Closed'
+2026-03-23 18:08:20,041 - INFO -     ✓ Sunday: Closed
+2026-03-23 18:08:20,041 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 18:08:20,041 - INFO - Extracting About section...
+2026-03-23 18:08:20,045 - INFO -   Found About tab
+2026-03-23 18:08:23,085 - INFO -   Clicked About tab
+2026-03-23 18:08:24,222 - INFO -   ✓ Total features extracted: 2
+2026-03-23 18:08:26,607 - INFO - Extracting all photos...
+2026-03-23 18:08:29,721 - INFO -   Opened photo gallery
+2026-03-23 18:08:29,749 - INFO -     Found 2 photos...
+2026-03-23 18:08:33,374 - INFO -     Found 12 photos...
+2026-03-23 18:08:36,960 - INFO -     Found 22 photos...
+2026-03-23 18:08:40,501 - INFO -     Found 32 photos...
+2026-03-23 18:08:44,035 - INFO -     Found 42 photos...
+2026-03-23 18:08:47,612 - INFO -     Found 52 photos...
+2026-03-23 18:08:51,194 - INFO -     Found 62 photos...
+2026-03-23 18:08:54,752 - INFO -     Found 72 photos...
+2026-03-23 18:08:58,357 - INFO -     Found 82 photos...
+2026-03-23 18:09:00,182 - INFO -   ✓ Found 82 photo URLs (stored, not downloaded)
+2026-03-23 18:09:02,644 - INFO - Extracting reviews...
+2026-03-23 18:09:05,741 - INFO -   Clicked Reviews tab
+2026-03-23 18:09:10,895 - INFO -   Found 20 review elements
+2026-03-23 18:09:11,689 - INFO -   ✓ Extracted 8 quality reviews
+2026-03-23 18:09:11,689 - INFO - Extracting social media...
+2026-03-23 18:09:11,702 - INFO -   Written to new/: the-ritzography-pune-photo-video.json
+2026-03-23 18:09:11,704 - INFO - Added: The Ritzography | Pune | Photo & Video
+2026-03-23 18:09:13,715 - INFO - 
+
+######################################################################
+2026-03-23 18:09:13,717 - INFO - # BUSINESS 70/119
+2026-03-23 18:09:13,717 - INFO - ######################################################################
+2026-03-23 18:09:13,717 - INFO - 
+======================================================================
+2026-03-23 18:09:13,717 - INFO - SCRAPING: https://www.google.com/maps/place/CK+Photography+India/data=!4m7!3m6!1s0x3bc2be2...
+2026-03-23 18:09:13,717 - INFO - ======================================================================
+2026-03-23 18:09:18,171 - INFO - Extracting basic info...
+2026-03-23 18:09:18,217 - INFO -   Name: CK Photography India
+2026-03-23 18:09:18,236 - INFO -   Rating: 4.9
+2026-03-23 18:09:18,243 - INFO -   Total Reviews: 105
+2026-03-23 18:09:18,255 - INFO -   Address: Pancham Society, TOWER-C, 103, Nanded City Sinhgad...
+2026-03-23 18:09:18,261 - INFO -   Phone: 090280 99343
+2026-03-23 18:09:18,268 - INFO - Extracting hours...
+2026-03-23 18:09:19,329 - INFO -   Using element directly: '· Closes 8 pm'
+2026-03-23 18:09:19,334 - INFO -   Hours element text: '· Closes 8 pm'
+2026-03-23 18:09:19,334 - INFO -   Clicking to expand hours...
+2026-03-23 18:09:19,341 - INFO -   Clicked via JS
+2026-03-23 18:09:21,851 - INFO -   Looking for hours table...
+2026-03-23 18:09:21,865 - INFO -   Found a table element
+2026-03-23 18:09:21,865 - INFO -   Parsing hours table...
+2026-03-23 18:09:21,870 - INFO -   Found 7 rows
+2026-03-23 18:09:21,874 - INFO -     Row: 'Monday
+9 am–8 pm'
+2026-03-23 18:09:21,884 - INFO -     ✓ Monday: 9 am–8 pm
+2026-03-23 18:09:21,993 - INFO -     Row: 'Tuesday
+9 am–8 pm'
+2026-03-23 18:09:22,024 - INFO -     ✓ Tuesday: 9 am–8 pm
+2026-03-23 18:09:22,028 - INFO -     Row: 'Wednesday
+9 am–8 pm'
+2026-03-23 18:09:22,035 - INFO -     ✓ Wednesday: 9 am–8 pm
+2026-03-23 18:09:22,038 - INFO -     Row: 'Thursday
+9 am–8 pm'
+2026-03-23 18:09:22,044 - INFO -     ✓ Thursday: 9 am–8 pm
+2026-03-23 18:09:22,048 - INFO -     Row: 'Friday
+(Rama Navami)
+9 am–9 pm
+Hours might differ'
+2026-03-23 18:09:22,055 - INFO -     ✓ Friday: 9 am–9 pm
+Hours might differ
+2026-03-23 18:09:22,058 - INFO -     Row: 'Saturday
+9 am–8 pm'
+2026-03-23 18:09:22,064 - INFO -     ✓ Saturday: 9 am–8 pm
+2026-03-23 18:09:22,068 - INFO -     Row: 'Sunday
+9 am–9 pm'
+2026-03-23 18:09:22,074 - INFO -     ✓ Sunday: 9 am–9 pm
+2026-03-23 18:09:22,074 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 18:09:22,074 - INFO - Extracting About section...
+2026-03-23 18:09:22,079 - INFO -   Found About tab
+2026-03-23 18:09:25,120 - INFO -   Clicked About tab
+2026-03-23 18:09:26,243 - INFO -   ✓ Total features extracted: 1
+2026-03-23 18:09:28,633 - INFO - Extracting all photos...
+2026-03-23 18:09:31,705 - INFO -   Opened photo gallery
+2026-03-23 18:09:31,719 - INFO -     Found 2 photos...
+2026-03-23 18:09:35,360 - INFO -     Found 12 photos...
+2026-03-23 18:09:38,908 - INFO -     Found 22 photos...
+2026-03-23 18:09:42,493 - INFO -     Found 32 photos...
+2026-03-23 18:09:46,063 - INFO -     Found 42 photos...
+2026-03-23 18:09:49,672 - INFO -     Found 51 photos...
+2026-03-23 18:09:53,246 - INFO -     Found 61 photos...
+2026-03-23 18:09:56,813 - INFO -     Found 70 photos...
+2026-03-23 18:10:00,310 - INFO -     Found 79 photos...
+2026-03-23 18:10:03,849 - INFO -     Found 89 photos...
+2026-03-23 18:10:07,432 - INFO -   ✓ Found 98 photo URLs (stored, not downloaded)
+2026-03-23 18:10:09,807 - INFO - Extracting reviews...
+2026-03-23 18:10:12,908 - INFO -   Clicked Reviews tab
+2026-03-23 18:10:18,063 - INFO -   Found 20 review elements
+2026-03-23 18:10:19,706 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 18:10:19,707 - INFO - Extracting social media...
+2026-03-23 18:10:19,720 - INFO -   Written to new/: ck-photography-india.json
+2026-03-23 18:10:19,724 - INFO - Added: CK Photography India
+2026-03-23 18:10:21,734 - INFO - 
+
+######################################################################
+2026-03-23 18:10:21,735 - INFO - # BUSINESS 71/119
+2026-03-23 18:10:21,736 - INFO - ######################################################################
+2026-03-23 18:10:21,736 - INFO - 
+======================================================================
+2026-03-23 18:10:21,736 - INFO - SCRAPING: https://www.google.com/maps/place/LIME+Studios+%28+Podcast+Studio+%7C+Photograph...
+2026-03-23 18:10:21,736 - INFO - ======================================================================
+2026-03-23 18:10:26,147 - INFO - Extracting basic info...
+2026-03-23 18:10:26,188 - INFO -   Name: LIME Studios ( Podcast Studio | Photography/Video Studio available for rent )
+2026-03-23 18:10:26,208 - INFO -   Rating: 4.8
+2026-03-23 18:10:26,216 - INFO -   Total Reviews: 60
+2026-03-23 18:10:26,228 - INFO -   Address: Montvert, 605, Baner - Pashan Link Rd, Pashan, Pun...
+2026-03-23 18:10:26,234 - INFO -   Phone: 080553 16262
+2026-03-23 18:10:26,240 - INFO - Extracting hours...
+2026-03-23 18:10:27,300 - INFO -   Using element directly: '· Closes 8 pm'
+2026-03-23 18:10:27,305 - INFO -   Hours element text: '· Closes 8 pm'
+2026-03-23 18:10:27,305 - INFO -   Clicking to expand hours...
+2026-03-23 18:10:27,311 - INFO -   Clicked via JS
+2026-03-23 18:10:29,821 - INFO -   Looking for hours table...
+2026-03-23 18:10:29,834 - INFO -   Found a table element
+2026-03-23 18:10:29,834 - INFO -   Parsing hours table...
+2026-03-23 18:10:29,843 - INFO -   Found 7 rows
+2026-03-23 18:10:29,849 - INFO -     Row: 'Monday
+9 am–8 pm'
+2026-03-23 18:10:29,861 - INFO -     ✓ Monday: 9 am–8 pm
+2026-03-23 18:10:29,865 - INFO -     Row: 'Tuesday
+9 am–8 pm'
+2026-03-23 18:10:29,916 - INFO -     ✓ Tuesday: 9 am–8 pm
+2026-03-23 18:10:29,949 - INFO -     Row: 'Wednesday
+9 am–8 pm'
+2026-03-23 18:10:29,964 - INFO -     ✓ Wednesday: 9 am–8 pm
+2026-03-23 18:10:29,968 - INFO -     Row: 'Thursday
+9 am–8 pm'
+2026-03-23 18:10:29,974 - INFO -     ✓ Thursday: 9 am–8 pm
+2026-03-23 18:10:29,978 - INFO -     Row: 'Friday
+(Rama Navami)
+9 am–8 pm
+Hours might differ'
+2026-03-23 18:10:29,986 - INFO -     ✓ Friday: 9 am–8 pm
+Hours might differ
+2026-03-23 18:10:29,989 - INFO -     Row: 'Saturday
+9 am–8 pm'
+2026-03-23 18:10:29,996 - INFO -     ✓ Saturday: 9 am–8 pm
+2026-03-23 18:10:30,000 - INFO -     Row: 'Sunday
+9 am–8 pm'
+2026-03-23 18:10:30,006 - INFO -     ✓ Sunday: 9 am–8 pm
+2026-03-23 18:10:30,006 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 18:10:30,006 - INFO - Extracting About section...
+2026-03-23 18:10:30,011 - INFO -   Found About tab
+2026-03-23 18:10:33,055 - INFO -   Clicked About tab
+2026-03-23 18:10:34,198 - INFO -   ✓ Total features extracted: 4
+2026-03-23 18:10:36,682 - INFO - Extracting all photos...
+2026-03-23 18:10:39,754 - INFO -   Opened photo gallery
+2026-03-23 18:10:39,783 - INFO -     Found 2 photos...
+2026-03-23 18:10:50,622 - INFO -     Found 21 photos...
+2026-03-23 18:10:57,781 - INFO -     Found 38 photos...
+2026-03-23 18:11:01,404 - INFO -   ✓ Found 43 photo URLs (stored, not downloaded)
+2026-03-23 18:11:03,788 - INFO - Extracting reviews...
+2026-03-23 18:11:06,892 - INFO -   Clicked Reviews tab
+2026-03-23 18:11:12,037 - INFO -   Found 20 review elements
+2026-03-23 18:11:13,641 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 18:11:13,642 - INFO - Extracting social media...
+2026-03-23 18:11:13,672 - INFO -   Written to new/: lime-studios-podcast-studio-photography-video-studio-available-for-rent.json
+2026-03-23 18:11:13,677 - INFO - Added: LIME Studios ( Podcast Studio | Photography/Video Studio available for rent )
+2026-03-23 18:11:15,682 - INFO - 
+
+######################################################################
+2026-03-23 18:11:15,683 - INFO - # BUSINESS 72/119
+2026-03-23 18:11:15,683 - INFO - ######################################################################
+2026-03-23 18:11:15,683 - INFO - 
+======================================================================
+2026-03-23 18:11:15,684 - INFO - SCRAPING: https://www.google.com/maps/place/UmanG%27s+Photography/data=!4m7!3m6!1s0x3bc2be...
+2026-03-23 18:11:15,684 - INFO - ======================================================================
+2026-03-23 18:11:20,076 - INFO - Extracting basic info...
+2026-03-23 18:11:20,112 - INFO -   Name: UmanG's Photography
+2026-03-23 18:11:20,132 - INFO -   Rating: 5.0
+2026-03-23 18:11:20,140 - INFO -   Total Reviews: 91
+2026-03-23 18:11:20,147 - INFO - Skipping - has website: http://facebook.com/UmangCopyRightPhotos
+2026-03-23 18:11:22,157 - INFO - 
+
+######################################################################
+2026-03-23 18:11:22,158 - INFO - # BUSINESS 73/119
+2026-03-23 18:11:22,158 - INFO - ######################################################################
+2026-03-23 18:11:22,158 - INFO - 
+======================================================================
+2026-03-23 18:11:22,158 - INFO - SCRAPING: https://www.google.com/maps/place/PIXI+Click+%7C+Best+Wedding+%26+Top+Baby+Photo...
+2026-03-23 18:11:22,158 - INFO - ======================================================================
+2026-03-23 18:11:26,547 - INFO - Extracting basic info...
+2026-03-23 18:11:26,592 - INFO -   Name: PIXI Click | Best Wedding & Top Baby Photography Studio Near Me, Mahalunge, Baner, Pune
+2026-03-23 18:11:26,611 - INFO -   Rating: 5.0
+2026-03-23 18:11:26,617 - INFO -   Total Reviews: 14
+2026-03-23 18:11:26,622 - INFO - Skipping - has website: https://deepfocusproduction.pixieset.com/pixiclick/
+2026-03-23 18:11:28,633 - INFO - 
+
+######################################################################
+2026-03-23 18:11:28,634 - INFO - # BUSINESS 74/119
+2026-03-23 18:11:28,635 - INFO - ######################################################################
+2026-03-23 18:11:28,635 - INFO - 
+======================================================================
+2026-03-23 18:11:28,635 - INFO - SCRAPING: https://www.google.com/maps/place/Amol+Matere+Photography/data=!4m7!3m6!1s0x3bc2...
+2026-03-23 18:11:28,635 - INFO - ======================================================================
+2026-03-23 18:11:33,119 - INFO - Extracting basic info...
+2026-03-23 18:11:33,150 - INFO -   Name: Amol Matere Photography
+2026-03-23 18:11:33,166 - INFO -   Rating: 4.9
+2026-03-23 18:11:33,172 - INFO -   Total Reviews: 27
+2026-03-23 18:11:33,183 - INFO -   Address: Pashan - Sus Rd, Shikshak Colony, Jai Bhavani Naga...
+2026-03-23 18:11:33,189 - INFO -   Phone: 087962 28298
+2026-03-23 18:11:33,196 - INFO - Extracting hours...
+2026-03-23 18:11:34,254 - INFO -   Using element directly: '· Closes 9 pm'
+2026-03-23 18:11:34,258 - INFO -   Hours element text: '· Closes 9 pm'
+2026-03-23 18:11:34,258 - INFO -   Clicking to expand hours...
+2026-03-23 18:11:34,266 - INFO -   Clicked via JS
+2026-03-23 18:11:36,776 - INFO -   Looking for hours table...
+2026-03-23 18:11:36,794 - INFO -   Found a table element
+2026-03-23 18:11:36,794 - INFO -   Parsing hours table...
+2026-03-23 18:11:36,807 - INFO -   Found 7 rows
+2026-03-23 18:11:36,814 - INFO -     Row: 'Monday
+9 am–9 pm'
+2026-03-23 18:11:36,826 - INFO -     ✓ Monday: 9 am–9 pm
+2026-03-23 18:11:36,831 - INFO -     Row: 'Tuesday
+9 am–9 pm'
+2026-03-23 18:11:36,839 - INFO -     ✓ Tuesday: 9 am–9 pm
+2026-03-23 18:11:36,843 - INFO -     Row: 'Wednesday
+9 am–9 pm'
+2026-03-23 18:11:36,850 - INFO -     ✓ Wednesday: 9 am–9 pm
+2026-03-23 18:11:36,855 - INFO -     Row: 'Thursday
+9 am–9 pm'
+2026-03-23 18:11:36,862 - INFO -     ✓ Thursday: 9 am–9 pm
+2026-03-23 18:11:36,866 - INFO -     Row: 'Friday
+(Rama Navami)
+9 am–9 pm
+Hours might differ'
+2026-03-23 18:11:36,873 - INFO -     ✓ Friday: 9 am–9 pm
+Hours might differ
+2026-03-23 18:11:36,876 - INFO -     Row: 'Saturday
+9 am–9 pm'
+2026-03-23 18:11:36,883 - INFO -     ✓ Saturday: 9 am–9 pm
+2026-03-23 18:11:36,887 - INFO -     Row: 'Sunday
+9 am–9 pm'
+2026-03-23 18:11:36,894 - INFO -     ✓ Sunday: 9 am–9 pm
+2026-03-23 18:11:36,894 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 18:11:36,894 - INFO - Extracting About section...
+2026-03-23 18:11:36,913 - INFO -   ✓ Total features extracted: 0
+2026-03-23 18:11:39,338 - INFO - Extracting all photos...
+2026-03-23 18:11:42,446 - INFO -   Opened photo gallery
+2026-03-23 18:11:42,475 - INFO -     Found 2 photos...
+2026-03-23 18:11:49,838 - INFO -     Found 21 photos...
+2026-03-23 18:11:53,438 - INFO -     Found 31 photos...
+2026-03-23 18:11:56,988 - INFO -     Found 41 photos...
+2026-03-23 18:12:00,549 - INFO -     Found 51 photos...
+2026-03-23 18:12:04,136 - INFO -     Found 61 photos...
+2026-03-23 18:12:07,709 - INFO -     Found 71 photos...
+2026-03-23 18:12:11,292 - INFO -     Found 81 photos...
+2026-03-23 18:12:14,858 - INFO -     Found 91 photos...
+2026-03-23 18:12:18,465 - INFO -   ✓ Found 99 photo URLs (stored, not downloaded)
+2026-03-23 18:12:21,636 - INFO - Extracting reviews...
+2026-03-23 18:12:24,730 - INFO -   Clicked Reviews tab
+2026-03-23 18:12:29,876 - INFO -   Found 20 review elements
+2026-03-23 18:12:30,464 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 18:12:30,465 - INFO - Extracting social media...
+2026-03-23 18:12:30,478 - INFO -   Written to new/: amol-matere-photography.json
+2026-03-23 18:12:30,481 - INFO - Added: Amol Matere Photography
+2026-03-23 18:12:32,492 - INFO - 
+
+######################################################################
+2026-03-23 18:12:32,494 - INFO - # BUSINESS 75/119
+2026-03-23 18:12:32,494 - INFO - ######################################################################
+2026-03-23 18:12:32,494 - INFO - 
+======================================================================
+2026-03-23 18:12:32,494 - INFO - SCRAPING: https://www.google.com/maps/place/Prasad+Pande+Photography/data=!4m7!3m6!1s0x3bc...
+2026-03-23 18:12:32,494 - INFO - ======================================================================
+2026-03-23 18:12:37,032 - INFO - Extracting basic info...
+2026-03-23 18:12:37,073 - INFO -   Name: Prasad Pande Photography
+2026-03-23 18:12:37,093 - INFO -   Rating: 4.9
+2026-03-23 18:12:37,100 - INFO -   Total Reviews: 10
+2026-03-23 18:12:37,107 - INFO - Skipping - has website: https://prasadpande.odoo.com/
+2026-03-23 18:12:39,117 - INFO - 
+
+######################################################################
+2026-03-23 18:12:39,118 - INFO - # BUSINESS 76/119
+2026-03-23 18:12:39,118 - INFO - ######################################################################
+2026-03-23 18:12:39,118 - INFO - 
+======================================================================
+2026-03-23 18:12:39,118 - INFO - SCRAPING: https://www.google.com/maps/place/Pratik+Heshi+Photography+%26+Films/data=!4m7!3...
+2026-03-23 18:12:39,118 - INFO - ======================================================================
+2026-03-23 18:12:43,579 - INFO - Extracting basic info...
+2026-03-23 18:12:43,611 - INFO -   Name: Pratik Heshi Photography & Films
+2026-03-23 18:12:43,630 - INFO -   Rating: 4.9
+2026-03-23 18:12:43,636 - INFO -   Total Reviews: 107
+2026-03-23 18:12:43,648 - INFO -   Address: Island society, Datta Mandir Rd, Wakad, Pune, Maha...
+2026-03-23 18:12:43,655 - INFO -   Phone: 097640 83269
+2026-03-23 18:12:43,662 - INFO - Extracting hours...
+2026-03-23 18:12:44,694 - WARNING -   ✗ Could not find hours element
+2026-03-23 18:12:44,694 - INFO - Extracting About section...
+2026-03-23 18:12:44,700 - INFO -   Found About tab
+2026-03-23 18:12:47,769 - INFO -   Clicked About tab
+2026-03-23 18:12:48,884 - INFO -   ✓ Total features extracted: 2
+2026-03-23 18:12:51,294 - INFO - Extracting all photos...
+2026-03-23 18:12:54,394 - INFO -   Opened photo gallery
+2026-03-23 18:12:54,421 - INFO -     Found 2 photos...
+2026-03-23 18:12:58,015 - INFO -     Found 12 photos...
+2026-03-23 18:13:05,154 - INFO -     Found 30 photos...
+2026-03-23 18:13:08,697 - INFO -     Found 40 photos...
+2026-03-23 18:13:12,271 - INFO -     Found 50 photos...
+2026-03-23 18:13:15,801 - INFO -     Found 60 photos...
+2026-03-23 18:13:19,414 - INFO -     Found 69 photos...
+2026-03-23 18:13:22,976 - INFO -     Found 79 photos...
+2026-03-23 18:13:26,565 - INFO -     Found 88 photos...
+2026-03-23 18:13:30,249 - INFO -   ✓ Found 97 photo URLs (stored, not downloaded)
+2026-03-23 18:13:32,775 - INFO - Extracting reviews...
+2026-03-23 18:13:35,891 - INFO -   Clicked Reviews tab
+2026-03-23 18:13:41,049 - INFO -   Found 20 review elements
+2026-03-23 18:13:43,592 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 18:13:43,592 - INFO - Extracting social media...
+2026-03-23 18:13:43,604 - INFO -   Written to new/: pratik-heshi-photography-films.json
+2026-03-23 18:13:43,607 - INFO - Added: Pratik Heshi Photography & Films
+2026-03-23 18:13:45,617 - INFO - 
+
+######################################################################
+2026-03-23 18:13:45,618 - INFO - # BUSINESS 77/119
+2026-03-23 18:13:45,618 - INFO - ######################################################################
+2026-03-23 18:13:45,618 - INFO - 
+======================================================================
+2026-03-23 18:13:45,618 - INFO - SCRAPING: https://www.google.com/maps/place/Weddings+by+One+Love+Studio+%28Photo+%26+Films...
+2026-03-23 18:13:45,618 - INFO - ======================================================================
+2026-03-23 18:13:50,129 - INFO - Extracting basic info...
+2026-03-23 18:13:50,169 - INFO -   Name: Weddings by One Love Studio (Photo & Films)
+2026-03-23 18:13:50,190 - INFO -   Rating: 4.9
+2026-03-23 18:13:50,198 - INFO -   Total Reviews: 14
+2026-03-23 18:13:50,209 - INFO -   Address: Flat no. 02, Madhusudhan apartment, Plot no. 42, n...
+2026-03-23 18:13:50,215 - INFO -   Phone: 098502 52181
+2026-03-23 18:13:50,221 - INFO - Extracting hours...
+2026-03-23 18:13:51,269 - INFO -   Using element directly: 'Open 24 hours'
+2026-03-23 18:13:51,273 - INFO -   Hours element text: 'Open 24 hours'
+2026-03-23 18:13:51,273 - INFO -   Clicking to expand hours...
+2026-03-23 18:13:51,287 - INFO -   Clicked via JS
+2026-03-23 18:13:53,798 - INFO -   Looking for hours table...
+2026-03-23 18:13:53,814 - INFO -   Found a table element
+2026-03-23 18:13:53,815 - INFO -   Parsing hours table...
+2026-03-23 18:13:53,825 - INFO -   Found 7 rows
+2026-03-23 18:13:53,832 - INFO -     Row: 'Monday
+Open 24 hours'
+2026-03-23 18:13:53,844 - INFO -     ✓ Monday: Open 24 hours
+2026-03-23 18:13:53,848 - INFO -     Row: 'Tuesday
+Open 24 hours'
+2026-03-23 18:13:53,856 - INFO -     ✓ Tuesday: Open 24 hours
+2026-03-23 18:13:53,860 - INFO -     Row: 'Wednesday
+Open 24 hours'
+2026-03-23 18:13:53,866 - INFO -     ✓ Wednesday: Open 24 hours
+2026-03-23 18:13:53,870 - INFO -     Row: 'Thursday
+Open 24 hours'
+2026-03-23 18:13:53,876 - INFO -     ✓ Thursday: Open 24 hours
+2026-03-23 18:13:53,880 - INFO -     Row: 'Friday
+(Rama Navami)
+Open 24 hours
+Hours might differ'
+2026-03-23 18:13:53,887 - INFO -     ✓ Friday: Open 24 hours
+Hours might differ
+2026-03-23 18:13:53,891 - INFO -     Row: 'Saturday
+Open 24 hours'
+2026-03-23 18:13:53,897 - INFO -     ✓ Saturday: Open 24 hours
+2026-03-23 18:13:53,900 - INFO -     Row: 'Sunday
+Open 24 hours'
+2026-03-23 18:13:53,907 - INFO -     ✓ Sunday: Open 24 hours
+2026-03-23 18:13:53,907 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 18:13:53,907 - INFO - Extracting About section...
+2026-03-23 18:13:53,912 - INFO -   Found About tab
+2026-03-23 18:13:56,960 - INFO -   Clicked About tab
+2026-03-23 18:13:58,108 - INFO -   ✓ Total features extracted: 3
+2026-03-23 18:14:00,496 - INFO - Extracting all photos...
+2026-03-23 18:14:03,593 - INFO -   Opened photo gallery
+2026-03-23 18:14:03,625 - INFO -     Found 2 photos...
+2026-03-23 18:14:07,238 - INFO -     Found 12 photos...
+2026-03-23 18:14:10,793 - INFO -     Found 22 photos...
+2026-03-23 18:14:14,336 - INFO -     Found 32 photos...
+2026-03-23 18:14:17,881 - INFO -     Found 42 photos...
+2026-03-23 18:14:21,423 - INFO -     Found 52 photos...
+2026-03-23 18:14:24,963 - INFO -     Found 61 photos...
+2026-03-23 18:14:28,555 - INFO -     Found 71 photos...
+2026-03-23 18:14:32,100 - INFO -     Found 81 photos...
+2026-03-23 18:14:36,780 - INFO -   ✓ Found 88 photo URLs (stored, not downloaded)
+2026-03-23 18:14:39,144 - INFO - Extracting reviews...
+2026-03-23 18:14:42,272 - INFO -   Clicked Reviews tab
+2026-03-23 18:14:47,412 - INFO -   Found 20 review elements
+2026-03-23 18:14:48,261 - INFO -   ✓ Extracted 8 quality reviews
+2026-03-23 18:14:48,261 - INFO - Extracting social media...
+2026-03-23 18:14:48,274 - INFO -   Written to new/: weddings-by-one-love-studio-photo-films.json
+2026-03-23 18:14:48,277 - INFO - Added: Weddings by One Love Studio (Photo & Films)
+2026-03-23 18:14:50,287 - INFO - 
+
+######################################################################
+2026-03-23 18:14:50,288 - INFO - # BUSINESS 78/119
+2026-03-23 18:14:50,288 - INFO - ######################################################################
+2026-03-23 18:14:50,288 - INFO - 
+======================================================================
+2026-03-23 18:14:50,288 - INFO - SCRAPING: https://www.google.com/maps/place/Fab+Media+Works+%7C+Pune+Office+%7C+Corporate+...
+2026-03-23 18:14:50,288 - INFO - ======================================================================
+2026-03-23 18:14:54,812 - INFO - Extracting basic info...
+2026-03-23 18:14:54,855 - INFO -   Name: Fab Media Works | Pune Office | Corporate Photography Studio
+2026-03-23 18:14:54,874 - INFO -   Rating: 5.0
+2026-03-23 18:14:54,881 - INFO -   Total Reviews: 322
+2026-03-23 18:14:54,888 - INFO - Skipping - has website: https://www.fabmediaworks.com/
+2026-03-23 18:14:56,898 - INFO - 
+
+######################################################################
+2026-03-23 18:14:56,899 - INFO - # BUSINESS 79/119
+2026-03-23 18:14:56,899 - INFO - ######################################################################
+2026-03-23 18:14:56,899 - INFO - 
+======================================================================
+2026-03-23 18:14:56,899 - INFO - SCRAPING: https://www.google.com/maps/place/The+Camerography/data=!4m7!3m6!1s0x3bc2eb672ef...
+2026-03-23 18:14:56,899 - INFO - ======================================================================
+2026-03-23 18:15:01,393 - INFO - Extracting basic info...
+2026-03-23 18:15:01,415 - INFO -   Name: The Camerography
+2026-03-23 18:15:01,426 - INFO -   Rating: 5.0
+2026-03-23 18:15:01,431 - INFO -   Total Reviews: 50
+2026-03-23 18:15:01,435 - INFO - Skipping - has website: http://www.thecamerograph.in/
+2026-03-23 18:15:03,435 - INFO - 
+
+######################################################################
+2026-03-23 18:15:03,436 - INFO - # BUSINESS 80/119
+2026-03-23 18:15:03,436 - INFO - ######################################################################
+2026-03-23 18:15:03,436 - INFO - 
+======================================================================
+2026-03-23 18:15:03,436 - INFO - SCRAPING: https://www.google.com/maps/place/TheBridalPhotography+-+Prewedding+%26+Wedding,...
+2026-03-23 18:15:03,436 - INFO - ======================================================================
+2026-03-23 18:15:07,805 - INFO - Extracting basic info...
+2026-03-23 18:15:07,840 - INFO -   Name: TheBridalPhotography - Prewedding & Wedding, Engagement, Maternity, Newborn, Baby shoot, Birthday Photographer In Pune
+2026-03-23 18:15:07,857 - INFO -   Rating: 5.0
+2026-03-23 18:15:07,862 - INFO -   Total Reviews: 1335
+2026-03-23 18:15:07,868 - INFO - Skipping - has website: https://thebridal.photography/
+2026-03-23 18:15:09,878 - INFO - 
+
+######################################################################
+2026-03-23 18:15:09,878 - INFO - # BUSINESS 81/119
+2026-03-23 18:15:09,878 - INFO - ######################################################################
+2026-03-23 18:15:09,878 - INFO - 
+======================================================================
+2026-03-23 18:15:09,878 - INFO - SCRAPING: https://www.google.com/maps/place/Bliss+Memoir+Photography+%26+Films/data=!4m7!3...
+2026-03-23 18:15:09,878 - INFO - ======================================================================
+2026-03-23 18:15:14,271 - INFO - Extracting basic info...
+2026-03-23 18:15:14,309 - INFO -   Name: Bliss Memoir Photography & Films
+2026-03-23 18:15:14,325 - INFO -   Rating: 4.7
+2026-03-23 18:15:14,331 - INFO -   Total Reviews: 105
+2026-03-23 18:15:14,336 - INFO - Skipping - has website: http://www.blissmemoir.com/
+2026-03-23 18:15:16,347 - INFO - 
+
+######################################################################
+2026-03-23 18:15:16,347 - INFO - # BUSINESS 82/119
+2026-03-23 18:15:16,347 - INFO - ######################################################################
+2026-03-23 18:15:16,347 - INFO - 
+======================================================================
+2026-03-23 18:15:16,347 - INFO - SCRAPING: https://www.google.com/maps/place/Photography+%26+Films+by+AV+PRODUCTIONS/data=!...
+2026-03-23 18:15:16,347 - INFO - ======================================================================
+2026-03-23 18:15:20,749 - INFO - Extracting basic info...
+2026-03-23 18:15:20,782 - INFO -   Name: Photography & Films by AV PRODUCTIONS
+2026-03-23 18:15:20,799 - INFO -   Rating: 5.0
+2026-03-23 18:15:20,805 - INFO -   Total Reviews: 45
+2026-03-23 18:15:20,815 - INFO -   Address: 215, Business Square, Bavdhan, Pune, Maharashtra 4...
+2026-03-23 18:15:20,826 - INFO - Extracting hours...
+2026-03-23 18:15:21,859 - INFO -   Using element directly: '· Closes 9:30 pm'
+2026-03-23 18:15:21,863 - INFO -   Hours element text: '· Closes 9:30 pm'
+2026-03-23 18:15:21,863 - INFO -   Clicking to expand hours...
+2026-03-23 18:15:21,869 - INFO -   Clicked via JS
+2026-03-23 18:15:24,380 - INFO -   Looking for hours table...
+2026-03-23 18:15:24,403 - INFO -   Found a table element
+2026-03-23 18:15:24,403 - INFO -   Parsing hours table...
+2026-03-23 18:15:24,413 - INFO -   Found 7 rows
+2026-03-23 18:15:24,422 - INFO -     Row: 'Monday
+9 am–9:30 pm'
+2026-03-23 18:15:24,433 - INFO -     ✓ Monday: 9 am–9:30 pm
+2026-03-23 18:15:24,438 - INFO -     Row: 'Tuesday
+9 am–9:30 pm'
+2026-03-23 18:15:24,445 - INFO -     ✓ Tuesday: 9 am–9:30 pm
+2026-03-23 18:15:24,449 - INFO -     Row: 'Wednesday
+9 am–9:30 pm'
+2026-03-23 18:15:24,456 - INFO -     ✓ Wednesday: 9 am–9:30 pm
+2026-03-23 18:15:24,468 - INFO -     Row: 'Thursday
+9 am–9:30 pm'
+2026-03-23 18:15:24,555 - INFO -     ✓ Thursday: 9 am–9:30 pm
+2026-03-23 18:15:24,560 - INFO -     Row: 'Friday
+(Rama Navami)
+9 am–9:30 pm
+Hours might differ'
+2026-03-23 18:15:24,566 - INFO -     ✓ Friday: 9 am–9:30 pm
+Hours might differ
+2026-03-23 18:15:24,570 - INFO -     Row: 'Saturday
+9 am–9:30 pm'
+2026-03-23 18:15:24,576 - INFO -     ✓ Saturday: 9 am–9:30 pm
+2026-03-23 18:15:24,580 - INFO -     Row: 'Sunday
+10 am–9:30 pm'
+2026-03-23 18:15:24,586 - INFO -     ✓ Sunday: 10 am–9:30 pm
+2026-03-23 18:15:24,586 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 18:15:24,586 - INFO - Extracting About section...
+2026-03-23 18:15:24,603 - INFO -   ✓ Total features extracted: 0
+2026-03-23 18:15:26,985 - INFO - Extracting all photos...
+2026-03-23 18:15:30,058 - INFO -   Opened photo gallery
+2026-03-23 18:15:30,081 - INFO -     Found 2 photos...
+2026-03-23 18:15:33,695 - INFO -     Found 11 photos...
+2026-03-23 18:15:37,240 - INFO -     Found 21 photos...
+2026-03-23 18:15:40,800 - INFO -     Found 31 photos...
+2026-03-23 18:15:43,311 - INFO -   ✓ Found 33 photo URLs (stored, not downloaded)
+2026-03-23 18:15:45,810 - INFO - Extracting reviews...
+2026-03-23 18:15:48,896 - INFO -   Clicked Reviews tab
+2026-03-23 18:15:54,048 - INFO -   Found 20 review elements
+2026-03-23 18:15:54,888 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 18:15:54,888 - INFO - Extracting social media...
+2026-03-23 18:15:54,900 - INFO -   Written to new/: photography-films-by-av-productions.json
+2026-03-23 18:15:54,903 - INFO - Added: Photography & Films by AV PRODUCTIONS
+2026-03-23 18:15:56,913 - INFO - 
+
+######################################################################
+2026-03-23 18:15:56,913 - INFO - # BUSINESS 83/119
+2026-03-23 18:15:56,913 - INFO - ######################################################################
+2026-03-23 18:15:56,913 - INFO - 
+======================================================================
+2026-03-23 18:15:56,914 - INFO - SCRAPING: https://www.google.com/maps/place/VIVAH+PHOTOS/data=!4m7!3m6!1s0x3bc2bfbbffffffb...
+2026-03-23 18:15:56,914 - INFO - ======================================================================
+2026-03-23 18:16:01,291 - INFO - Extracting basic info...
+2026-03-23 18:16:01,330 - INFO -   Name: VIVAH PHOTOS
+2026-03-23 18:16:01,350 - INFO -   Rating: 4.8
+2026-03-23 18:16:01,358 - INFO -   Total Reviews: 121
+2026-03-23 18:16:01,364 - INFO - Skipping - has website: https://www.vivahphotos.com/
+2026-03-23 18:16:03,375 - INFO - 
+
+######################################################################
+2026-03-23 18:16:03,375 - INFO - # BUSINESS 84/119
+2026-03-23 18:16:03,375 - INFO - ######################################################################
+2026-03-23 18:16:03,375 - INFO - 
+======================================================================
+2026-03-23 18:16:03,375 - INFO - SCRAPING: https://www.google.com/maps/place/Atharva+Creation/data=!4m7!3m6!1s0x3bc2958fcb8...
+2026-03-23 18:16:03,375 - INFO - ======================================================================
+2026-03-23 18:16:07,887 - INFO - Extracting basic info...
+2026-03-23 18:16:07,921 - INFO -   Name: Atharva Creation
+2026-03-23 18:16:07,938 - INFO -   Rating: 4.9
+2026-03-23 18:16:07,943 - INFO -   Total Reviews: 51
+2026-03-23 18:16:07,948 - INFO - Skipping - has website: http://www.atharvcreation.com/
+2026-03-23 18:16:09,959 - INFO - 
+
+######################################################################
+2026-03-23 18:16:09,959 - INFO - # BUSINESS 85/119
+2026-03-23 18:16:09,959 - INFO - ######################################################################
+2026-03-23 18:16:09,959 - INFO - 
+======================================================================
+2026-03-23 18:16:09,959 - INFO - SCRAPING: https://www.google.com/maps/place/Exposure+9+Photography+%26+Films+in+Pune/data=...
+2026-03-23 18:16:09,959 - INFO - ======================================================================
+2026-03-23 18:16:14,364 - INFO - Extracting basic info...
+2026-03-23 18:16:14,399 - INFO -   Name: Exposure 9 Photography & Films in Pune
+2026-03-23 18:16:14,416 - INFO -   Rating: 4.9
+2026-03-23 18:16:14,423 - INFO -   Total Reviews: 45
+2026-03-23 18:16:14,428 - INFO - Skipping - has website: https://exposure9.in/
+2026-03-23 18:16:16,438 - INFO - 
+
+######################################################################
+2026-03-23 18:16:16,438 - INFO - # BUSINESS 86/119
+2026-03-23 18:16:16,438 - INFO - ######################################################################
+2026-03-23 18:16:16,438 - INFO - 
+======================================================================
+2026-03-23 18:16:16,438 - INFO - SCRAPING: https://www.google.com/maps/place/Sachin+Gupta+Photography+%26+Films/data=!4m7!3...
+2026-03-23 18:16:16,438 - INFO - ======================================================================
+2026-03-23 18:16:20,837 - INFO - Extracting basic info...
+2026-03-23 18:16:20,869 - INFO -   Name: Sachin Gupta Photography & Films
+2026-03-23 18:16:20,886 - INFO -   Rating: 5.0
+2026-03-23 18:16:20,892 - INFO -   Total Reviews: 82
+2026-03-23 18:16:20,902 - INFO -   Address: Deccan Tower, near Burger King, Solapur Bazar, Cam...
+2026-03-23 18:16:20,909 - INFO -   Phone: 070812 94540
+2026-03-23 18:16:20,915 - INFO - Extracting hours...
+2026-03-23 18:16:21,968 - INFO -   Using element directly: 'Open 24 hours'
+2026-03-23 18:16:21,973 - INFO -   Hours element text: 'Open 24 hours'
+2026-03-23 18:16:21,973 - INFO -   Clicking to expand hours...
+2026-03-23 18:16:21,979 - INFO -   Clicked via JS
+2026-03-23 18:16:24,490 - INFO -   Looking for hours table...
+2026-03-23 18:16:24,506 - INFO -   Found a table element
+2026-03-23 18:16:24,507 - INFO -   Parsing hours table...
+2026-03-23 18:16:24,517 - INFO -   Found 7 rows
+2026-03-23 18:16:24,540 - INFO -     Row: 'Monday
+Open 24 hours'
+2026-03-23 18:16:24,606 - INFO -     ✓ Monday: Open 24 hours
+2026-03-23 18:16:24,610 - INFO -     Row: 'Tuesday
+Open 24 hours'
+2026-03-23 18:16:24,616 - INFO -     ✓ Tuesday: Open 24 hours
+2026-03-23 18:16:24,619 - INFO -     Row: 'Wednesday
+Open 24 hours'
+2026-03-23 18:16:24,625 - INFO -     ✓ Wednesday: Open 24 hours
+2026-03-23 18:16:24,629 - INFO -     Row: 'Thursday
+Open 24 hours'
+2026-03-23 18:16:24,634 - INFO -     ✓ Thursday: Open 24 hours
+2026-03-23 18:16:24,638 - INFO -     Row: 'Friday
+(Rama Navami)
+Open 24 hours
+Hours might differ'
+2026-03-23 18:16:24,644 - INFO -     ✓ Friday: Open 24 hours
+Hours might differ
+2026-03-23 18:16:24,648 - INFO -     Row: 'Saturday
+Open 24 hours'
+2026-03-23 18:16:24,654 - INFO -     ✓ Saturday: Open 24 hours
+2026-03-23 18:16:24,657 - INFO -     Row: 'Sunday
+Open 24 hours'
+2026-03-23 18:16:24,663 - INFO -     ✓ Sunday: Open 24 hours
+2026-03-23 18:16:24,663 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 18:16:24,663 - INFO - Extracting About section...
+2026-03-23 18:16:24,668 - INFO -   Found About tab
+2026-03-23 18:16:27,711 - INFO -   Clicked About tab
+2026-03-23 18:16:28,827 - INFO -   ✓ Total features extracted: 2
+2026-03-23 18:16:31,204 - INFO - Extracting all photos...
+2026-03-23 18:16:34,287 - INFO -   Opened photo gallery
+2026-03-23 18:16:34,312 - INFO -     Found 2 photos...
+2026-03-23 18:16:37,922 - INFO -     Found 9 photos...
+2026-03-23 18:16:41,579 - INFO -     Found 19 photos...
+2026-03-23 18:16:45,133 - INFO -     Found 29 photos...
+2026-03-23 18:16:48,684 - INFO -     Found 39 photos...
+2026-03-23 18:16:55,780 - INFO -     Found 58 photos...
+2026-03-23 18:16:59,332 - INFO -     Found 68 photos...
+2026-03-23 18:17:02,882 - INFO -     Found 78 photos...
+2026-03-23 18:17:06,448 - INFO -     Found 88 photos...
+2026-03-23 18:17:10,180 - INFO -   ✓ Found 97 photo URLs (stored, not downloaded)
+2026-03-23 18:17:12,543 - INFO - Extracting reviews...
+2026-03-23 18:17:15,648 - INFO -   Clicked Reviews tab
+2026-03-23 18:17:20,795 - INFO -   Found 20 review elements
+2026-03-23 18:17:22,058 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 18:17:22,058 - INFO - Extracting social media...
+2026-03-23 18:17:22,070 - INFO -   Written to new/: sachin-gupta-photography-films.json
+2026-03-23 18:17:22,073 - INFO - Added: Sachin Gupta Photography & Films
+2026-03-23 18:17:24,073 - INFO - 
+
+######################################################################
+2026-03-23 18:17:24,073 - INFO - # BUSINESS 87/119
+2026-03-23 18:17:24,073 - INFO - ######################################################################
+2026-03-23 18:17:24,073 - INFO - 
+======================================================================
+2026-03-23 18:17:24,073 - INFO - SCRAPING: https://www.google.com/maps/place/Rachna+%26+Niranjan+Photography/data=!4m7!3m6!...
+2026-03-23 18:17:24,073 - INFO - ======================================================================
+2026-03-23 18:17:28,471 - INFO - Extracting basic info...
+2026-03-23 18:17:28,510 - INFO -   Name: Rachna & Niranjan Photography
+2026-03-23 18:17:28,529 - INFO -   Rating: 5.0
+2026-03-23 18:17:28,536 - INFO -   Total Reviews: 25
+2026-03-23 18:17:28,543 - INFO - Skipping - has website: http://www.rachnaniranjan.com/
+2026-03-23 18:17:30,553 - INFO - 
+
+######################################################################
+2026-03-23 18:17:30,554 - INFO - # BUSINESS 88/119
+2026-03-23 18:17:30,554 - INFO - ######################################################################
+2026-03-23 18:17:30,554 - INFO - 
+======================================================================
+2026-03-23 18:17:30,554 - INFO - SCRAPING: https://www.google.com/maps/place/MAHESH+KALE+PHOTOGRAPHY+%26+VIDEOGRAPHY/data=!...
+2026-03-23 18:17:30,554 - INFO - ======================================================================
+2026-03-23 18:17:34,946 - INFO - Extracting basic info...
+2026-03-23 18:17:34,980 - INFO -   Name: MAHESH KALE PHOTOGRAPHY & VIDEOGRAPHY
+2026-03-23 18:17:34,997 - INFO -   Rating: 5.0
+2026-03-23 18:17:35,002 - INFO -   Total Reviews: 55
+2026-03-23 18:17:35,013 - INFO -   Address: shop no 3, B] ,BUCHADE HEIGHTS, Hinjawadi - Kasars...
+2026-03-23 18:17:35,019 - INFO -   Phone: 095799 14264
+2026-03-23 18:17:35,026 - INFO - Extracting hours...
+2026-03-23 18:17:36,084 - INFO -   Using element directly: '· Closes 10 pm'
+2026-03-23 18:17:36,088 - INFO -   Hours element text: '· Closes 10 pm'
+2026-03-23 18:17:36,088 - INFO -   Clicking to expand hours...
+2026-03-23 18:17:36,094 - INFO -   Clicked via JS
+2026-03-23 18:17:38,595 - INFO -   Looking for hours table...
+2026-03-23 18:17:38,611 - INFO -   Found a table element
+2026-03-23 18:17:38,611 - INFO -   Parsing hours table...
+2026-03-23 18:17:38,620 - INFO -   Found 7 rows
+2026-03-23 18:17:38,630 - INFO -     Row: 'Monday
+8 am–10 pm'
+2026-03-23 18:17:38,642 - INFO -     ✓ Monday: 8 am–10 pm
+2026-03-23 18:17:38,646 - INFO -     Row: 'Tuesday
+8 am–10 pm'
+2026-03-23 18:17:38,653 - INFO -     ✓ Tuesday: 8 am–10 pm
+2026-03-23 18:17:38,658 - INFO -     Row: 'Wednesday
+8 am–10 pm'
+2026-03-23 18:17:38,665 - INFO -     ✓ Wednesday: 8 am–10 pm
+2026-03-23 18:17:38,669 - INFO -     Row: 'Thursday
+8 am–10 pm'
+2026-03-23 18:17:38,676 - INFO -     ✓ Thursday: 8 am–10 pm
+2026-03-23 18:17:38,680 - INFO -     Row: 'Friday
+(Rama Navami)
+8 am–10 pm
+Hours might differ'
+2026-03-23 18:17:38,686 - INFO -     ✓ Friday: 8 am–10 pm
+Hours might differ
+2026-03-23 18:17:38,690 - INFO -     Row: 'Saturday
+8 am–10 pm'
+2026-03-23 18:17:38,696 - INFO -     ✓ Saturday: 8 am–10 pm
+2026-03-23 18:17:38,700 - INFO -     Row: 'Sunday
+8 am–10 pm'
+2026-03-23 18:17:38,707 - INFO -     ✓ Sunday: 8 am–10 pm
+2026-03-23 18:17:38,707 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 18:17:38,707 - INFO - Extracting About section...
+2026-03-23 18:17:38,711 - INFO -   Found About tab
+2026-03-23 18:17:41,757 - INFO -   Clicked About tab
+2026-03-23 18:17:42,901 - INFO -   ✓ Total features extracted: 3
+2026-03-23 18:17:45,392 - INFO - Extracting all photos...
+2026-03-23 18:17:48,462 - INFO -   Opened photo gallery
+2026-03-23 18:17:48,487 - INFO -     Found 2 photos...
+2026-03-23 18:17:52,191 - INFO -     Found 9 photos...
+2026-03-23 18:17:56,513 - INFO -   ✓ Found 15 photo URLs (stored, not downloaded)
+2026-03-23 18:17:58,717 - INFO - Extracting reviews...
+2026-03-23 18:18:01,813 - INFO -   Clicked Reviews tab
+2026-03-23 18:18:06,930 - INFO -   Found 20 review elements
+2026-03-23 18:18:08,202 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 18:18:08,202 - INFO - Extracting social media...
+2026-03-23 18:18:08,214 - INFO -   Written to new/: mahesh-kale-photography-videography.json
+2026-03-23 18:18:08,217 - INFO - Added: MAHESH KALE PHOTOGRAPHY & VIDEOGRAPHY
+2026-03-23 18:18:10,221 - INFO - 
+
+######################################################################
+2026-03-23 18:18:10,222 - INFO - # BUSINESS 89/119
+2026-03-23 18:18:10,222 - INFO - ######################################################################
+2026-03-23 18:18:10,222 - INFO - 
+======================================================================
+2026-03-23 18:18:10,222 - INFO - SCRAPING: https://www.google.com/maps/place/Kaiwalya+Photos/data=!4m7!3m6!1s0x3bc2bf1bb0c2...
+2026-03-23 18:18:10,222 - INFO - ======================================================================
+2026-03-23 18:18:14,630 - INFO - Extracting basic info...
+2026-03-23 18:18:14,668 - INFO -   Name: Kaiwalya Photos
+2026-03-23 18:18:14,768 - INFO -   Rating: 4.9
+2026-03-23 18:18:14,775 - INFO -   Total Reviews: 27
+2026-03-23 18:18:14,781 - INFO - Skipping - has website: http://www.kaiwalyaphotos.com/
+2026-03-23 18:18:16,791 - INFO - 
+
+######################################################################
+2026-03-23 18:18:16,792 - INFO - # BUSINESS 90/119
+2026-03-23 18:18:16,792 - INFO - ######################################################################
+2026-03-23 18:18:16,792 - INFO - 
+======================================================================
+2026-03-23 18:18:16,792 - INFO - SCRAPING: https://www.google.com/maps/place/Rajpal+Productions/data=!4m7!3m6!1s0x3bc2c125f...
+2026-03-23 18:18:16,792 - INFO - ======================================================================
+2026-03-23 18:18:21,211 - INFO - Extracting basic info...
+2026-03-23 18:18:21,234 - INFO -   Name: Rajpal Productions
+2026-03-23 18:18:21,249 - INFO -   Rating: 4.9
+2026-03-23 18:18:21,254 - INFO -   Total Reviews: 39
+2026-03-23 18:18:21,260 - INFO - Skipping - has website: https://rajpalproductions.com/
+2026-03-23 18:18:23,270 - INFO - 
+
+######################################################################
+2026-03-23 18:18:23,270 - INFO - # BUSINESS 91/119
+2026-03-23 18:18:23,270 - INFO - ######################################################################
+2026-03-23 18:18:23,270 - INFO - 
+======================================================================
+2026-03-23 18:18:23,270 - INFO - SCRAPING: https://www.google.com/maps/place/Komal+Photo+studio-+Top+Wedding+Photographer+i...
+2026-03-23 18:18:23,270 - INFO - ======================================================================
+2026-03-23 18:18:27,672 - INFO - Extracting basic info...
+2026-03-23 18:18:27,704 - INFO -   Name: Komal Photo studio- Top Wedding Photographer in Pune
+2026-03-23 18:18:27,720 - INFO -   Rating: 4.8
+2026-03-23 18:18:27,726 - INFO -   Total Reviews: 600
+2026-03-23 18:18:27,736 - INFO -   Address: Sr.no.168,near yash Hospital,Keshv chowk, Malwadi,...
+2026-03-23 18:18:27,742 - INFO -   Phone: 099223 21014
+2026-03-23 18:18:27,749 - INFO - Extracting hours...
+2026-03-23 18:18:28,806 - INFO -   Using element directly: '· Closes 9:45 pm'
+2026-03-23 18:18:28,810 - INFO -   Hours element text: '· Closes 9:45 pm'
+2026-03-23 18:18:28,810 - INFO -   Clicking to expand hours...
+2026-03-23 18:18:28,816 - INFO -   Clicked via JS
+2026-03-23 18:18:31,326 - INFO -   Looking for hours table...
+2026-03-23 18:18:31,343 - INFO -   Found a table element
+2026-03-23 18:18:31,343 - INFO -   Parsing hours table...
+2026-03-23 18:18:31,354 - INFO -   Found 7 rows
+2026-03-23 18:18:31,361 - INFO -     Row: 'Monday
+9:15 am–9:45 pm'
+2026-03-23 18:18:31,373 - INFO -     ✓ Monday: 9:15 am–9:45 pm
+2026-03-23 18:18:31,378 - INFO -     Row: 'Tuesday
+9:15 am–2 pm
+2:10–9:45 pm'
+2026-03-23 18:18:31,385 - INFO -     ✓ Tuesday: 9:15 am–2 pm
+2:10–9:45 pm
+2026-03-23 18:18:31,391 - INFO -     Row: 'Wednesday
+9:15 am–2 pm
+2:10–9:45 pm'
+2026-03-23 18:18:31,397 - INFO -     ✓ Wednesday: 9:15 am–2 pm
+2:10–9:45 pm
+2026-03-23 18:18:31,401 - INFO -     Row: 'Thursday
+9:15 am–2 pm
+2:10–9:45 pm'
+2026-03-23 18:18:31,408 - INFO -     ✓ Thursday: 9:15 am–2 pm
+2:10–9:45 pm
+2026-03-23 18:18:31,411 - INFO -     Row: 'Friday
+(Rama Navami)
+9:15 am–2 pm
+2:10–9:45 pm
+Hours might differ'
+2026-03-23 18:18:31,417 - INFO -     ✓ Friday: 9:15 am–2 pm
+2:10–9:45 pm
+Hours might differ
+2026-03-23 18:18:31,421 - INFO -     Row: 'Saturday
+9:15 am–2 pm
+2:10–9:45 pm'
+2026-03-23 18:18:31,427 - INFO -     ✓ Saturday: 9:15 am–2 pm
+2:10–9:45 pm
+2026-03-23 18:18:31,431 - INFO -     Row: 'Sunday
+9:15 am–2 pm
+2:10–9:45 pm'
+2026-03-23 18:18:31,437 - INFO -     ✓ Sunday: 9:15 am–2 pm
+2:10–9:45 pm
+2026-03-23 18:18:31,437 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 18:18:31,437 - INFO - Extracting About section...
+2026-03-23 18:18:31,441 - INFO -   Found About tab
+2026-03-23 18:18:34,480 - INFO -   Clicked About tab
+2026-03-23 18:18:35,583 - INFO -   ✓ Total features extracted: 1
+2026-03-23 18:18:37,972 - INFO - Extracting all photos...
+2026-03-23 18:18:41,042 - INFO -   Opened photo gallery
+2026-03-23 18:18:41,069 - INFO -     Found 2 photos...
+2026-03-23 18:18:44,711 - INFO -     Found 11 photos...
+2026-03-23 18:18:48,257 - INFO -     Found 21 photos...
+2026-03-23 18:18:51,775 - INFO -     Found 31 photos...
+2026-03-23 18:18:55,485 - INFO -     Found 41 photos...
+2026-03-23 18:18:59,110 - INFO -     Found 50 photos...
+2026-03-23 18:19:02,702 - INFO -     Found 59 photos...
+2026-03-23 18:19:05,956 - INFO -   ✓ Found 62 photo URLs (stored, not downloaded)
+2026-03-23 18:19:08,343 - INFO - Extracting reviews...
+2026-03-23 18:19:11,477 - INFO -   Clicked Reviews tab
+2026-03-23 18:19:16,623 - INFO -   Found 20 review elements
+2026-03-23 18:19:18,044 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 18:19:18,044 - INFO - Extracting social media...
+2026-03-23 18:19:18,055 - INFO -   Written to new/: komal-photo-studio-top-wedding-photographer-in-pune.json
+2026-03-23 18:19:18,059 - INFO - Added: Komal Photo studio- Top Wedding Photographer in Pune
+2026-03-23 18:19:20,069 - INFO - 
+
+######################################################################
+2026-03-23 18:19:20,070 - INFO - # BUSINESS 92/119
+2026-03-23 18:19:20,070 - INFO - ######################################################################
+2026-03-23 18:19:20,070 - INFO - 
+======================================================================
+2026-03-23 18:19:20,070 - INFO - SCRAPING: https://www.google.com/maps/place/wedshot+india+wedding+album+design+pune/data=!...
+2026-03-23 18:19:20,070 - INFO - ======================================================================
+2026-03-23 18:19:24,556 - INFO - Extracting basic info...
+2026-03-23 18:19:24,591 - INFO -   Name: wedshot india wedding album design pune
+2026-03-23 18:19:24,609 - INFO -   Rating: 4.6
+2026-03-23 18:19:24,616 - INFO -   Total Reviews: 42
+2026-03-23 18:19:24,688 - INFO - Skipping - has website: https://www.instagram.com/album_designing/
+2026-03-23 18:19:26,691 - INFO - 
+
+######################################################################
+2026-03-23 18:19:26,691 - INFO - # BUSINESS 93/119
+2026-03-23 18:19:26,692 - INFO - ######################################################################
+2026-03-23 18:19:26,692 - INFO - 
+======================================================================
+2026-03-23 18:19:26,692 - INFO - SCRAPING: https://www.google.com/maps/place/Arnav+photography+%26+videography+services/dat...
+2026-03-23 18:19:26,692 - INFO - ======================================================================
+2026-03-23 18:19:31,074 - INFO - Extracting basic info...
+2026-03-23 18:19:31,107 - INFO -   Name: Arnav photography & videography services
+2026-03-23 18:19:31,123 - INFO -   Rating: 4.9
+2026-03-23 18:19:31,129 - INFO -   Total Reviews: 38
+2026-03-23 18:19:31,139 - INFO -   Address: 1028, Mahatma Gandhi Society, Navjeevan Society, P...
+2026-03-23 18:19:31,146 - INFO -   Phone: 075586 58500
+2026-03-23 18:19:31,152 - INFO - Extracting hours...
+2026-03-23 18:19:32,194 - INFO -   Using element directly: 'Open 24 hours'
+2026-03-23 18:19:32,198 - INFO -   Hours element text: 'Open 24 hours'
+2026-03-23 18:19:32,198 - INFO -   Clicking to expand hours...
+2026-03-23 18:19:32,204 - INFO -   Clicked via JS
+2026-03-23 18:19:34,714 - INFO -   Looking for hours table...
+2026-03-23 18:19:34,730 - INFO -   Found a table element
+2026-03-23 18:19:34,731 - INFO -   Parsing hours table...
+2026-03-23 18:19:34,742 - INFO -   Found 7 rows
+2026-03-23 18:19:34,748 - INFO -     Row: 'Monday
+Open 24 hours'
+2026-03-23 18:19:34,760 - INFO -     ✓ Monday: Open 24 hours
+2026-03-23 18:19:34,764 - INFO -     Row: 'Tuesday
+Open 24 hours'
+2026-03-23 18:19:34,771 - INFO -     ✓ Tuesday: Open 24 hours
+2026-03-23 18:19:34,776 - INFO -     Row: 'Wednesday
+Open 24 hours'
+2026-03-23 18:19:34,782 - INFO -     ✓ Wednesday: Open 24 hours
+2026-03-23 18:19:34,786 - INFO -     Row: 'Thursday
+Open 24 hours'
+2026-03-23 18:19:34,795 - INFO -     ✓ Thursday: Open 24 hours
+2026-03-23 18:19:34,799 - INFO -     Row: 'Friday
+(Rama Navami)
+Open 24 hours
+Hours might differ'
+2026-03-23 18:19:34,805 - INFO -     ✓ Friday: Open 24 hours
+Hours might differ
+2026-03-23 18:19:34,809 - INFO -     Row: 'Saturday
+Open 24 hours'
+2026-03-23 18:19:34,815 - INFO -     ✓ Saturday: Open 24 hours
+2026-03-23 18:19:34,818 - INFO -     Row: 'Sunday
+Open 24 hours'
+2026-03-23 18:19:34,825 - INFO -     ✓ Sunday: Open 24 hours
+2026-03-23 18:19:34,825 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 18:19:34,825 - INFO - Extracting About section...
+2026-03-23 18:19:34,843 - INFO -   ✓ Total features extracted: 0
+2026-03-23 18:19:37,210 - INFO - Extracting all photos...
+2026-03-23 18:19:40,291 - INFO -   Opened photo gallery
+2026-03-23 18:19:40,317 - INFO -     Found 2 photos...
+2026-03-23 18:19:43,907 - INFO -     Found 11 photos...
+2026-03-23 18:19:47,482 - INFO -     Found 21 photos...
+2026-03-23 18:19:49,653 - INFO -   ✓ Found 22 photo URLs (stored, not downloaded)
+2026-03-23 18:19:52,046 - INFO - Extracting reviews...
+2026-03-23 18:19:55,122 - INFO -   Clicked Reviews tab
+2026-03-23 18:20:00,247 - INFO -   Found 20 review elements
+2026-03-23 18:20:00,751 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 18:20:00,751 - INFO - Extracting social media...
+2026-03-23 18:20:00,762 - INFO -   Written to new/: arnav-photography-videography-services.json
+2026-03-23 18:20:00,765 - INFO - Added: Arnav photography & videography services
+2026-03-23 18:20:02,776 - INFO - 
+
+######################################################################
+2026-03-23 18:20:02,776 - INFO - # BUSINESS 94/119
+2026-03-23 18:20:02,776 - INFO - ######################################################################
+2026-03-23 18:20:02,777 - INFO - 
+======================================================================
+2026-03-23 18:20:02,777 - INFO - SCRAPING: https://www.google.com/maps/place/The+untold+memories+photography/data=!4m7!3m6!...
+2026-03-23 18:20:02,777 - INFO - ======================================================================
+2026-03-23 18:20:07,163 - INFO - Extracting basic info...
+2026-03-23 18:20:07,185 - INFO -   Name: The untold memories photography
+2026-03-23 18:20:07,200 - INFO -   Rating: 5.0
+2026-03-23 18:20:07,207 - INFO -   Total Reviews: 29
+2026-03-23 18:20:07,213 - INFO - Skipping - has website: https://instagram.com/theuntoldmemories24?igshid=MzRlODBiNWFlZA==
+2026-03-23 18:20:09,223 - INFO - 
+
+######################################################################
+2026-03-23 18:20:09,224 - INFO - # BUSINESS 95/119
+2026-03-23 18:20:09,224 - INFO - ######################################################################
+2026-03-23 18:20:09,224 - INFO - 
+======================================================================
+2026-03-23 18:20:09,224 - INFO - SCRAPING: https://www.google.com/maps/place/OM+%26+ADITYA+SUTAR+PHOTOGRAPHY~FILMS/data=!4m...
+2026-03-23 18:20:09,224 - INFO - ======================================================================
+2026-03-23 18:20:13,632 - INFO - Extracting basic info...
+2026-03-23 18:20:13,668 - INFO -   Name: OM & ADITYA SUTAR PHOTOGRAPHY~FILMS
+2026-03-23 18:20:13,685 - INFO -   Rating: 4.8
+2026-03-23 18:20:13,691 - INFO -   Total Reviews: 37
+2026-03-23 18:20:13,697 - INFO - Skipping - has website: https://www.instagram.com/oa_sutar_photography_2122?igsh=aDR3azFubG1jaWE3
+2026-03-23 18:20:15,698 - INFO - 
+
+######################################################################
+2026-03-23 18:20:15,699 - INFO - # BUSINESS 96/119
+2026-03-23 18:20:15,699 - INFO - ######################################################################
+2026-03-23 18:20:15,699 - INFO - 
+======================================================================
+2026-03-23 18:20:15,699 - INFO - SCRAPING: https://www.google.com/maps/place/Smart+Video+Pune/data=!4m7!3m6!1s0x3bc2c1ed039...
+2026-03-23 18:20:15,699 - INFO - ======================================================================
+2026-03-23 18:20:20,105 - INFO - Extracting basic info...
+2026-03-23 18:20:20,138 - INFO -   Name: Smart Video Pune
+2026-03-23 18:20:20,156 - INFO -   Rating: 5.0
+2026-03-23 18:20:20,162 - INFO -   Total Reviews: 11
+2026-03-23 18:20:20,173 - INFO -   Address: 404/71, Atur Terraces Rd, Rasta Peth, Pune, Mahara...
+2026-03-23 18:20:20,179 - INFO -   Phone: 087880 02710
+2026-03-23 18:20:20,186 - INFO - Extracting hours...
+2026-03-23 18:20:21,244 - INFO -   Using element directly: 'Open 24 hours'
+2026-03-23 18:20:21,249 - INFO -   Hours element text: 'Open 24 hours'
+2026-03-23 18:20:21,249 - INFO -   Clicking to expand hours...
+2026-03-23 18:20:21,255 - INFO -   Clicked via JS
+2026-03-23 18:20:23,758 - INFO -   Looking for hours table...
+2026-03-23 18:20:23,780 - INFO -   Found a table element
+2026-03-23 18:20:23,780 - INFO -   Parsing hours table...
+2026-03-23 18:20:23,790 - INFO -   Found 7 rows
+2026-03-23 18:20:23,797 - INFO -     Row: 'Monday
+Open 24 hours'
+2026-03-23 18:20:23,808 - INFO -     ✓ Monday: Open 24 hours
+2026-03-23 18:20:23,813 - INFO -     Row: 'Tuesday
+Open 24 hours'
+2026-03-23 18:20:23,819 - INFO -     ✓ Tuesday: Open 24 hours
+2026-03-23 18:20:23,824 - INFO -     Row: 'Wednesday
+Open 24 hours'
+2026-03-23 18:20:23,831 - INFO -     ✓ Wednesday: Open 24 hours
+2026-03-23 18:20:23,834 - INFO -     Row: 'Thursday
+Open 24 hours'
+2026-03-23 18:20:23,841 - INFO -     ✓ Thursday: Open 24 hours
+2026-03-23 18:20:23,846 - INFO -     Row: 'Friday
+(Rama Navami)
+Open 24 hours
+Hours might differ'
+2026-03-23 18:20:23,853 - INFO -     ✓ Friday: Open 24 hours
+Hours might differ
+2026-03-23 18:20:23,858 - INFO -     Row: 'Saturday
+Open 24 hours'
+2026-03-23 18:20:23,864 - INFO -     ✓ Saturday: Open 24 hours
+2026-03-23 18:20:23,867 - INFO -     Row: 'Sunday
+Open 24 hours'
+2026-03-23 18:20:23,874 - INFO -     ✓ Sunday: Open 24 hours
+2026-03-23 18:20:23,874 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 18:20:23,874 - INFO - Extracting About section...
+2026-03-23 18:20:23,879 - INFO -   Found About tab
+2026-03-23 18:20:26,941 - INFO -   Clicked About tab
+2026-03-23 18:20:28,066 - INFO -   ✓ Total features extracted: 1
+2026-03-23 18:20:30,461 - INFO - Extracting all photos...
+2026-03-23 18:20:33,555 - INFO -   Opened photo gallery
+2026-03-23 18:20:33,580 - INFO -     Found 2 photos...
+2026-03-23 18:20:37,131 - INFO -     Found 11 photos...
+2026-03-23 18:20:40,675 - INFO -     Found 20 photos...
+2026-03-23 18:20:42,885 - INFO -   ✓ Found 21 photo URLs (stored, not downloaded)
+2026-03-23 18:20:45,378 - INFO - Extracting reviews...
+2026-03-23 18:20:48,462 - INFO -   Clicked Reviews tab
+2026-03-23 18:20:53,606 - INFO -   Found 20 review elements
+2026-03-23 18:20:54,889 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 18:20:54,889 - INFO - Extracting social media...
+2026-03-23 18:20:54,899 - INFO -   Written to new/: smart-video-pune.json
+2026-03-23 18:20:54,903 - INFO - Added: Smart Video Pune
+2026-03-23 18:20:56,913 - INFO - 
+
+######################################################################
+2026-03-23 18:20:56,914 - INFO - # BUSINESS 97/119
+2026-03-23 18:20:56,915 - INFO - ######################################################################
+2026-03-23 18:20:56,915 - INFO - 
+======================================================================
+2026-03-23 18:20:56,915 - INFO - SCRAPING: https://www.google.com/maps/place/Wedding+Glints+-+Photography+%26+Films/data=!4...
+2026-03-23 18:20:56,915 - INFO - ======================================================================
+2026-03-23 18:21:01,334 - INFO - Extracting basic info...
+2026-03-23 18:21:01,371 - INFO -   Name: Wedding Glints - Photography & Films
+2026-03-23 18:21:01,388 - INFO -   Rating: 4.8
+2026-03-23 18:21:01,394 - INFO -   Total Reviews: 40
+2026-03-23 18:21:01,400 - INFO - Skipping - has website: http://weddinglints.com/
+2026-03-23 18:21:03,410 - INFO - 
+
+######################################################################
+2026-03-23 18:21:03,410 - INFO - # BUSINESS 98/119
+2026-03-23 18:21:03,411 - INFO - ######################################################################
+2026-03-23 18:21:03,411 - INFO - 
+======================================================================
+2026-03-23 18:21:03,411 - INFO - SCRAPING: https://www.google.com/maps/place/Ashish+Gurbani+Studio/data=!4m7!3m6!1s0x3bc2c1...
+2026-03-23 18:21:03,411 - INFO - ======================================================================
+2026-03-23 18:21:07,826 - INFO - Extracting basic info...
+2026-03-23 18:21:07,865 - INFO -   Name: Ashish Gurbani Studio
+2026-03-23 18:21:07,953 - INFO -   Rating: 4.9
+2026-03-23 18:21:07,958 - INFO -   Total Reviews: 159
+2026-03-23 18:21:07,963 - INFO - Skipping - has website: http://www.ashishgurbani.com/
+2026-03-23 18:21:09,973 - INFO - 
+
+######################################################################
+2026-03-23 18:21:09,974 - INFO - # BUSINESS 99/119
+2026-03-23 18:21:09,974 - INFO - ######################################################################
+2026-03-23 18:21:09,974 - INFO - 
+======================================================================
+2026-03-23 18:21:09,974 - INFO - SCRAPING: https://www.google.com/maps/place/Abhiram+Tilak-Photography/data=!4m7!3m6!1s0x3b...
+2026-03-23 18:21:09,974 - INFO - ======================================================================
+2026-03-23 18:21:14,358 - INFO - Extracting basic info...
+2026-03-23 18:21:14,394 - INFO -   Name: Abhiram Tilak-Photography
+2026-03-23 18:21:14,411 - INFO -   Rating: 4.3
+2026-03-23 18:21:14,416 - INFO -   Total Reviews: 23
+2026-03-23 18:21:14,421 - INFO - Skipping - has website: http://www.studiopanorama.com/
+2026-03-23 18:21:16,427 - INFO - 
+
+######################################################################
+2026-03-23 18:21:16,427 - INFO - # BUSINESS 100/119
+2026-03-23 18:21:16,427 - INFO - ######################################################################
+2026-03-23 18:21:16,427 - INFO - 
+======================================================================
+2026-03-23 18:21:16,427 - INFO - SCRAPING: https://www.google.com/maps/place/MH12Weddings+-+Best+Wedding+Photographer+in+Pu...
+2026-03-23 18:21:16,427 - INFO - ======================================================================
+2026-03-23 18:21:20,913 - INFO - Extracting basic info...
+2026-03-23 18:21:20,942 - INFO -   Name: MH12Weddings - Best Wedding Photographer in Pune / Pre Wedding Photographer in Pune / Pre Wedding Photoshoot Pune
+2026-03-23 18:21:20,957 - INFO -   Rating: 5.0
+2026-03-23 18:21:21,023 - INFO -   Total Reviews: 349
+2026-03-23 18:21:21,052 - INFO - Skipping - has website: https://www.mh12weddings.com/
+2026-03-23 18:21:23,063 - INFO - 
+
+######################################################################
+2026-03-23 18:21:23,063 - INFO - # BUSINESS 101/119
+2026-03-23 18:21:23,063 - INFO - ######################################################################
+2026-03-23 18:21:23,063 - INFO - 
+======================================================================
+2026-03-23 18:21:23,063 - INFO - SCRAPING: https://www.google.com/maps/place/RAW+Megapixel+Solutions+Photography+%26+Videog...
+2026-03-23 18:21:23,063 - INFO - ======================================================================
+2026-03-23 18:21:27,459 - INFO - Extracting basic info...
+2026-03-23 18:21:27,495 - INFO -   Name: RAW Megapixel Solutions Photography & Videography service
+2026-03-23 18:21:27,511 - INFO -   Rating: 4.9
+2026-03-23 18:21:27,516 - INFO -   Total Reviews: 94
+2026-03-23 18:21:27,521 - INFO - Skipping - has website: https://www.cchaii.com/
+2026-03-23 18:21:29,531 - INFO - 
+
+######################################################################
+2026-03-23 18:21:29,532 - INFO - # BUSINESS 102/119
+2026-03-23 18:21:29,532 - INFO - ######################################################################
+2026-03-23 18:21:29,532 - INFO - 
+======================================================================
+2026-03-23 18:21:29,532 - INFO - SCRAPING: https://www.google.com/maps/place/Ravi+Jadhav+Productions/data=!4m7!3m6!1s0x3bc2...
+2026-03-23 18:21:29,532 - INFO - ======================================================================
+2026-03-23 18:21:33,928 - INFO - Extracting basic info...
+2026-03-23 18:21:33,961 - INFO -   Name: Ravi Jadhav Productions
+2026-03-23 18:21:33,977 - INFO -   Rating: 4.9
+2026-03-23 18:21:33,983 - INFO -   Total Reviews: 34
+2026-03-23 18:21:33,988 - INFO - Skipping - has website: https://instagram.com/ravi_jadhav_productions?utm_medium=copy_link
+2026-03-23 18:21:35,999 - INFO - 
+
+######################################################################
+2026-03-23 18:21:35,999 - INFO - # BUSINESS 103/119
+2026-03-23 18:21:35,999 - INFO - ######################################################################
+2026-03-23 18:21:35,999 - INFO - 
+======================================================================
+2026-03-23 18:21:35,999 - INFO - SCRAPING: https://www.google.com/maps/place/Niraj+Suryawanshi+Photo+And+Films/data=!4m7!3m...
+2026-03-23 18:21:36,000 - INFO - ======================================================================
+2026-03-23 18:21:40,738 - INFO - Extracting basic info...
+2026-03-23 18:21:40,779 - INFO -   Name: Niraj Suryawanshi Photo And Films
+2026-03-23 18:21:40,795 - INFO -   Rating: 4.5
+2026-03-23 18:21:40,801 - INFO -   Total Reviews: 45
+2026-03-23 18:21:40,806 - INFO - Skipping - has website: http://www.punewedding.in/
+2026-03-23 18:21:42,817 - INFO - 
+
+######################################################################
+2026-03-23 18:21:42,817 - INFO - # BUSINESS 104/119
+2026-03-23 18:21:42,817 - INFO - ######################################################################
+2026-03-23 18:21:42,817 - INFO - 
+======================================================================
+2026-03-23 18:21:42,817 - INFO - SCRAPING: https://www.google.com/maps/place/Panganti+Visual+Studio/data=!4m7!3m6!1s0x3bc29...
+2026-03-23 18:21:42,817 - INFO - ======================================================================
+2026-03-23 18:21:47,339 - INFO - Extracting basic info...
+2026-03-23 18:21:47,364 - INFO -   Name: Panganti Visual Studio
+2026-03-23 18:21:47,378 - INFO -   Rating: 4.9
+2026-03-23 18:21:47,383 - INFO -   Total Reviews: 60
+2026-03-23 18:21:47,388 - INFO - Skipping - has website: https://www.pangantivisualstudio.com/
+2026-03-23 18:21:49,398 - INFO - 
+
+######################################################################
+2026-03-23 18:21:49,398 - INFO - # BUSINESS 105/119
+2026-03-23 18:21:49,399 - INFO - ######################################################################
+2026-03-23 18:21:49,399 - INFO - 
+======================================================================
+2026-03-23 18:21:49,399 - INFO - SCRAPING: https://www.google.com/maps/place/Rajendra+karmarkar+photography/data=!4m7!3m6!1...
+2026-03-23 18:21:49,399 - INFO - ======================================================================
+2026-03-23 18:21:53,817 - INFO - Extracting basic info...
+2026-03-23 18:21:53,913 - INFO -   Name: Rajendra karmarkar photography
+2026-03-23 18:21:53,924 - INFO -   Rating: 4.9
+2026-03-23 18:21:53,928 - INFO -   Total Reviews: 18
+2026-03-23 18:21:53,932 - INFO - Skipping - has website: https://www.facebook.com/pg/R.dodiedo
+2026-03-23 18:21:55,943 - INFO - 
+
+######################################################################
+2026-03-23 18:21:55,943 - INFO - # BUSINESS 106/119
+2026-03-23 18:21:55,943 - INFO - ######################################################################
+2026-03-23 18:21:55,943 - INFO - 
+======================================================================
+2026-03-23 18:21:55,943 - INFO - SCRAPING: https://www.google.com/maps/place/7+Iris+Studio+-+E+Commerce+Photography/data=!4...
+2026-03-23 18:21:55,944 - INFO - ======================================================================
+2026-03-23 18:22:00,470 - INFO - Extracting basic info...
+2026-03-23 18:22:00,504 - INFO -   Name: 7 Iris Studio - E Commerce Photography
+2026-03-23 18:22:00,521 - INFO -   Rating: 4.8
+2026-03-23 18:22:00,527 - INFO -   Total Reviews: 70
+2026-03-23 18:22:00,532 - INFO - Skipping - has website: https://7irisstudio.in/
+2026-03-23 18:22:02,542 - INFO - 
+
+######################################################################
+2026-03-23 18:22:02,543 - INFO - # BUSINESS 107/119
+2026-03-23 18:22:02,543 - INFO - ######################################################################
+2026-03-23 18:22:02,543 - INFO - 
+======================================================================
+2026-03-23 18:22:02,543 - INFO - SCRAPING: https://www.google.com/maps/place/DIGI6SENSE+STUDIO+%7C+WEDDING+PHOTOGRAPHER+%7C...
+2026-03-23 18:22:02,543 - INFO - ======================================================================
+2026-03-23 18:22:06,923 - INFO - Extracting basic info...
+2026-03-23 18:22:06,958 - INFO -   Name: DIGI6SENSE STUDIO | WEDDING PHOTOGRAPHER | EVENT PHOTOGRAPHER | NEAR PHOTO STUDIO
+2026-03-23 18:22:06,975 - INFO -   Rating: 5.0
+2026-03-23 18:22:06,986 - INFO -   Total Reviews: 173
+2026-03-23 18:22:06,991 - INFO - Skipping - has website: https://digi6sense.in/
+2026-03-23 18:22:09,002 - INFO - 
+
+######################################################################
+2026-03-23 18:22:09,002 - INFO - # BUSINESS 108/119
+2026-03-23 18:22:09,002 - INFO - ######################################################################
+2026-03-23 18:22:09,002 - INFO - 
+======================================================================
+2026-03-23 18:22:09,002 - INFO - SCRAPING: https://www.google.com/maps/place/Photizo+Studio/data=!4m7!3m6!1s0x3bc2bf2dc9930...
+2026-03-23 18:22:09,002 - INFO - ======================================================================
+2026-03-23 18:22:13,489 - INFO - Extracting basic info...
+2026-03-23 18:22:13,528 - INFO -   Name: Photizo Studio
+2026-03-23 18:22:13,544 - INFO -   Rating: 4.8
+2026-03-23 18:22:13,550 - INFO -   Total Reviews: 53
+2026-03-23 18:22:13,562 - INFO -   Address: 110/12, Ashirwad, Prabhat Road, Lane No. 14, Thora...
+2026-03-23 18:22:13,568 - INFO -   Phone: 097306 63228
+2026-03-23 18:22:13,575 - INFO - Extracting hours...
+2026-03-23 18:22:14,634 - INFO -   Using element directly: '· Closes 9 pm'
+2026-03-23 18:22:14,639 - INFO -   Hours element text: '· Closes 9 pm'
+2026-03-23 18:22:14,639 - INFO -   Clicking to expand hours...
+2026-03-23 18:22:14,645 - INFO -   Clicked via JS
+2026-03-23 18:22:17,155 - INFO -   Looking for hours table...
+2026-03-23 18:22:17,176 - INFO -   Found a table element
+2026-03-23 18:22:17,176 - INFO -   Parsing hours table...
+2026-03-23 18:22:17,186 - INFO -   Found 7 rows
+2026-03-23 18:22:17,193 - INFO -     Row: 'Monday
+10 am–9 pm'
+2026-03-23 18:22:17,205 - INFO -     ✓ Monday: 10 am–9 pm
+2026-03-23 18:22:17,210 - INFO -     Row: 'Tuesday
+10 am–9 pm'
+2026-03-23 18:22:17,217 - INFO -     ✓ Tuesday: 10 am–9 pm
+2026-03-23 18:22:17,221 - INFO -     Row: 'Wednesday
+10 am–9 pm'
+2026-03-23 18:22:17,229 - INFO -     ✓ Wednesday: 10 am–9 pm
+2026-03-23 18:22:17,233 - INFO -     Row: 'Thursday
+10 am–9 pm'
+2026-03-23 18:22:17,239 - INFO -     ✓ Thursday: 10 am–9 pm
+2026-03-23 18:22:17,247 - INFO -     Row: 'Friday
+(Rama Navami)
+10 am–9 pm
+Hours might differ'
+2026-03-23 18:22:17,318 - INFO -     ✓ Friday: 10 am–9 pm
+Hours might differ
+2026-03-23 18:22:17,322 - INFO -     Row: 'Saturday
+10 am–9 pm'
+2026-03-23 18:22:17,328 - INFO -     ✓ Saturday: 10 am–9 pm
+2026-03-23 18:22:17,332 - INFO -     Row: 'Sunday
+Closed'
+2026-03-23 18:22:17,338 - INFO -     ✓ Sunday: Closed
+2026-03-23 18:22:17,338 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 18:22:17,338 - INFO - Extracting About section...
+2026-03-23 18:22:17,355 - INFO -   ✓ Total features extracted: 0
+2026-03-23 18:22:19,727 - INFO - Extracting all photos...
+2026-03-23 18:22:22,799 - INFO -   Opened photo gallery
+2026-03-23 18:22:22,825 - INFO -     Found 2 photos...
+2026-03-23 18:22:26,490 - INFO -     Found 12 photos...
+2026-03-23 18:22:30,056 - INFO -     Found 22 photos...
+2026-03-23 18:22:33,694 - INFO -     Found 32 photos...
+2026-03-23 18:22:37,258 - INFO -     Found 42 photos...
+2026-03-23 18:22:40,824 - INFO -     Found 52 photos...
+2026-03-23 18:22:44,417 - INFO -     Found 62 photos...
+2026-03-23 18:22:47,978 - INFO -     Found 72 photos...
+2026-03-23 18:22:51,464 - INFO -     Found 81 photos...
+2026-03-23 18:22:55,047 - INFO -     Found 91 photos...
+2026-03-23 18:22:58,621 - INFO -   ✓ Found 99 photo URLs (stored, not downloaded)
+2026-03-23 18:23:01,132 - INFO - Extracting reviews...
+2026-03-23 18:23:04,239 - INFO -   Clicked Reviews tab
+2026-03-23 18:23:09,378 - INFO -   Found 20 review elements
+2026-03-23 18:23:12,038 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 18:23:12,039 - INFO - Extracting social media...
+2026-03-23 18:23:12,053 - INFO -   Written to new/: photizo-studio.json
+2026-03-23 18:23:12,057 - INFO - Added: Photizo Studio
+2026-03-23 18:23:14,060 - INFO - 
+
+######################################################################
+2026-03-23 18:23:14,060 - INFO - # BUSINESS 109/119
+2026-03-23 18:23:14,060 - INFO - ######################################################################
+2026-03-23 18:23:14,061 - INFO - 
+======================================================================
+2026-03-23 18:23:14,061 - INFO - SCRAPING: https://www.google.com/maps/place/Jitesh+Patil+Photography/data=!4m7!3m6!1s0x3bc...
+2026-03-23 18:23:14,061 - INFO - ======================================================================
+2026-03-23 18:23:18,496 - INFO - Extracting basic info...
+2026-03-23 18:23:18,536 - INFO -   Name: Jitesh Patil Photography
+2026-03-23 18:23:18,558 - INFO -   Rating: 5.0
+2026-03-23 18:23:18,565 - INFO -   Total Reviews: 45
+2026-03-23 18:23:18,572 - INFO - Skipping - has website: http://www.jiteshpatil.in/
+2026-03-23 18:23:20,576 - INFO - 
+
+######################################################################
+2026-03-23 18:23:20,576 - INFO - # BUSINESS 110/119
+2026-03-23 18:23:20,576 - INFO - ######################################################################
+2026-03-23 18:23:20,577 - INFO - 
+======================================================================
+2026-03-23 18:23:20,577 - INFO - SCRAPING: https://www.google.com/maps/place/BAASUS+Studio+Video/data=!4m7!3m6!1s0x3bc2bf69...
+2026-03-23 18:23:20,577 - INFO - ======================================================================
+2026-03-23 18:23:24,973 - INFO - Extracting basic info...
+2026-03-23 18:23:25,012 - INFO -   Name: BAASUS Studio Video
+2026-03-23 18:23:25,029 - INFO -   Rating: 4.5
+2026-03-23 18:23:25,034 - INFO -   Total Reviews: 76
+2026-03-23 18:23:25,045 - INFO -   Address: Sameer Apartment, 1St. floor, Flat No. 1, Sanghvi ...
+2026-03-23 18:23:25,052 - INFO -   Phone: 020 2589 0715
+2026-03-23 18:23:25,058 - INFO - Extracting hours...
+2026-03-23 18:23:26,107 - INFO -   Using element directly: '· Closes 8 pm'
+2026-03-23 18:23:26,117 - INFO -   Hours element text: '· Closes 8 pm'
+2026-03-23 18:23:26,117 - INFO -   Clicking to expand hours...
+2026-03-23 18:23:26,158 - INFO -   Clicked via JS
+2026-03-23 18:23:28,669 - INFO -   Looking for hours table...
+2026-03-23 18:23:28,686 - INFO -   Found a table element
+2026-03-23 18:23:28,687 - INFO -   Parsing hours table...
+2026-03-23 18:23:28,697 - INFO -   Found 7 rows
+2026-03-23 18:23:28,704 - INFO -     Row: 'Monday
+9 am–8 pm'
+2026-03-23 18:23:28,716 - INFO -     ✓ Monday: 9 am–8 pm
+2026-03-23 18:23:28,721 - INFO -     Row: 'Tuesday
+9 am–8 pm'
+2026-03-23 18:23:28,728 - INFO -     ✓ Tuesday: 9 am–8 pm
+2026-03-23 18:23:28,732 - INFO -     Row: 'Wednesday
+9 am–8 pm'
+2026-03-23 18:23:28,739 - INFO -     ✓ Wednesday: 9 am–8 pm
+2026-03-23 18:23:28,743 - INFO -     Row: 'Thursday
+9 am–8 pm'
+2026-03-23 18:23:28,749 - INFO -     ✓ Thursday: 9 am–8 pm
+2026-03-23 18:23:28,753 - INFO -     Row: 'Friday
+(Rama Navami)
+9 am–8 pm
+Hours might differ'
+2026-03-23 18:23:28,760 - INFO -     ✓ Friday: 9 am–8 pm
+Hours might differ
+2026-03-23 18:23:28,764 - INFO -     Row: 'Saturday
+9 am–8 pm'
+2026-03-23 18:23:28,770 - INFO -     ✓ Saturday: 9 am–8 pm
+2026-03-23 18:23:28,773 - INFO -     Row: 'Sunday
+Closed'
+2026-03-23 18:23:28,779 - INFO -     ✓ Sunday: Closed
+2026-03-23 18:23:28,779 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 18:23:28,779 - INFO - Extracting About section...
+2026-03-23 18:23:28,796 - INFO -   ✓ Total features extracted: 0
+2026-03-23 18:23:31,173 - INFO - Extracting all photos...
+2026-03-23 18:23:34,246 - INFO -   Opened photo gallery
+2026-03-23 18:23:34,272 - INFO -     Found 2 photos...
+2026-03-23 18:23:37,885 - INFO -     Found 12 photos...
+2026-03-23 18:23:42,643 - INFO -   ✓ Found 20 photo URLs (stored, not downloaded)
+2026-03-23 18:23:45,040 - INFO - Extracting reviews...
+2026-03-23 18:23:48,149 - INFO -   Clicked Reviews tab
+2026-03-23 18:23:53,303 - INFO -   Found 20 review elements
+2026-03-23 18:23:54,680 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 18:23:54,680 - INFO - Extracting social media...
+2026-03-23 18:23:54,693 - INFO -   Written to new/: baasus-studio-video.json
+2026-03-23 18:23:54,697 - INFO - Added: BAASUS Studio Video
+2026-03-23 18:23:56,707 - INFO - 
+
+######################################################################
+2026-03-23 18:23:56,708 - INFO - # BUSINESS 111/119
+2026-03-23 18:23:56,708 - INFO - ######################################################################
+2026-03-23 18:23:56,708 - INFO - 
+======================================================================
+2026-03-23 18:23:56,708 - INFO - SCRAPING: https://www.google.com/maps/place/GD+Photography/data=!4m7!3m6!1s0x3bc2bfbfd77b5...
+2026-03-23 18:23:56,708 - INFO - ======================================================================
+2026-03-23 18:24:01,220 - INFO - Extracting basic info...
+2026-03-23 18:24:01,259 - INFO -   Name: GD Photography
+2026-03-23 18:24:01,279 - INFO -   Rating: 4.9
+2026-03-23 18:24:01,286 - INFO -   Total Reviews: 188
+2026-03-23 18:24:01,294 - INFO - Skipping - has website: http://gdphotographypune.com/
+2026-03-23 18:24:03,294 - INFO - 
+
+######################################################################
+2026-03-23 18:24:03,295 - INFO - # BUSINESS 112/119
+2026-03-23 18:24:03,295 - INFO - ######################################################################
+2026-03-23 18:24:03,295 - INFO - 
+======================================================================
+2026-03-23 18:24:03,295 - INFO - SCRAPING: https://www.google.com/maps/place/Nestled+Photography+%2F+Videography,+Editing+%...
+2026-03-23 18:24:03,295 - INFO - ======================================================================
+2026-03-23 18:24:07,698 - INFO - Extracting basic info...
+2026-03-23 18:24:07,719 - INFO -   Name: Nestled Photography / Videography, Editing & All Production Services in Pune, Baner
+2026-03-23 18:24:07,735 - INFO -   Rating: 5.0
+2026-03-23 18:24:07,742 - INFO -   Total Reviews: 44
+2026-03-23 18:24:07,748 - INFO - Skipping - has website: https://www.nestledphotography.com/
+2026-03-23 18:24:09,758 - INFO - 
+
+######################################################################
+2026-03-23 18:24:09,758 - INFO - # BUSINESS 113/119
+2026-03-23 18:24:09,758 - INFO - ######################################################################
+2026-03-23 18:24:09,758 - INFO - 
+======================================================================
+2026-03-23 18:24:09,758 - INFO - SCRAPING: https://www.google.com/maps/place/Amour+Affairs+Photography,+Since+2011/data=!4m...
+2026-03-23 18:24:09,759 - INFO - ======================================================================
+2026-03-23 18:24:13,992 - INFO - Extracting basic info...
+2026-03-23 18:24:14,016 - INFO -   Name: Amour Affairs Photography, Since 2011
+2026-03-23 18:24:14,028 - INFO -   Rating: 4.9
+2026-03-23 18:24:14,033 - INFO -   Total Reviews: 191
+2026-03-23 18:24:14,037 - INFO - Skipping - has website: https://www.amouraffairs.in/
+2026-03-23 18:24:16,047 - INFO - 
+
+######################################################################
+2026-03-23 18:24:16,048 - INFO - # BUSINESS 114/119
+2026-03-23 18:24:16,048 - INFO - ######################################################################
+2026-03-23 18:24:16,048 - INFO - 
+======================================================================
+2026-03-23 18:24:16,048 - INFO - SCRAPING: https://www.google.com/maps/place/Capture+The+Image+Films/data=!4m7!3m6!1s0x3bc2...
+2026-03-23 18:24:16,048 - INFO - ======================================================================
+2026-03-23 18:24:20,637 - INFO - Extracting basic info...
+2026-03-23 18:24:20,680 - INFO -   Name: Capture The Image Films
+2026-03-23 18:24:20,702 - INFO -   Rating: 5.0
+2026-03-23 18:24:20,711 - INFO -   Total Reviews: 369
+2026-03-23 18:24:20,727 - INFO -   Address: Office No.401 Giridhar Residency Dangat Industrial...
+2026-03-23 18:24:20,741 - INFO -   Phone: 096650 57955
+2026-03-23 18:24:20,747 - INFO - Extracting hours...
+2026-03-23 18:24:21,806 - INFO -   Using element directly: 'Open 24 hours'
+2026-03-23 18:24:21,810 - INFO -   Hours element text: 'Open 24 hours'
+2026-03-23 18:24:21,810 - INFO -   Clicking to expand hours...
+2026-03-23 18:24:21,817 - INFO -   Clicked via JS
+2026-03-23 18:24:24,327 - INFO -   Looking for hours table...
+2026-03-23 18:24:24,346 - INFO -   Found a table element
+2026-03-23 18:24:24,346 - INFO -   Parsing hours table...
+2026-03-23 18:24:24,356 - INFO -   Found 7 rows
+2026-03-23 18:24:24,364 - INFO -     Row: 'Monday
+Open 24 hours'
+2026-03-23 18:24:24,375 - INFO -     ✓ Monday: Open 24 hours
+2026-03-23 18:24:24,380 - INFO -     Row: 'Tuesday
+Open 24 hours'
+2026-03-23 18:24:24,387 - INFO -     ✓ Tuesday: Open 24 hours
+2026-03-23 18:24:24,392 - INFO -     Row: 'Wednesday
+Open 24 hours'
+2026-03-23 18:24:24,399 - INFO -     ✓ Wednesday: Open 24 hours
+2026-03-23 18:24:24,403 - INFO -     Row: 'Thursday
+Open 24 hours'
+2026-03-23 18:24:24,409 - INFO -     ✓ Thursday: Open 24 hours
+2026-03-23 18:24:24,413 - INFO -     Row: 'Friday
+(Rama Navami)
+Open 24 hours
+Hours might differ'
+2026-03-23 18:24:24,420 - INFO -     ✓ Friday: Open 24 hours
+Hours might differ
+2026-03-23 18:24:24,424 - INFO -     Row: 'Saturday
+Open 24 hours'
+2026-03-23 18:24:24,431 - INFO -     ✓ Saturday: Open 24 hours
+2026-03-23 18:24:24,435 - INFO -     Row: 'Sunday
+Open 24 hours'
+2026-03-23 18:24:24,442 - INFO -     ✓ Sunday: Open 24 hours
+2026-03-23 18:24:24,442 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 18:24:24,442 - INFO - Extracting About section...
+2026-03-23 18:24:24,461 - INFO -   ✓ Total features extracted: 0
+2026-03-23 18:24:26,836 - INFO - Extracting all photos...
+2026-03-23 18:24:29,945 - INFO -   Opened photo gallery
+2026-03-23 18:24:29,971 - INFO -     Found 2 photos...
+2026-03-23 18:24:33,686 - INFO -     Found 12 photos...
+2026-03-23 18:24:37,303 - INFO -     Found 22 photos...
+2026-03-23 18:24:40,865 - INFO -     Found 32 photos...
+2026-03-23 18:24:44,382 - INFO -     Found 42 photos...
+2026-03-23 18:24:47,916 - INFO -     Found 52 photos...
+2026-03-23 18:24:51,457 - INFO -     Found 62 photos...
+2026-03-23 18:24:54,994 - INFO -     Found 71 photos...
+2026-03-23 18:24:58,519 - INFO -     Found 81 photos...
+2026-03-23 18:25:02,053 - INFO -     Found 91 photos...
+2026-03-23 18:25:05,648 - INFO -   ✓ Found 100 photo URLs (stored, not downloaded)
+2026-03-23 18:25:08,016 - INFO - Extracting reviews...
+2026-03-23 18:25:11,126 - INFO -   Clicked Reviews tab
+2026-03-23 18:25:16,285 - INFO -   Found 20 review elements
+2026-03-23 18:25:17,825 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 18:25:17,825 - INFO - Extracting social media...
+2026-03-23 18:25:17,837 - INFO -   Written to new/: capture-the-image-films.json
+2026-03-23 18:25:17,842 - INFO - Added: Capture The Image Films
+2026-03-23 18:25:19,852 - INFO - 
+
+######################################################################
+2026-03-23 18:25:19,853 - INFO - # BUSINESS 115/119
+2026-03-23 18:25:19,853 - INFO - ######################################################################
+2026-03-23 18:25:19,853 - INFO - 
+======================================================================
+2026-03-23 18:25:19,853 - INFO - SCRAPING: https://www.google.com/maps/place/Eyes+Pixel+Professional+Candid+Photographer+Be...
+2026-03-23 18:25:19,853 - INFO - ======================================================================
+2026-03-23 18:25:24,276 - INFO - Extracting basic info...
+2026-03-23 18:25:24,317 - INFO -   Name: Eyes Pixel Professional Candid Photographer Best Pre Wedding Photography Birthday Event Photoshoot
+2026-03-23 18:25:24,337 - INFO -   Rating: 5.0
+2026-03-23 18:25:24,345 - INFO -   Total Reviews: 220
+2026-03-23 18:25:24,351 - INFO - Skipping - has website: https://www.eyespixel.com/
+2026-03-23 18:25:26,356 - INFO - 
+
+######################################################################
+2026-03-23 18:25:26,357 - INFO - # BUSINESS 116/119
+2026-03-23 18:25:26,357 - INFO - ######################################################################
+2026-03-23 18:25:26,357 - INFO - 
+======================================================================
+2026-03-23 18:25:26,357 - INFO - SCRAPING: https://www.google.com/maps/place/Vivahdarpan+Photography+and+films/data=!4m7!3m...
+2026-03-23 18:25:26,357 - INFO - ======================================================================
+2026-03-23 18:25:30,770 - INFO - Extracting basic info...
+2026-03-23 18:25:30,803 - INFO -   Name: Vivahdarpan Photography and films
+2026-03-23 18:25:30,819 - INFO -   Rating: 4.4
+2026-03-23 18:25:30,825 - INFO -   Total Reviews: 122
+2026-03-23 18:25:30,836 - INFO -   Address: third floor, sai residency, Ashiyana Park Lane No ...
+2026-03-23 18:25:30,843 - INFO -   Phone: 087931 75655
+2026-03-23 18:25:30,849 - INFO - Extracting hours...
+2026-03-23 18:25:31,908 - INFO -   Using element directly: '· Closes 9 pm'
+2026-03-23 18:25:31,912 - INFO -   Hours element text: '· Closes 9 pm'
+2026-03-23 18:25:31,912 - INFO -   Clicking to expand hours...
+2026-03-23 18:25:31,919 - INFO -   Clicked via JS
+2026-03-23 18:25:34,430 - INFO -   Looking for hours table...
+2026-03-23 18:25:34,446 - INFO -   Found a table element
+2026-03-23 18:25:34,447 - INFO -   Parsing hours table...
+2026-03-23 18:25:34,459 - INFO -   Found 7 rows
+2026-03-23 18:25:34,466 - INFO -     Row: 'Monday
+12 am–9 pm'
+2026-03-23 18:25:34,478 - INFO -     ✓ Monday: 12 am–9 pm
+2026-03-23 18:25:34,483 - INFO -     Row: 'Tuesday
+12 am–9 pm'
+2026-03-23 18:25:34,586 - INFO -     ✓ Tuesday: 12 am–9 pm
+2026-03-23 18:25:34,592 - INFO -     Row: 'Wednesday
+12 am–9 pm'
+2026-03-23 18:25:34,598 - INFO -     ✓ Wednesday: 12 am–9 pm
+2026-03-23 18:25:34,601 - INFO -     Row: 'Thursday
+12 am–9 pm'
+2026-03-23 18:25:34,608 - INFO -     ✓ Thursday: 12 am–9 pm
+2026-03-23 18:25:34,612 - INFO -     Row: 'Friday
+(Rama Navami)
+12 am–9 pm
+Hours might differ'
+2026-03-23 18:25:34,618 - INFO -     ✓ Friday: 12 am–9 pm
+Hours might differ
+2026-03-23 18:25:34,622 - INFO -     Row: 'Saturday
+12 am–9 pm'
+2026-03-23 18:25:34,628 - INFO -     ✓ Saturday: 12 am–9 pm
+2026-03-23 18:25:34,631 - INFO -     Row: 'Sunday
+12 am–9 pm'
+2026-03-23 18:25:34,637 - INFO -     ✓ Sunday: 12 am–9 pm
+2026-03-23 18:25:34,637 - INFO -   ✓ Hours extracted: 7 days
+2026-03-23 18:25:34,638 - INFO - Extracting About section...
+2026-03-23 18:25:34,655 - INFO -   ✓ Total features extracted: 0
+2026-03-23 18:25:37,026 - INFO - Extracting all photos...
+2026-03-23 18:25:40,115 - INFO -   Opened photo gallery
+2026-03-23 18:25:40,135 - INFO -     Found 2 photos...
+2026-03-23 18:25:52,395 - INFO -     Found 22 photos...
+2026-03-23 18:25:56,918 - INFO -     Found 32 photos...
+2026-03-23 18:26:00,868 - INFO -     Found 41 photos...
+2026-03-23 18:26:04,341 - INFO -     Found 51 photos...
+2026-03-23 18:26:07,217 - INFO -   ✓ Found 54 photo URLs (stored, not downloaded)
+2026-03-23 18:26:09,947 - INFO - Extracting reviews...
+2026-03-23 18:26:13,047 - INFO -   Clicked Reviews tab
+2026-03-23 18:26:18,145 - INFO -   Found 20 review elements
+2026-03-23 18:26:23,020 - INFO -   ✓ Extracted 15 quality reviews
+2026-03-23 18:26:23,021 - INFO - Extracting social media...
+2026-03-23 18:26:23,047 - INFO -   Written to new/: vivahdarpan-photography-and-films.json
+2026-03-23 18:26:23,061 - INFO - Added: Vivahdarpan Photography and films
+2026-03-23 18:26:25,066 - INFO - 
+
+######################################################################
+2026-03-23 18:26:25,067 - INFO - # BUSINESS 117/119
+2026-03-23 18:26:25,067 - INFO - ######################################################################
+2026-03-23 18:26:25,067 - INFO - 
+======================================================================
+2026-03-23 18:26:25,067 - INFO - SCRAPING: https://www.google.com/maps/place/Stories+by+Hari/data=!4m7!3m6!1s0x3bc2c1138a87...
+2026-03-23 18:26:25,067 - INFO - ======================================================================
+2026-03-23 18:26:29,496 - INFO - Extracting basic info...
+2026-03-23 18:26:29,546 - INFO -   Name: Stories by Hari
+2026-03-23 18:26:29,563 - INFO -   Rating: 5.0
+2026-03-23 18:26:29,574 - INFO -   Total Reviews: 64
+2026-03-23 18:26:29,581 - INFO - Skipping - has website: http://storiesbyhari.com/
+2026-03-23 18:26:31,582 - INFO - 
+
+######################################################################
+2026-03-23 18:26:31,582 - INFO - # BUSINESS 118/119
+2026-03-23 18:26:31,582 - INFO - ######################################################################
+2026-03-23 18:26:31,582 - INFO - 
+======================================================================
+2026-03-23 18:26:31,582 - INFO - SCRAPING: https://www.google.com/maps/place/Ajay+Khot+Photography/data=!4m7!3m6!1s0x3bc2c0...
+2026-03-23 18:26:31,582 - INFO - ======================================================================
+2026-03-23 18:26:35,979 - INFO - Extracting basic info...
+2026-03-23 18:26:36,026 - INFO -   Name: Ajay Khot Photography
+2026-03-23 18:26:36,045 - INFO -   Rating: 4.7
+2026-03-23 18:26:36,052 - INFO -   Total Reviews: 53
+2026-03-23 18:26:36,059 - INFO - Skipping - has website: https://ajaykhotphotography.com/
+2026-03-23 18:26:38,061 - INFO - 
+
+######################################################################
+2026-03-23 18:26:38,062 - INFO - # BUSINESS 119/119
+2026-03-23 18:26:38,062 - INFO - ######################################################################
+2026-03-23 18:26:38,062 - INFO - 
+======================================================================
+2026-03-23 18:26:38,062 - INFO - SCRAPING: https://www.google.com/maps/place/Sandeep+Khade+Studios/data=!4m7!3m6!1s0x3bc2bf...
+2026-03-23 18:26:38,062 - INFO - ======================================================================
+2026-03-23 18:26:42,489 - INFO - Extracting basic info...
+2026-03-23 18:26:42,530 - INFO -   Name: Sandeep Khade Studios
+2026-03-23 18:26:42,574 - INFO -   Rating: 4.9
+2026-03-23 18:26:42,582 - INFO -   Total Reviews: 174
+2026-03-23 18:26:42,587 - INFO - Skipping - has website: http://www.sandeepkhadestudios.com/
+2026-03-23 18:26:44,633 - INFO - Saved to business_website_data/
+2026-03-23 18:26:44,730 - INFO - ============================================================
+2026-03-23 18:26:44,730 - INFO - Pipeline started
+2026-03-23 18:26:44,731 - ERROR - template.html not found

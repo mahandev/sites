@@ -31,14 +31,15 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-NEW_DIR = Path("business_website_data/new")
-PROCESSED_DIR = Path("processed")
-MASTER_JSON = Path("business_website_data/pipeline_master.json")
-OUTPUT_DIR = Path("output")
-STATE_FILE = Path("pipeline_state.json")
-TEMPLATE_FILE = Path("template.html")
+BASE_DIR = Path(__file__).resolve().parent
+NEW_DIR = BASE_DIR / "business_website_data/new"
+PROCESSED_DIR = BASE_DIR / "processed"
+MASTER_JSON = BASE_DIR / "business_website_data/pipeline_master.json"
+OUTPUT_DIR = BASE_DIR / "output"
+STATE_FILE = BASE_DIR / "pipeline_state.json"
+TEMPLATE_FILE = BASE_DIR / "template.html"
 
-TEMPLATES_DIR = Path("templates")
+TEMPLATES_DIR = BASE_DIR / "templates"
 
 REQUIRED_FIELDS = ["name", "phone", "category"]
 
@@ -70,17 +71,37 @@ def _resolve_template_type(business: dict) -> str:
 
 
 def _load_template(template_type: str) -> str:
-    """Load and cache a template file. Falls back to template.html if not found."""
+    """Load and cache a template file with safe fallbacks."""
     if template_type in _template_cache:
         return _template_cache[template_type]
+
     candidate = TEMPLATES_DIR / f"{template_type}.html"
     if candidate.exists():
         text = candidate.read_text(encoding="utf-8")
         log.debug(f"Loaded template: {candidate}")
     else:
-        if template_type != "general":
-            log.warning(f"Template '{template_type}.html' not found, falling back to template.html")
-        text = TEMPLATE_FILE.read_text(encoding="utf-8")
+        fallback = None
+        for option in [TEMPLATES_DIR / "general.html", TEMPLATE_FILE]:
+            if option.exists():
+                fallback = option
+                break
+        if fallback is None:
+            available = sorted(p.name for p in TEMPLATES_DIR.glob("*.html"))
+            if available:
+                fallback = TEMPLATES_DIR / available[0]
+                log.warning(
+                    f"Template '{template_type}.html' not found, using '{fallback.name}' as fallback"
+                )
+            else:
+                raise FileNotFoundError(
+                    "No template files found. Add templates/*.html or template.html"
+                )
+        else:
+            log.warning(
+                f"Template '{template_type}.html' not found, using '{fallback.name}' as fallback"
+            )
+        text = fallback.read_text(encoding="utf-8")
+
     _template_cache[template_type] = text
     return text
 
@@ -185,10 +206,6 @@ def run():
     NEW_DIR.mkdir(parents=True, exist_ok=True)
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-
-    if not TEMPLATE_FILE.exists():
-        log.error("template.html not found")
-        return
 
     state = load_state()
     master = load_master()

@@ -1,6 +1,8 @@
 import base64
+import argparse
 import os
 import time
+from pathlib import Path
 from typing import List, Tuple
 
 try:
@@ -136,3 +138,72 @@ def deploy_all_new(output_dir: str = "output", remote_prefix: str = "") -> Tuple
             time.sleep(0.5)
 
     return deployed, failed
+
+
+def _build_parser():
+    parser = argparse.ArgumentParser(
+        description="Deploy generated or manually edited HTML files to GitHub Pages repo."
+    )
+    parser.add_argument(
+        "--all",
+        action="store_true",
+        help="Deploy all .html files from output directory.",
+    )
+    parser.add_argument(
+        "--file",
+        type=str,
+        help="Deploy one HTML file (absolute path or path relative to repo root).",
+    )
+    parser.add_argument(
+        "--output-dir",
+        type=str,
+        default="output",
+        help="Directory used with --all (default: output).",
+    )
+    parser.add_argument(
+        "--message",
+        type=str,
+        default=None,
+        help="Optional commit message for single-file deploy.",
+    )
+    return parser
+
+
+def main():
+    parser = _build_parser()
+    args = parser.parse_args()
+
+    if not args.all and not args.file:
+        parser.error("Provide either --all or --file")
+    if args.all and args.file:
+        parser.error("Use only one mode: --all or --file")
+
+    base_dir = Path(__file__).resolve().parent
+
+    if args.all:
+        output_dir = Path(args.output_dir)
+        if not output_dir.is_absolute():
+            output_dir = base_dir / output_dir
+        deployed, failed = deploy_all_new(str(output_dir))
+        print(f"\nDone. Deployed: {len(deployed)}  Failed: {len(failed)}")
+        raise SystemExit(0 if not failed else 1)
+
+    local_path = Path(args.file)
+    if not local_path.is_absolute():
+        local_path = base_dir / local_path
+    if not local_path.exists():
+        print(f"ERROR: File not found: {local_path}")
+        raise SystemExit(1)
+
+    remote_name = local_path.name
+    success = deploy_file(str(local_path), remote_name, commit_message=args.message)
+    if success:
+        print(f"Deployed: {remote_name}")
+        raise SystemExit(0)
+
+    print(f"Failed: {remote_name}")
+    raise SystemExit(1)
+
+
+if __name__ == "__main__":
+    main()

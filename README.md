@@ -96,9 +96,25 @@ This processes every JSON in `business_website_data/new/` and for each business:
 2. Generates `output/{slug}.html` from `template.html`
 3. Adds a row to your Google Sheet with name, phone, city, demo URL, call status
 4. Deploys the HTML file to GitHub Pages
-5. Moves the JSON to `processed/` so it isn't re-processed
+5. Cleans up processed JSON (default: deletes it so no JSON files pile up)
 
 Progress is logged to `pipeline.log` and the terminal.
+
+### JSON cleanup behavior
+
+By default, processed JSON files are deleted immediately.
+
+Optional environment variables:
+
+```env
+# delete (default): remove JSON after processing
+# archive: move JSON to processed/
+PIPELINE_JSON_CLEANUP=delete
+
+# only used when PIPELINE_JSON_CLEANUP=archive
+# delete archived JSON older than this many days
+PIPELINE_PROCESSED_KEEP_DAYS=7
+```
 
 ---
 
@@ -148,11 +164,19 @@ Reads `business_website_data/businesses_progress.json`, writes all HTML files to
 ### Deploy all files in `output/` to GitHub Pages
 
 ```bash
-python -c "
-from deploy import deploy_all_new
-deployed, failed = deploy_all_new('output')
-print(f'Deployed: {len(deployed)}  Failed: {len(failed)}')
-"
+python deploy.py --all
+```
+
+### Deploy one manually edited HTML file
+
+```bash
+python deploy.py --file output/your-page.html
+```
+
+Optional custom commit message:
+
+```bash
+python deploy.py --file output/your-page.html --message "Manual HTML fix"
 ```
 
 ### Sync a single business to Google Sheets

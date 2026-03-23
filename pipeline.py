@@ -4,6 +4,7 @@ import os
 import re
 import shutil
 from datetime import datetime
+from datetime import timedelta
 from difflib import SequenceMatcher
 from pathlib import Path
 
@@ -199,6 +200,52 @@ def _move_to_processed(path_obj):
     shutil.move(str(path_obj), str(destination))
 
 
+def _get_json_cleanup_mode() -> str:
+    """How to handle processed JSON files: delete (default) or archive."""
+    mode = (os.getenv("PIPELINE_JSON_CLEANUP", "delete") or "delete").strip().lower()
+    return mode if mode in {"delete", "archive"} else "delete"
+
+
+def _finalize_json(path_obj: Path):
+    """Cleanup current JSON after processing based on configured mode."""
+    if _get_json_cleanup_mode() == "archive":
+        _move_to_processed(path_obj)
+        return
+    try:
+        path_obj.unlink(missing_ok=True)
+    except Exception as exc:
+        log.warning(f"WARN  Could not delete processed JSON {path_obj.name}: {exc}")
+
+
+def _cleanup_archived_jsons():
+    """Delete old archived JSON files after configured retention period."""
+    if _get_json_cleanup_mode() != "archive":
+        return
+
+    keep_days_raw = (os.getenv("PIPELINE_PROCESSED_KEEP_DAYS", "7") or "7").strip()
+    try:
+        keep_days = int(keep_days_raw)
+    except ValueError:
+        keep_days = 7
+
+    if keep_days < 0:
+        return
+
+    cutoff = datetime.now() - timedelta(days=keep_days)
+    removed = 0
+    for path_obj in PROCESSED_DIR.glob("*.json"):
+        try:
+            modified_at = datetime.fromtimestamp(path_obj.stat().st_mtime)
+            if modified_at < cutoff:
+                path_obj.unlink()
+                removed += 1
+        except Exception as exc:
+            log.warning(f"WARN  Could not cleanup archived JSON {path_obj.name}: {exc}")
+
+    if removed:
+        log.info(f"OK    Cleaned archived JSON files: {removed}")
+
+
 def run():
     log.info("=" * 60)
     log.info("Pipeline started")
@@ -230,7 +277,7 @@ def run():
             stats["errors"] += 1
             state["total_skipped"] = state.get("total_skipped", 0) + 1
             save_state(state)
-            _move_to_processed(json_file)
+            _finalize_json(json_file)
             continue
 
         errors = validate_business(business, filename, existing_ids, existing_names)
@@ -239,7 +286,7 @@ def run():
             stats["skipped"] += 1
             state["total_skipped"] = state.get("total_skipped", 0) + 1
             save_state(state)
-            _move_to_processed(json_file)
+            _finalize_json(json_file)
             continue
 
         slug = make_slug(business["name"])
@@ -256,7 +303,7 @@ def run():
             stats["errors"] += 1
             state["total_skipped"] = state.get("total_skipped", 0) + 1
             save_state(state)
-            _move_to_processed(json_file)
+            _finalize_json(json_file)
             continue
 
         try:
@@ -285,13 +332,14 @@ def run():
             existing_ids.add(business_id)
         existing_names.append(business.get("name", ""))
 
-        _move_to_processed(json_file)
+        _finalize_json(json_file)
 
         state["total_generated"] = state.get("total_generated", 0) + 1
         stats["generated"] += 1
         save_state(state)
 
     save_master(master)
+    _cleanup_archived_jsons()
     state["last_run"] = datetime.now().isoformat()
     save_state(state)
 

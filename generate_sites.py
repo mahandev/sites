@@ -1,4 +1,5 @@
 import json
+import json as _json
 import os
 import re
 from datetime import datetime
@@ -79,6 +80,91 @@ SERVICES_MAP = {
     ],
 }
 
+SOCIAL_LABELS = {
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "twitter": "X",
+    "youtube": "YouTube",
+    "whatsapp": "WhatsApp",
+    "linkedin": "LinkedIn",
+}
+
+
+# ---------------------------------------------------------------------------
+# Groq AI personalisation
+# ---------------------------------------------------------------------------
+
+def call_groq(business):
+    """Single Groq call returning all personalised content as a dict. Returns None on any failure."""
+    api_key = os.getenv("GROQ_API_KEY")
+    if not api_key:
+        return None
+
+    name = business.get("name") or ""
+    category = business.get("category") or ""
+    address = business.get("full_address") or business.get("address") or ""
+    rating = business.get("rating") or "5.0"
+    total_reviews = business.get("total_reviews") or "0"
+    service_options = business.get("service_options") or []
+    reviews = business.get("reviews") or []
+
+    review_digest = " | ".join(
+        r.get("text", "")[:120] for r in reviews[:6] if r.get("text")
+    )[:600]
+
+    prompt = f"""You are generating content for a professional business website. Return ONLY a valid JSON object with these exact fields:
+
+{{
+  "city": "city name extracted from address",
+  "area": "local area or neighborhood from address",
+  "hero_title": ["line1 (max 4 words)", "em_line (max 4 words)", "line3 (max 4 words)"],
+  "hero_subtitle": "1-2 sentences specific to this business, mention city",
+  "about_para_1": "2-3 sentences: who they are, what they do, how long serving",
+  "about_para_2": "2-3 sentences: reference specific things from reviews, why customers trust them",
+  "services": [{{"name": "service name", "desc": "1-line description"}}],
+  "usps": ["usp1 (max 4 words)", "usp2 (max 4 words)", "usp3 (max 4 words)"],
+  "faq": [{{"q": "question", "a": "1-2 sentence answer"}}]
+}}
+
+Rules:
+- services: exactly 5 items. Use real scraped services if provided, else infer from category.
+- usps: exactly 3, extract from reviews (e.g. "Same-Day Filing", "Home Visits", "GST Specialist")
+- faq: exactly 4 questions relevant to this business type
+- hero_title: unique to this business, not generic. Line 2 (em_line) is italicised.
+- All text in English. Professional, warm tone. No markdown.
+
+Business data:
+Name: {name}
+Category: {category}
+Address: {address}
+Rating: {rating} stars ({total_reviews} reviews)
+Scraped services: {", ".join(service_options) if service_options else "none"}
+Customer reviews: {review_digest if review_digest else "none available"}"""
+
+    try:
+        from groq import Groq
+        client = Groq(api_key=api_key)
+        resp = client.chat.completions.create(
+            model="llama-3.1-8b-instant",
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=900,
+            timeout=10,
+            response_format={"type": "json_object"},
+        )
+        data = _json.loads(resp.choices[0].message.content)
+        required = ["city", "area", "hero_title", "about_para_1", "about_para_2",
+                    "services", "usps", "faq"]
+        if all(k in data for k in required):
+            return data
+    except Exception:
+        pass
+
+    return None
+
+
+# ---------------------------------------------------------------------------
+# Slug / address helpers
+# ---------------------------------------------------------------------------
 
 def make_slug(name):
     slug = (name or "").lower()
@@ -177,6 +263,10 @@ def get_services(category):
     return SERVICES_MAP["default"]
 
 
+# ---------------------------------------------------------------------------
+# HTML builders
+# ---------------------------------------------------------------------------
+
 def build_services_html(category, scraped_services=None):
     if scraped_services:
         services = [(s, "") for s in scraped_services[:5]]
@@ -185,8 +275,8 @@ def build_services_html(category, scraped_services=None):
     html = ""
     for i, (name, desc) in enumerate(services, 1):
         html += (
-            "\n        <div class=\"service-item reveal\">"
-            f"\n          <span class=\"service-num\">0{i}</span>"
+            "\n        <div class=\"service-item service-card reveal\">"
+            f"\n          <span class=\"service-num service-number\">0{i}</span>"
             "\n          <div>"
             f"\n            <p class=\"service-name\">{escape(name)}</p>"
             + (f"\n            <p class=\"service-desc\">{escape(desc)}</p>" if desc else "")
@@ -196,17 +286,62 @@ def build_services_html(category, scraped_services=None):
     return html
 
 
-def extract_staff_names(reviews):
-    names = []
-    seen = set()
-    for r in reviews:
-        text = r.get("text", "") or ""
-        matches = re.findall(r"\b(?:Mr\.|Ms\.|Mrs\.)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)", text)
-        for match in matches:
-            if match not in seen:
-                names.append(match)
-                seen.add(match)
-    return names[:3]
+def build_services_html_from_ai(services):
+    html = ""
+    for i, svc in enumerate(services[:5], 1):
+        name = escape(svc.get("name") or "")
+        desc = escape(svc.get("desc") or "")
+        html += (
+            f"\n        <div class=\"service-item service-card reveal\">"
+            f"\n          <span class=\"service-num service-number\">0{i}</span>"
+            f"\n          <div>"
+            f"\n            <p class=\"service-name\">{name}</p>"
+            + (f"\n            <p class=\"service-desc\">{desc}</p>" if desc else "")
+            + "\n          </div>"
+            "\n        </div>"
+        )
+    return html
+
+
+def build_usps_html(usps):
+    if not usps:
+        return ""
+    items = "".join(f'<span class="usp-chip">{escape(u)}</span>' for u in usps[:3])
+    return f'<div class="usp-chips">{items}</div>'
+
+
+def build_faq_html(faq):
+    if not faq:
+        return ""
+    html = ""
+    for item in faq[:4]:
+        q = escape(item.get("q") or "")
+        a = escape(item.get("a") or "")
+        html += (
+            f"\n      <div class=\"faq-item\">"
+            f"\n        <p class=\"faq-q\">{q}</p>"
+            f"\n        <p class=\"faq-a\">{a}</p>"
+            f"\n      </div>"
+        )
+    return html
+
+
+def build_payments_html(payments):
+    if not payments:
+        return ""
+    items = "".join(f'<span class="pay-badge">{escape(p)}</span>' for p in payments[:6])
+    return f'<div class="pay-badges">{items}</div>'
+
+
+def build_social_html(social_media):
+    if not social_media:
+        return ""
+    links = "".join(
+        f'<a href="{escape(url, quote=True)}" target="_blank" rel="noopener" class="social-link">'
+        f'{SOCIAL_LABELS.get(platform, platform.title())}</a>'
+        for platform, url in social_media.items()
+    )
+    return f'<div class="social-links">{links}</div>' if links else ""
 
 
 def extract_years(reviews):
@@ -236,12 +371,13 @@ def build_reviews_html(reviews):
         if len(text) > 220:
             text = text[:217].rstrip() + "..."
         posted = (r.get("posted") or "Recently").strip() or "Recently"
+        author = (r.get("author") or "").strip() or "Customer"
         html += (
             "\n        <div class=\"review-card reveal\">"
             "\n          <div class=\"review-quote\">\"</div>"
             f"\n          <p class=\"review-text\">{escape(text)}</p>"
             "\n          <div class=\"review-stars\">★★★★★</div>"
-            f"\n          <p class=\"review-meta\">Verified Google Review · {escape(posted)}</p>"
+            f"\n          <p class=\"review-meta\">{escape(author)} · Verified Google Review · {escape(posted)}</p>"
             "\n        </div>"
         )
 
@@ -274,13 +410,12 @@ def build_hours_html(hours_dict):
 
 def build_photos_html(photos, business_name):
     html = ""
-    for url in (photos or [])[:5]:
+    for url in (photos or [])[:12]:
         html += (
             "\n        <div class=\"photo-cell\">"
             f"\n          <img src=\"{escape(url, quote=True)}\" alt=\"{escape(business_name)}\" onerror=\"this.parentElement.style.background='#2a2a28'\">"
             "\n        </div>"
         )
-
     if not html:
         html = (
             "\n        <div class=\"photo-cell\">"
@@ -289,6 +424,10 @@ def build_photos_html(photos, business_name):
         )
     return html
 
+
+# ---------------------------------------------------------------------------
+# Main generator
+# ---------------------------------------------------------------------------
 
 def generate_one(business, template_str):
     b = business
@@ -305,49 +444,69 @@ def generate_one(business, template_str):
     current_year = str(datetime.now().year)
 
     phone_digits = extract_phone_digits(phone_raw)
-    area, city = extract_location(full_address)
 
-    wa_message = quote(f"Hi, I found {name} online and would like to know more about your services.")
-    wa_booking_message = quote(f"Hi, I would like to book a free consultation with {name}.")
+    # --- Groq single call ---
+    ai = call_groq(b)
 
-    nav_logo_html = logo_html(name)
-    footer_logo_html = logo_html(name)
-    category_short_text = category_short(category)
+    # Address
+    if ai:
+        city = ai.get("city") or ""
+        area = ai.get("area") or ""
+    else:
+        area, city = extract_location(full_address)
 
-    hero_title_line1, hero_title_em, hero_title_line3 = get_hero_title(category)
+    # Hero title
+    if ai and isinstance(ai.get("hero_title"), list) and len(ai["hero_title"]) == 3:
+        hero_title_line1, hero_title_em, hero_title_line3 = ai["hero_title"]
+    else:
+        hero_title_line1, hero_title_em, hero_title_line3 = get_hero_title(category)
 
+    # Hero subtitle
     hero_subtitle = (
+        ai.get("hero_subtitle") if ai else None
+    ) or (
         f"{name} offers professional {category.lower()} services "
         f"in {area}, {city} - serving the local community with expertise and care."
     )
 
-    services_section_title = services_title(category)
-    scraped = (b.get("service_options") or []) + (b.get("offerings") or [])
-    services_list_html = build_services_html(category, scraped_services=scraped or None)
-
-    about_paragraph_1 = (
+    # About paragraphs
+    about_paragraph_1 = (ai.get("about_para_1") if ai else None) or (
         f"{name} has been serving individuals and businesses in {city} "
         "with a commitment to quality, speed, and complete transparency. "
         "Whether you're a first-time customer or a long-standing client - we're here for you."
     )
+    about_paragraph_2 = (ai.get("about_para_2") if ai else None) or (
+        "Our team is known for being approachable, thorough, and always available to answer your questions "
+        "in plain language - no jargon, just clarity."
+    )
 
-    staff = extract_staff_names(b.get("reviews", []))
-    if staff:
-        names_str = ", ".join(staff[:-1]) + (" and " + staff[-1] if len(staff) > 1 else staff[0])
-        about_paragraph_2 = (
-            "Our team is known for being approachable and always available. "
-            f"Clients specifically praise {names_str} for their expertise, warmth, and willingness to explain things clearly."
-        )
+    # Services
+    if ai and ai.get("services"):
+        services_list_html = build_services_html_from_ai(ai["services"])
     else:
-        about_paragraph_2 = (
-            "Our team is known for being approachable, thorough, and always available to answer your questions "
-            "in plain language - no jargon, just clarity."
-        )
+        scraped = (b.get("service_options") or []) + (b.get("offerings") or [])
+        services_list_html = build_services_html(category, scraped_services=scraped or None)
+
+    # USPs, FAQ, payments, social
+    usps_html = build_usps_html(ai.get("usps") if ai else [])
+    faq_html = build_faq_html(ai.get("faq") if ai else [])
+    payments_html = build_payments_html(b.get("payments") or [])
+    social_html = build_social_html(b.get("social_media") or {})
+
+    wa_message = quote(f"Hi, I found {name} online and would like to know more about your services.")
+    wa_booking_message = quote(f"Hi, I would like to book a free consultation with {name}.")
 
     years_stat = extract_years(b.get("reviews", []))
     reviews_html = build_reviews_html(b.get("reviews", []))
     hours_table_html = build_hours_html(b.get("hours", {}))
     photos_html = build_photos_html(photos, name)
+
+    # Derived tokens
+    phone_link = f"tel:+91{phone_digits}" if len(phone_digits) == 10 else f"tel:{phone_digits}"
+    since_year = str(int(current_year) - int(years_stat.replace("+", "")) - 1)
+    maps_query = quote(full_address or name)
+    maps_link = f"https://maps.google.com/maps?q={maps_query}"
+    maps_embed = f"https://maps.google.com/maps?q={maps_query}&output=embed"
 
     replacements = {
         "{{BUSINESS_NAME}}": escape(name),
@@ -364,14 +523,14 @@ def generate_one(business, template_str):
         "{{AREA}}": escape(area),
         "{{WA_MESSAGE}}": wa_message,
         "{{WA_BOOKING_MESSAGE}}": wa_booking_message,
-        "{{NAV_LOGO_HTML}}": nav_logo_html,
-        "{{FOOTER_LOGO_HTML}}": footer_logo_html,
-        "{{CATEGORY_SHORT}}": escape(category_short_text),
+        "{{NAV_LOGO_HTML}}": logo_html(name),
+        "{{FOOTER_LOGO_HTML}}": logo_html(name),
+        "{{CATEGORY_SHORT}}": escape(category_short(category)),
         "{{HERO_TITLE_LINE1}}": escape(hero_title_line1),
         "{{HERO_TITLE_EM}}": escape(hero_title_em),
         "{{HERO_TITLE_LINE3}}": escape(hero_title_line3),
         "{{HERO_SUBTITLE}}": escape(hero_subtitle),
-        "{{SERVICES_SECTION_TITLE}}": services_section_title,
+        "{{SERVICES_SECTION_TITLE}}": services_title(category),
         "{{SERVICES_LIST_HTML}}": services_list_html,
         "{{ABOUT_PARAGRAPH_1}}": escape(about_paragraph_1),
         "{{ABOUT_PARAGRAPH_2}}": escape(about_paragraph_2),
@@ -379,6 +538,20 @@ def generate_one(business, template_str):
         "{{REVIEWS_HTML}}": reviews_html,
         "{{HOURS_TABLE_HTML}}": hours_table_html,
         "{{PHOTOS_HTML}}": photos_html,
+        "{{USPS_HTML}}": usps_html,
+        "{{FAQ_HTML}}": faq_html,
+        "{{PAYMENTS_HTML}}": payments_html,
+        "{{SOCIAL_HTML}}": social_html,
+        # Aliases used by new templates
+        "{{SERVICES_HTML}}": services_list_html,
+        "{{HOURS_HTML}}": hours_table_html,
+        "{{ABOUT_PARA_1}}": escape(about_paragraph_1),
+        "{{ABOUT_PARA_2}}": escape(about_paragraph_2),
+        "{{YEAR}}": current_year,
+        "{{SINCE_YEAR}}": since_year,
+        "{{PHONE_LINK}}": phone_link,
+        "{{MAPS_LINK}}": maps_link,
+        "{{MAPS_EMBED}}": maps_embed,
     }
 
     filled = template_str

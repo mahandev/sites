@@ -41,9 +41,10 @@ class BusinessWebsiteDataScraper:
     - Social media links
     """
     
-    def __init__(self, filter_mode='no_website'):
+    def __init__(self, filter_mode='no_website', template_type='general'):
         self.output_dir = "business_website_data"
         self.filter_mode = filter_mode  # 'no_website', 'with_website', or 'all'
+        self.template_type = template_type
         os.makedirs(self.output_dir, exist_ok=True)
         os.makedirs(f"{self.output_dir}/images", exist_ok=True)
         self.businesses_data = []
@@ -242,13 +243,38 @@ class BusinessWebsiteDataScraper:
         """Extract all basic business information"""
         logging.info("Extracting basic info...")
         
-        # Name
+        # Name — wait for element to have actual text, not just exist in DOM
         try:
-            name_elem = self.wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'h1.DUwDvf')))
-            business['name'] = name_elem.text
-            logging.info(f"  Name: {business['name']}")
+            self.wait.until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, 'h1.DUwDvf'), ''))
+            name_elem = self.driver.find_element(By.CSS_SELECTOR, 'h1.DUwDvf')
+            business['name'] = name_elem.text.strip()
         except:
-            business['name'] = "Unknown Business"
+            pass
+
+        # If still empty, try alternative selectors
+        if not business.get('name'):
+            for sel in ['h1[class*="DUwDvf"]', 'h1.fontHeadlineLarge', 'h1']:
+                try:
+                    elem = self.driver.find_element(By.CSS_SELECTOR, sel)
+                    if elem.text.strip():
+                        business['name'] = elem.text.strip()
+                        break
+                except:
+                    continue
+
+        # Last resort: decode name from the Google Maps URL
+        if not business.get('name'):
+            try:
+                from urllib.parse import unquote
+                url = business.get('google_maps_url', '')
+                match = re.search(r'/maps/place/([^/]+)', url)
+                if match:
+                    business['name'] = unquote(match.group(1).replace('+', ' ')).strip()
+            except:
+                pass
+
+        business['name'] = business.get('name') or 'Unknown Business'
+        logging.info(f"  Name: {business['name']}")
 
         # Category
         try:
@@ -879,6 +905,7 @@ class BusinessWebsiteDataScraper:
         while os.path.exists(path):
             path = os.path.join(new_dir, f"{slug}-{counter}.json")
             counter += 1
+        business['template'] = self.template_type
         with open(path, "w", encoding="utf-8") as f:
             json.dump(business, f, indent=2, ensure_ascii=False)
         logging.info(f"  Written to new/: {os.path.basename(path)}")
@@ -947,12 +974,17 @@ class BusinessWebsiteDataScraper:
                 continue
         
         self.save_final()
-        
+
         print(f"\n\n{'='*70}")
         print("SCRAPING COMPLETE")
         print(f"Total businesses scraped: {len(self.businesses_data)}")
         print(f"Data saved in: {self.output_dir}/")
         print(f"{'='*70}")
+
+        if self.businesses_data:
+            print("\nRunning pipeline: generating sites, deploying, syncing to Google Sheets...")
+            import pipeline
+            pipeline.run()
 
     def save_progress(self):
         """Save progress"""
@@ -1021,7 +1053,25 @@ def main():
     filter_mode = filter_map.get(filter_choice, "no_website")
     logging.info(f"Filter mode: {filter_mode}")
 
-    scraper = BusinessWebsiteDataScraper(filter_mode=filter_mode)
+    print("\nChoose website template design:")
+    print("  1 - General (default)")
+    print("  2 - Clinic / Diagnostic Lab")
+    print("  3 - Coaching / Tuition Institute")
+    print("  4 - Interior Designer")
+    print("  5 - Wedding Photographer / Videographer")
+    print("  6 - Caterer / Food Business")
+    print("  7 - Real Estate Agent")
+    print("  8 - Export / Import Business")
+    template_choice = input("Choose [1-8]: ").strip() or "1"
+    template_map = {
+        "1": "general", "2": "clinic", "3": "coaching",
+        "4": "interior", "5": "wedding", "6": "caterer",
+        "7": "realestate", "8": "export",
+    }
+    template_type = template_map.get(template_choice, "general")
+    logging.info(f"Template: {template_type}")
+
+    scraper = BusinessWebsiteDataScraper(filter_mode=filter_mode, template_type=template_type)
     
     try:
         scraper.run(industry=industry, area=area)

@@ -77,7 +77,7 @@ def make_demo_url(business_name: str, github_username: str) -> str:
     slug = re.sub(r"-+", "-", slug)
     repo = (os.getenv("GITHUB_REPO", "").split("/")[-1] or "sites").strip()
     username = (github_username or "").strip() or "username"
-    return f"https://{username}.github.io/{repo}/{slug}/"
+    return f"https://{username}.github.io/{repo}/{slug}.html"
 
 
 def sync_business(business: Dict, github_username: str = "") -> Tuple[str, str]:

@@ -33,12 +33,56 @@ log = logging.getLogger(__name__)
 
 NEW_DIR = Path("business_website_data/new")
 PROCESSED_DIR = Path("processed")
-MASTER_JSON = Path("business_website_data/businesses_progress.json")
+MASTER_JSON = Path("business_website_data/pipeline_master.json")
 OUTPUT_DIR = Path("output")
 STATE_FILE = Path("pipeline_state.json")
 TEMPLATE_FILE = Path("template.html")
 
+TEMPLATES_DIR = Path("templates")
+
 REQUIRED_FIELDS = ["name", "phone", "category"]
+
+# Keywords used to auto-detect template type from category when not explicitly set
+_TEMPLATE_KEYWORDS = {
+    "clinic":     ["clinic", "diagnostic", "lab", "hospital", "pathology", "medical", "health", "doctor", "physician", "dental", "dentist", "eye", "ortho"],
+    "coaching":   ["coaching", "tuition", "institute", "academy", "classes", "education", "school", "tutorial", "training"],
+    "interior":   ["interior", "decorator", "design studio", "furnishing", "architecture", "architect"],
+    "wedding":    ["wedding", "photographer", "photography", "videographer", "videography", "photo studio", "event photo"],
+    "caterer":    ["caterer", "catering", "food", "tiffin", "cloud kitchen", "canteen", "mess", "meals", "dabba"],
+    "realestate": ["real estate", "property", "realty", "builder", "developer", "broker", "housing", "plot", "flat"],
+    "export":     ["export", "import", "trading", "trade", "wholesale", "manufacturer", "supplier", "distributor"],
+}
+
+# Cache loaded template strings so each file is read only once per pipeline run
+_template_cache: dict = {}
+
+
+def _resolve_template_type(business: dict) -> str:
+    """Return the template key for this business: explicit > category keywords > 'general'."""
+    explicit = (business.get("template") or "").strip().lower()
+    if explicit and explicit != "general":
+        return explicit
+    category = (business.get("category") or "").lower()
+    for key, keywords in _TEMPLATE_KEYWORDS.items():
+        if any(kw in category for kw in keywords):
+            return key
+    return "general"
+
+
+def _load_template(template_type: str) -> str:
+    """Load and cache a template file. Falls back to template.html if not found."""
+    if template_type in _template_cache:
+        return _template_cache[template_type]
+    candidate = TEMPLATES_DIR / f"{template_type}.html"
+    if candidate.exists():
+        text = candidate.read_text(encoding="utf-8")
+        log.debug(f"Loaded template: {candidate}")
+    else:
+        if template_type != "general":
+            log.warning(f"Template '{template_type}.html' not found, falling back to template.html")
+        text = TEMPLATE_FILE.read_text(encoding="utf-8")
+    _template_cache[template_type] = text
+    return text
 
 
 def load_state():
@@ -155,7 +199,6 @@ def run():
     new_files = sorted(NEW_DIR.glob("*.json"))
     log.info(f"Found {len(new_files)} new JSON files in {NEW_DIR}/")
 
-    template_str = TEMPLATE_FILE.read_text(encoding="utf-8")
     github_user = (os.getenv("GITHUB_REPO", "/").split("/")[0] or "").strip()
 
     stats = {"generated": 0, "skipped": 0, "errors": 0}
@@ -168,7 +211,6 @@ def run():
         except Exception as exc:
             log.error(f"ERROR Validation failed for {filename}: {exc}")
             stats["errors"] += 1
-            state["processed_files"].append(filename)
             state["total_skipped"] = state.get("total_skipped", 0) + 1
             save_state(state)
             _move_to_processed(json_file)
@@ -187,9 +229,11 @@ def run():
         out_path = OUTPUT_DIR / f"{slug}.html"
 
         try:
+            tpl_type = _resolve_template_type(business)
+            template_str = _load_template(tpl_type)
             html = generate_one(business, template_str)
             out_path.write_text(html, encoding="utf-8")
-            log.info(f"OK    Generated: {out_path.name}")
+            log.info(f"OK    Generated: {out_path.name} [{tpl_type}]")
         except Exception as exc:
             log.error(f"ERROR Site generation failed for {filename}: {exc}")
             stats["errors"] += 1

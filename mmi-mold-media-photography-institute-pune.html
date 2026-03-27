@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE — Photography Institute in Pune</title>
+  <meta name="description" content="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE — Local Expert based in Pune, flat no 4. MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE offers professional photography institute services in flat no 4, Pune - serving the local community with expertise and care." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── Reset & Base ─────────────────────────────────────────── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg:        #0d0d0b;
+      --bg-alt:    #111110;
+      --bg-card:   #181714;
+      --cream:     #f5f0e8;
+      --cream-dim: #c8c0b0;
+      --rose:      #c9956c;
+      --rose-dim:  #a97a55;
+      --rule:      rgba(201,149,108,0.35);
+      --font-h:    'Cormorant Garamond', Georgia, serif;
+      --font-b:    'Jost', sans-serif;
+      --ease:      cubic-bezier(.16,1,.3,1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--cream);
+      font-family: var(--font-b);
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+
+    /* ─── Film Grain ────────────────────────────────────────────── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 200px 200px;
+      opacity: 0.08;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* ─── Typography ────────────────────────────────────────────── */
+    h1, h2, h3, h4 { font-family: var(--font-h); font-weight: 300; line-height: 1.15; }
+    em { font-style: italic; }
+    a { color: inherit; text-decoration: none; transition: color .2s; }
+    a:hover { color: var(--rose); }
+    img { display: block; max-width: 100%; }
+
+    .rose       { color: var(--rose); }
+    .cream-dim  { color: var(--cream-dim); }
+    .italic     { font-style: italic; }
+
+    .section-label {
+      font-family: var(--font-b);
+      font-weight: 300;
+      font-size: 10px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--rose);
+    }
+
+    /* ─── Horizontal Rule ───────────────────────────────────────── */
+    .hr-rose {
+      border: none;
+      border-top: 1px solid var(--rule);
+      width: 100%;
+      margin: 0;
+    }
+    .hr-rose--short {
+      width: 80px;
+      border-color: var(--rose);
+    }
+
+    /* ─── Utility ───────────────────────────────────────────────── */
+    .container {
+      width: 90%;
+      max-width: 1280px;
+      margin-inline: auto;
+    }
+    .container--narrow {
+      width: 90%;
+      max-width: 860px;
+      margin-inline: auto;
+    }
+
+    /* ─── Scroll Reveal ─────────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity .9s var(--ease), transform .9s var(--ease);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: .1s; }
+    .reveal-delay-2 { transition-delay: .22s; }
+    .reveal-delay-3 { transition-delay: .36s; }
+    .reveal-delay-4 { transition-delay: .5s; }
+
+    /* ═══════════════════════════════════════════════════════════
+       NAV
+    ═══════════════════════════════════════════════════════════ */
+    #nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      transition: background .4s, border-color .4s;
+      border-bottom: 1px solid transparent;
+      padding: 20px 0;
+    }
+    #nav.scrolled {
+      background: rgba(13,13,11,.92);
+      backdrop-filter: blur(12px);
+      border-color: var(--rule);
+      padding: 14px 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 92%;
+      max-width: 1400px;
+      margin-inline: auto;
+    }
+
+    .nav-logo {
+      font-family: var(--font-h);
+      font-size: clamp(18px, 2vw, 22px);
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 0.04em;
+      color: var(--cream);
+      flex: 1;
+      text-align: center;
+    }
+
+    .nav-phone {
+      font-family: var(--font-b);
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      color: var(--cream-dim);
+      flex: 1;
+      text-align: right;
+      transition: color .2s;
+    }
+    .nav-phone:hover { color: var(--rose); }
+
+    .nav-left {
+      flex: 1;
+    }
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+    }
+    .nav-menu a {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      font-weight: 300;
+      transition: color .2s;
+    }
+    .nav-menu a:hover { color: var(--rose); }
+
+    /* ═══════════════════════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════════════════════ */
+    #hero {
+      position: relative;
+      height: 100vh;
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: -60px -10px;
+      background-image: url('https://lh3.googleusercontent.com/p/AF1QipOfAkVIPueioRu19r_fsZzx254rdKu-nWWOt2BV=w1920-h1080-k-no');
+      background-size: cover;
+      background-position: center 30%;
+      will-change: transform;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(13,13,11,.55) 0%,
+        rgba(13,13,11,.45) 40%,
+        rgba(13,13,11,.75) 80%,
+        rgba(13,13,11,1) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 24px;
+      max-width: 960px;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-b);
+      font-size: 10px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 32px;
+      display: block;
+    }
+
+    .hero-title {
+      font-family: var(--font-h);
+      font-weight: 300;
+      font-size: clamp(52px, 9vw, 128px);
+      line-height: 1;
+      letter-spacing: -0.01em;
+      color: var(--cream);
+    }
+    .hero-title em {
+      color: var(--rose);
+      font-style: italic;
+    }
+
+    .hero-rule {
+      border: none;
+      border-top: 1px solid var(--rose);
+      width: 120px;
+      margin: 36px auto;
+      opacity: .7;
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-b);
+      font-size: clamp(11px, 1.2vw, 13px);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      font-weight: 300;
+      margin-bottom: 44px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 38px;
+      font-family: var(--font-b);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      transition: all .3s var(--ease);
+      cursor: pointer;
+    }
+    .btn--primary {
+      background: var(--rose);
+      color: #0d0d0b;
+      border: 1px solid var(--rose);
+    }
+    .btn--primary:hover {
+      background: transparent;
+      color: var(--rose);
+    }
+    .btn--ghost {
+      background: transparent;
+      color: var(--cream);
+      border: 1px solid rgba(245,240,232,.35);
+    }
+    .btn--ghost:hover {
+      border-color: var(--rose);
+      color: var(--rose);
+    }
+
+    .hero-rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid var(--rule);
+      padding: 8px 20px;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      color: var(--cream-dim);
+    }
+    .hero-rating .stars { color: var(--rose); font-size: 13px; }
+
+    /* ═══════════════════════════════════════════════════════════
+       USP
+    ═══════════════════════════════════════════════════════════ */
+    #usps {
+      background: var(--bg);
+      padding: 60px 0;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .usps-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    /* USP chips injected via  — style them via .usp-chip */
+    .usp-chip {
+      display: inline-block;
+      border: 1px solid var(--rose);
+      padding: 10px 24px;
+      font-family: var(--font-b);
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      background: transparent;
+      transition: background .25s, color .25s;
+    }
+    .usp-chip:hover {
+      background: rgba(201,149,108,.08);
+      color: var(--rose);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       PORTFOLIO STRIP
+    ═══════════════════════════════════════════════════════════ */
+    #portfolio {
+      background: var(--bg);
+      padding: 100px 0 80px;
+    }
+
+    .portfolio-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .portfolio-header h2 {
+      font-size: clamp(32px, 4vw, 54px);
+      font-weight: 300;
+      font-style: italic;
+      letter-spacing: 0.02em;
+      margin-top: 16px;
+    }
+
+    .portfolio-strip {
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 8px;
+      align-items: flex-start;
+    }
+    .portfolio-strip::-webkit-scrollbar { display: none; }
+
+    /* Photos injected via 
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipOfAkVIPueioRu19r_fsZzx254rdKu-nWWOt2BV=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipOrLgLqs8O0R7Ky5IMCrYsyaqsttld4b8udXybL=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoXzWHGZsXjnW-n7_I8gb5cf3_7nEPr5vB7TaZUAi_KJXdRAJqe-KeDp1cUH3_QKKLS9-F40_uA4n4lEoSmHDNbjevpjbnnH4FUe2Rc4jpo1KsF0J7sa2EMF0MafcebB9MvkT0=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipPcXV-JFhZiqrqCIZypU_zqcIvBxlpztYxRaBKB=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweo-AV5IkAHKnJxgpGbTT_i7YBKy1d46pLqTMivArxiU0csQQdkIZJjZQR1FNGTug2vM36Vas6HgkDvmlXcjaQA08zftux6UziWdl1e8R7zSWbDJoPQUfWPkYcCN235ziabSMO4Y=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipMb48xoDUYCye44zEPGoin2nV5Jx-VfiHghOJI7=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipNdHwH1QgyCiB5ubs0GAAyNKIXrPCg1KIsQ4XWU=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipPoUrys672-ijztd8-EhK-VtyECLNCew1L2HM4X=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipMtn0r_UUSFzKCSKidt6mWmU7I4znqt2MG1M64c=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipM9CSFGKXBaS0YDEFGbeIG9ZBNXFjCIpjU3ZGSu=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipPasV1QPaDiwLx-6c6M3nVER_jIxo9XH8U9Nxj1=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipNwYmNHQAc6nn9KeAlNaJERGp5lwNnyxzQ5FXkL=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div> — style .portfolio-photo */
+    .portfolio-photo {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      position: relative;
+      overflow: hidden;
+      transition: transform .4s var(--ease);
+    }
+    .portfolio-photo:nth-child(odd)  { margin-top: 40px; }
+    .portfolio-photo:nth-child(even) { margin-top: 0; z-index: 2; margin-left: -18px; margin-right: -18px; }
+    .portfolio-photo img {
+      width: 320px;
+      height: 440px;
+      object-fit: cover;
+      display: block;
+      filter: brightness(.92) saturate(.9);
+      transition: filter .4s, transform .5s var(--ease);
+    }
+    .portfolio-photo:hover img {
+      filter: brightness(1) saturate(1);
+      transform: scale(1.03);
+    }
+
+    .portfolio-drag-hint {
+      text-align: center;
+      margin-top: 28px;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--rose);
+      opacity: .6;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       SERVICES
+    ═══════════════════════════════════════════════════════════ */
+    #services {
+      background: var(--bg-alt);
+      padding: 110px 0;
+    }
+
+    .services-header {
+      margin-bottom: 72px;
+    }
+    .services-header h2 {
+      font-size: clamp(38px, 5vw, 68px);
+      margin-top: 16px;
+      font-weight: 300;
+    }
+
+    .services-list {
+      list-style: none;
+    }
+
+    /* Service items from 
+        <div class="service-item service-card reveal">
+          <span class="service-num service-number">01</span>
+          <div>
+            <p class="service-name">Professional Service</p>
+            <p class="service-desc">High-quality service delivered by experienced professionals.</p>
+          </div>
+        </div>
+        <div class="service-item service-card reveal">
+          <span class="service-num service-number">02</span>
+          <div>
+            <p class="service-name">Expert Consultation</p>
+            <p class="service-desc">Personalised advice from our team of industry experts.</p>
+          </div>
+        </div>
+        <div class="service-item service-card reveal">
+          <span class="service-num service-number">03</span>
+          <div>
+            <p class="service-name">Fast Turnaround</p>
+            <p class="service-desc">We value your time - quick and reliable delivery, always.</p>
+          </div>
+        </div>
+        <div class="service-item service-card reveal">
+          <span class="service-num service-number">04</span>
+          <div>
+            <p class="service-name">Affordable Pricing</p>
+            <p class="service-desc">Transparent pricing with no hidden charges.</p>
+          </div>
+        </div>
+        <div class="service-item service-card reveal">
+          <span class="service-num service-number">05</span>
+          <div>
+            <p class="service-name">Customer Support</p>
+            <p class="service-desc">Always available to answer your queries and assist you.</p>
+          </div>
+        </div> — style .service-item */
+    .service-item {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 0 32px;
+      padding: 32px 0;
+      border-top: 1px solid var(--rule);
+      align-items: start;
+      transition: background .25s;
+    }
+    .service-item:last-child { border-bottom: 1px solid var(--rule); }
+
+    .service-num {
+      font-family: var(--font-h);
+      font-size: clamp(36px, 3vw, 48px);
+      font-weight: 300;
+      color: var(--rose);
+      opacity: .5;
+      line-height: 1;
+      padding-top: 4px;
+    }
+
+    .service-body {}
+    .service-name {
+      font-family: var(--font-h);
+      font-size: clamp(22px, 2.5vw, 32px);
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 8px;
+    }
+    .service-desc {
+      font-family: var(--font-b);
+      font-size: 14px;
+      color: var(--cream-dim);
+      font-weight: 300;
+      line-height: 1.8;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       ABOUT
+    ═══════════════════════════════════════════════════════════ */
+    #about {
+      background: var(--bg);
+      padding: 120px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .about-left {}
+
+    .about-pull-quote {
+      font-family: var(--font-h);
+      font-size: clamp(30px, 3.5vw, 50px);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.25;
+      color: var(--cream);
+      position: relative;
+      padding-top: 28px;
+    }
+    .about-pull-quote::before {
+      content: '\201C';
+      display: block;
+      font-size: 100px;
+      line-height: .6;
+      color: var(--rose);
+      opacity: .4;
+      margin-bottom: 20px;
+      font-style: normal;
+    }
+
+    .about-years {
+      margin-top: 60px;
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+    }
+    .about-years-num {
+      font-family: var(--font-h);
+      font-size: clamp(72px, 8vw, 120px);
+      font-weight: 300;
+      color: var(--rose);
+      line-height: 1;
+      opacity: .7;
+    }
+    .about-years-label {
+      font-family: var(--font-b);
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      line-height: 1.5;
+    }
+
+    .about-right {
+      padding-top: 12px;
+    }
+
+    .about-text {
+      font-size: 15px;
+      line-height: 2;
+      color: var(--cream-dim);
+      margin-bottom: 28px;
+    }
+    .about-text strong {
+      color: var(--cream);
+      font-weight: 400;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       REVIEWS
+    ═══════════════════════════════════════════════════════════ */
+    #reviews {
+      background: var(--bg-alt);
+      padding: 110px 0;
+    }
+
+    .reviews-header {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+    .reviews-header h2 {
+      font-size: clamp(32px, 4vw, 58px);
+      font-weight: 300;
+      font-style: italic;
+      margin-top: 16px;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    /* Review cards from 
+        <div class="review-card reveal">
+          <div class="review-quote">"</div>
+          <p class="review-text">This is a best photography  school  in Pune i found  after wasting  my time going to another  classes. A student  get  perfect  guidance with using right  methods. Vision development  is  one of my  most favorite  top...</p>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-meta">Customer · Verified Google Review · 3 years ago</p>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-quote">"</div>
+          <p class="review-text">&quot;I had an amazing experience at the Photography Institute in Pune! The courses offered were incredibly detailed and well-structured, making it easy to learn and improve my skills. The instructors were highly knowledge...</p>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-meta">Customer · Verified Google Review · a year ago</p>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-quote">"</div>
+          <p class="review-text">Best institute to start your career in photography field. Faculty here are very Experienced in over all technical as well as practical. They do know how to boost their students and that really work. Teaching experienc...</p>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-meta">Customer · Verified Google Review · 4 years ago</p>
+        </div> — style .review-card */
+    .review-card {
+      background: var(--bg-card);
+      padding: 40px 36px;
+      position: relative;
+      border: 1px solid rgba(245,240,232,.05);
+      transition: border-color .3s;
+    }
+    .review-card:hover {
+      border-color: var(--rule);
+    }
+    .review-card:nth-child(2) { margin-top: 40px; }
+
+    .review-quote-mark {
+      font-family: var(--font-h);
+      font-size: 80px;
+      line-height: .7;
+      color: var(--rose);
+      opacity: .35;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .review-text {
+      font-family: var(--font-h);
+      font-size: clamp(16px, 1.5vw, 20px);
+      font-style: italic;
+      font-weight: 300;
+      color: var(--cream);
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .review-author {
+      font-family: var(--font-b);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--rose);
+    }
+    .review-stars {
+      margin-bottom: 8px;
+      color: var(--rose);
+      font-size: 12px;
+      letter-spacing: 3px;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       FAQ
+    ═══════════════════════════════════════════════════════════ */
+    #faq {
+      background: #0a0a09;
+      padding: 110px 0;
+    }
+
+    .faq-header {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+    .faq-header h2 {
+      font-size: clamp(32px, 4vw, 58px);
+      font-weight: 300;
+      font-style: italic;
+      margin-top: 16px;
+    }
+
+    /* FAQ items from  — style .faq-item */
+    .faq-item {
+      border-top: 1px solid var(--rule);
+      padding: 28px 0;
+    }
+    .faq-item:last-child { border-bottom: 1px solid var(--rule); }
+
+    .faq-question {
+      font-family: var(--font-h);
+      font-size: clamp(18px, 1.8vw, 24px);
+      font-weight: 400;
+      color: var(--cream);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      user-select: none;
+    }
+    .faq-question::after {
+      content: '+';
+      font-family: var(--font-b);
+      font-size: 20px;
+      color: var(--rose);
+      font-weight: 300;
+      flex-shrink: 0;
+      transition: transform .3s;
+    }
+    .faq-item.open .faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .45s var(--ease), padding .3s;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 400px;
+      padding-top: 20px;
+    }
+
+    .faq-answer p {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--cream-dim);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       CONTACT
+    ═══════════════════════════════════════════════════════════ */
+    #contact {
+      background: var(--bg-alt);
+      padding: 110px 0;
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+    .contact-header h2 {
+      font-size: clamp(36px, 5vw, 70px);
+      font-weight: 300;
+      font-style: italic;
+      margin-top: 16px;
+    }
+    .contact-header p {
+      font-size: 14px;
+      color: var(--cream-dim);
+      margin-top: 20px;
+      letter-spacing: 0.05em;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .contact-block + .contact-block {
+      margin-top: 48px;
+    }
+
+    .contact-block-label {
+      font-family: var(--font-b);
+      font-size: 10px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .contact-phone-link {
+      font-family: var(--font-h);
+      font-size: clamp(28px, 3vw, 44px);
+      font-weight: 300;
+      color: var(--cream);
+      display: block;
+      margin-bottom: 24px;
+      transition: color .2s;
+    }
+    .contact-phone-link:hover { color: var(--rose); }
+
+    .contact-address {
+      font-size: 14px;
+      color: var(--cream-dim);
+      line-height: 1.9;
+    }
+
+    .contact-hours {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .contact-hours td {
+      padding: 8px 0;
+      color: var(--cream-dim);
+      border-bottom: 1px solid rgba(245,240,232,.05);
+    }
+    .contact-hours td:first-child {
+      color: var(--cream);
+      font-weight: 400;
+      padding-right: 24px;
+    }
+
+    .contact-payments {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 8px;
+    }
+    .payment-chip {
+      border: 1px solid var(--rule);
+      padding: 6px 16px;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: var(--cream-dim);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .social-link {
+      font-family: var(--font-b);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+      transition: color .2s, border-color .2s;
+    }
+    .social-link:hover {
+      color: var(--rose);
+      border-color: var(--rose);
+    }
+
+    .wa-cta-block {
+      margin-top: 36px;
+    }
+    .btn--wa {
+      background: transparent;
+      border: 1px solid var(--rose);
+      color: var(--rose);
+      padding: 14px 38px;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      font-family: var(--font-b);
+      display: inline-block;
+      transition: background .3s, color .3s;
+    }
+    .btn--wa:hover {
+      background: var(--rose);
+      color: var(--bg);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════════════════ */
+    #footer {
+      background: var(--bg);
+      padding: 64px 0 48px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: var(--font-h);
+      font-size: clamp(22px, 3vw, 34px);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--cream);
+      margin-bottom: 32px;
+    }
+
+    .footer-hr {
+      border: none;
+      border-top: 1px solid var(--rule);
+      width: 100%;
+      margin: 0 0 32px;
+    }
+
+    .footer-nav {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+    .footer-nav a {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      transition: color .2s;
+    }
+    .footer-nav a:hover { color: var(--rose); }
+
+    .footer-copy {
+      font-size: 12px;
+      color: var(--cream-dim);
+      opacity: .5;
+      letter-spacing: 0.05em;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       FLOATING WHATSAPP
+    ═══════════════════════════════════════════════════════════ */
+    #wa-float {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      z-index: 900;
+    }
+
+    .wa-float-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      box-shadow: 0 4px 24px rgba(37,211,102,.35);
+      transition: transform .3s var(--ease), box-shadow .3s;
+      cursor: pointer;
+    }
+    .wa-float-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 32px rgba(37,211,102,.5);
+    }
+    .wa-float-btn svg {
+      width: 28px;
+      height: 28px;
+      fill: #fff;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .reviews-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .reviews-grid .review-card:nth-child(2) { margin-top: 0; }
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #nav { padding: 16px 0; }
+      .nav-menu { display: none; }
+      .nav-logo { text-align: left; }
+      .hero-title { font-size: clamp(42px, 10vw, 72px); }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .review-card:nth-child(2) { margin-top: 0 !important; }
+      .portfolio-photo img { width: 240px; height: 320px; }
+      .about-years-num { font-size: 72px; }
+      .service-item { grid-template-columns: 52px 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-ctas { flex-direction: column; align-items: center; }
+      .btn { width: 100%; max-width: 280px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════ NAV ═══════════════ -->
+  <nav id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <ul class="nav-left nav-menu">
+        <li><a href="#portfolio">Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+      </ul>
+
+      <div class="nav-logo">
+        <span>MMI</span> - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE
+      </div>
+
+      <a class="nav-phone" href="tel:7977291488" aria-label="Call us">7977291488</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-bg" id="heroParallax" role="img" aria-label="Wedding photography by MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <span class="hero-eyebrow reveal">Local Expert &mdash; Pune</span>
+
+      <h1 class="hero-title reveal reveal-delay-1">
+        Serving<br />
+        <em>our community,</em><br />
+        with pride.
+      </h1>
+
+      <hr class="hero-rule reveal reveal-delay-2" />
+
+      <p class="hero-subtitle reveal reveal-delay-2">MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE offers professional photography institute services in flat no 4, Pune - serving the local community with expertise and care.</p>
+
+      <div class="hero-ctas reveal reveal-delay-3">
+        <a href="tel:7977291488" class="btn btn--primary">Call Now</a>
+        <a href="https://wa.me/7977291488?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20with%20MMI%20-%20MOLD%20MEDIA%20PHOTOGRAPHY%20INSTITUTE%20PUNE." class="btn btn--ghost" target="_blank" rel="noopener">WhatsApp Us</a>
+      </div>
+
+      <div class="hero-rating reveal reveal-delay-4">
+        <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+        <span><strong>4.9</strong> / 5 &ensp;&bull;&ensp; 61 reviews</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ USP CHIPS ═══════════════ -->
+  <section id="usps" aria-label="Why choose us">
+    <div class="container">
+      <div class="usps-inner reveal">
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PORTFOLIO ═══════════════ -->
+  <section id="portfolio" aria-label="Portfolio">
+    <div class="container">
+      <div class="portfolio-header reveal">
+        <span class="section-label">Our Work</span>
+        <h2><em>A glimpse of our work</em></h2>
+      </div>
+    </div>
+    <div class="portfolio-strip reveal" id="portfolioStrip" role="list" aria-label="Portfolio photos">
+      
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipOfAkVIPueioRu19r_fsZzx254rdKu-nWWOt2BV=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipOrLgLqs8O0R7Ky5IMCrYsyaqsttld4b8udXybL=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoXzWHGZsXjnW-n7_I8gb5cf3_7nEPr5vB7TaZUAi_KJXdRAJqe-KeDp1cUH3_QKKLS9-F40_uA4n4lEoSmHDNbjevpjbnnH4FUe2Rc4jpo1KsF0J7sa2EMF0MafcebB9MvkT0=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipPcXV-JFhZiqrqCIZypU_zqcIvBxlpztYxRaBKB=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweo-AV5IkAHKnJxgpGbTT_i7YBKy1d46pLqTMivArxiU0csQQdkIZJjZQR1FNGTug2vM36Vas6HgkDvmlXcjaQA08zftux6UziWdl1e8R7zSWbDJoPQUfWPkYcCN235ziabSMO4Y=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipMb48xoDUYCye44zEPGoin2nV5Jx-VfiHghOJI7=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipNdHwH1QgyCiB5ubs0GAAyNKIXrPCg1KIsQ4XWU=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipPoUrys672-ijztd8-EhK-VtyECLNCew1L2HM4X=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipMtn0r_UUSFzKCSKidt6mWmU7I4znqt2MG1M64c=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipM9CSFGKXBaS0YDEFGbeIG9ZBNXFjCIpjU3ZGSu=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipPasV1QPaDiwLx-6c6M3nVER_jIxo9XH8U9Nxj1=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipNwYmNHQAc6nn9KeAlNaJERGp5lwNnyxzQ5FXkL=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+    </div>
+    <div class="container">
+      <p class="portfolio-drag-hint">Scroll to explore &rarr;</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SERVICES ═══════════════ -->
+  <section id="services" aria-label="Services">
+    <div class="container--narrow">
+      <div class="services-header reveal">
+        <span class="section-label">What We Offer</span>
+        <h2>Our <em>craft</em></h2>
+        <hr class="hr-rose" style="margin-top:32px;" />
+      </div>
+      <ul class="services-list" aria-label="Services list">
+        
+        <div class="service-item service-card reveal">
+          <span class="service-num service-number">01</span>
+          <div>
+            <p class="service-name">Professional Service</p>
+            <p class="service-desc">High-quality service delivered by experienced professionals.</p>
+          </div>
+        </div>
+        <div class="service-item service-card reveal">
+          <span class="service-num service-number">02</span>
+          <div>
+            <p class="service-name">Expert Consultation</p>
+            <p class="service-desc">Personalised advice from our team of industry experts.</p>
+          </div>
+        </div>
+        <div class="service-item service-card reveal">
+          <span class="service-num service-number">03</span>
+          <div>
+            <p class="service-name">Fast Turnaround</p>
+            <p class="service-desc">We value your time - quick and reliable delivery, always.</p>
+          </div>
+        </div>
+        <div class="service-item service-card reveal">
+          <span class="service-num service-number">04</span>
+          <div>
+            <p class="service-name">Affordable Pricing</p>
+            <p class="service-desc">Transparent pricing with no hidden charges.</p>
+          </div>
+        </div>
+        <div class="service-item service-card reveal">
+          <span class="service-num service-number">05</span>
+          <div>
+            <p class="service-name">Customer Support</p>
+            <p class="service-desc">Always available to answer your queries and assist you.</p>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════ ABOUT ═══════════════ -->
+  <section id="about" aria-label="About us">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-left reveal">
+          <span class="section-label">The Story</span>
+          <blockquote class="about-pull-quote">
+            MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE has been serving individuals and businesses in Pune with a commitment to quality, speed, and complete transparency. Whether you&#x27;re a first-time customer or a long-standing client - we&#x27;re here for you.
+          </blockquote>
+          <div class="about-years">
+            <span class="about-years-num">5+</span>
+            <span class="about-years-label">years of<br />capturing<br />love</span>
+          </div>
+        </div>
+
+        <div class="about-right reveal reveal-delay-2">
+          <hr class="hr-rose hr-rose--short" style="margin-bottom:40px;" />
+          <p class="about-text">MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE has been serving individuals and businesses in Pune with a commitment to quality, speed, and complete transparency. Whether you&#x27;re a first-time customer or a long-standing client - we&#x27;re here for you.</p>
+          <p class="about-text">Our team is known for being approachable, thorough, and always available to answer your questions in plain language - no jargon, just clarity.</p>
+          <a href="https://wa.me/7977291488?text=Hi%2C%20I%20found%20MMI%20-%20MOLD%20MEDIA%20PHOTOGRAPHY%20INSTITUTE%20PUNE%20online%20and%20would%20like%20to%20know%20more%20about%20your%20services." class="btn btn--ghost" target="_blank" rel="noopener" style="margin-top:16px;">Start a Conversation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ REVIEWS ═══════════════ -->
+  <section id="reviews" aria-label="Client reviews">
+    <div class="container">
+      <div class="reviews-header reveal">
+        <span class="section-label">Testimonials</span>
+        <h2><em>Words from our couples</em></h2>
+        <hr class="hr-rose hr-rose--short" style="margin: 28px auto 0;" />
+      </div>
+      <div class="reviews-grid">
+        
+        <div class="review-card reveal">
+          <div class="review-quote">"</div>
+          <p class="review-text">This is a best photography  school  in Pune i found  after wasting  my time going to another  classes. A student  get  perfect  guidance with using right  methods. Vision development  is  one of my  most favorite  top...</p>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-meta">Customer · Verified Google Review · 3 years ago</p>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-quote">"</div>
+          <p class="review-text">&quot;I had an amazing experience at the Photography Institute in Pune! The courses offered were incredibly detailed and well-structured, making it easy to learn and improve my skills. The instructors were highly knowledge...</p>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-meta">Customer · Verified Google Review · a year ago</p>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-quote">"</div>
+          <p class="review-text">Best institute to start your career in photography field. Faculty here are very Experienced in over all technical as well as practical. They do know how to boost their students and that really work. Teaching experienc...</p>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-meta">Customer · Verified Google Review · 4 years ago</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FAQ ═══════════════ -->
+  <section id="faq" aria-label="Frequently asked questions">
+    <div class="container--narrow">
+      <div class="faq-header reveal">
+        <span class="section-label">FAQs</span>
+        <h2><em>Questions &amp; answers</em></h2>
+      </div>
+      <div class="faq-list">
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTACT ═══════════════ -->
+  <section id="contact" aria-label="Contact information">
+    <div class="container">
+      <div class="contact-header reveal">
+        <span class="section-label">Get In Touch</span>
+        <h2><em>Let&rsquo;s create something</em><br />unforgettable</h2>
+        <p>Based in flat no 4, Pune &mdash; available worldwide.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="reveal">
+          <div class="contact-block">
+            <span class="contact-block-label">Call or WhatsApp</span>
+            <a class="contact-phone-link" href="tel:7977291488">7977291488</a>
+            <div class="wa-cta-block">
+              <a href="https://wa.me/7977291488?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20with%20MMI%20-%20MOLD%20MEDIA%20PHOTOGRAPHY%20INSTITUTE%20PUNE." class="btn--wa" target="_blank" rel="noopener">
+                Message on WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-block" style="margin-top:52px;">
+            <span class="contact-block-label">Our Location</span>
+            <address class="contact-address" style="font-style:normal;">flat no 4, Namratali Apartments, Raagdari Society, Aundh, Pune, Maharashtra 411067</address>
+          </div>
+
+          <div class="contact-block" style="margin-top:40px;">
+            <span class="contact-block-label">Follow Along</span>
+            <div class="social-links">
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-2">
+          <div class="contact-block">
+            <span class="contact-block-label">Studio Hours</span>
+            <table class="contact-hours" aria-label="Business hours">
+              <tr><td colspan='2' style='color:var(--muted)'>Hours not available</td></tr>
+            </table>
+          </div>
+
+          <div class="contact-block" style="margin-top:48px;">
+            <span class="contact-block-label">We Accept</span>
+            <div class="contact-payments">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-logo">
+        <span>MMI</span> - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE
+      </div>
+      <hr class="footer-hr" />
+      <ul class="footer-nav" aria-label="Footer navigation">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#portfolio">Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2026 MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE. All rights reserved. Pune, flat no 4.</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════ FLOATING WHATSAPP ═══════════════ -->
+  <div id="wa-float" aria-label="Chat on WhatsApp">
+    <a class="wa-float-btn" href="https://wa.me/7977291488?text=Hi%2C%20I%20found%20MMI%20-%20MOLD%20MEDIA%20PHOTOGRAPHY%20INSTITUTE%20PUNE%20online%20and%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener" aria-label="Open WhatsApp chat">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- ═══════════════ JAVASCRIPT ═══════════════ -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ── Nav scroll behaviour ── */
+      const nav = document.getElementById('nav');
+      function handleNavScroll() {
+        nav.classList.toggle('scrolled', window.scrollY > 60);
+      }
+      window.addEventListener('scroll', handleNavScroll, { passive: true });
+      handleNavScroll();
+
+      /* ── Hero parallax ── */
+      const heroBg = document.getElementById('heroParallax');
+      if (heroBg) {
+        function updateParallax() {
+          const scrolled = window.scrollY;
+          const hero = document.getElementById('hero');
+          if (scrolled < hero.offsetHeight) {
+            heroBg.style.transform = 'translateY(' + (scrolled * 0.28) + 'px)';
+          }
+        }
+        window.addEventListener('scroll', updateParallax, { passive: true });
+      }
+
+      /* ── Scroll reveal ── */
+      const revealEls = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -48px 0px' });
+
+        revealEls.forEach(function (el) { observer.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('visible'); });
+      }
+
+      /* ── FAQ accordion ── */
+      document.querySelectorAll('.faq-question').forEach(function (q) {
+        q.addEventListener('click', function () {
+          const item = this.closest('.faq-item');
+          const isOpen = item.classList.contains('open');
+          document.querySelectorAll('.faq-item.open').forEach(function (o) {
+            o.classList.remove('open');
+          });
+          if (!isOpen) item.classList.add('open');
+        });
+      });
+
+      /* ── Portfolio drag-to-scroll ── */
+      const strip = document.getElementById('portfolioStrip');
+      if (strip) {
+        let isDown = false;
+        let startX, scrollLeft;
+        strip.addEventListener('mousedown', function (e) {
+          isDown = true;
+          strip.style.cursor = 'grabbing';
+          startX = e.pageX - strip.offsetLeft;
+          scrollLeft = strip.scrollLeft;
+        });
+        strip.addEventListener('mouseleave', function () { isDown = false; strip.style.cursor = ''; });
+        strip.addEventListener('mouseup', function () { isDown = false; strip.style.cursor = ''; });
+        strip.addEventListener('mousemove', function (e) {
+          if (!isDown) return;
+          e.preventDefault();
+          var x = e.pageX - strip.offsetLeft;
+          strip.scrollLeft = scrollLeft - (x - startX) * 1.4;
+        });
+      }
+
+    })();
+  </script>
+
+</body>
+</html>

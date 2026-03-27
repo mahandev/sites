@@ -1,0 +1,1885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hairforce Salon — Beauty Parlour in Pune</title>
+  <meta name="description" content="Hairforce Salon — distinguished Beauty Parlour serving Bavdhan, Pune. Transforming interiors with editorial vision since 2019. Call 083299 51787 to begin your project." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── TOKENS ─────────────────────────────────────── */
+    :root {
+      --cream:       #f5f0e8;
+      --ink:         #1a1714;
+      --brass:       #b8972a;
+      --brass-light: rgba(184,151,42,0.12);
+      --muted:       #8a8178;
+      --border:      rgba(26,23,20,0.12);
+
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans:  'Raleway', sans-serif;
+
+      --nav-h:    76px;
+      --max-w:    1300px;
+      --px:       clamp(1.5rem, 5vw, 5rem);
+      --section-y: clamp(5rem, 10vw, 9rem);
+
+      --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    /* ── RESET ──────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-sans);
+      font-weight: 300;
+      background: var(--cream);
+      color: var(--ink);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    img   { display: block; width: 100%; height: 100%; object-fit: cover; }
+    a     { color: inherit; text-decoration: none; }
+    ul    { list-style: none; }
+
+    /* ── NOISE GRAIN OVERLAY ────────────────────────── */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.5;
+    }
+
+    /* ── CONTAINER ──────────────────────────────────── */
+    .container {
+      width: 100%;
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: var(--px);
+    }
+
+    /* ── REVEAL ANIMATIONS ──────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+    .d1 { transition-delay: 0.1s; }
+    .d2 { transition-delay: 0.2s; }
+    .d3 { transition-delay: 0.3s; }
+    .d4 { transition-delay: 0.45s; }
+    .d5 { transition-delay: 0.6s; }
+
+    /* ── SECTION LABEL ──────────────────────────────── */
+    .label {
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 0.68rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--brass);
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      margin-bottom: 1.4rem;
+    }
+    .label::before {
+      content: '';
+      display: block;
+      width: 2.5rem;
+      height: 1px;
+      background: var(--brass);
+      flex-shrink: 0;
+    }
+
+    /* ── HEADING UTILITY ────────────────────────────── */
+    .h-display {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+    }
+    .h-display em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--brass);
+    }
+
+    /* ════════════════════════════════════════════════
+       ① NAVIGATION
+    ════════════════════════════════════════════════ */
+    #nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: rgba(245,240,232,0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      z-index: 900;
+      display: flex;
+      align-items: center;
+    }
+    #nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0.02em;
+      line-height: 1;
+    }
+    .nav-logo-sub {
+      display: block;
+      font-family: var(--font-sans);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 0.58rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-top: 4px;
+    }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    .nav-links a {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--brass); }
+    .nav-cta {
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink);
+      border: 1px solid var(--ink);
+      padding: 0.5rem 1.2rem;
+      transition: background 0.3s, color 0.3s, border-color 0.3s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: var(--brass); border-color: var(--brass); color: #fff; }
+    .nav-burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: none;
+    }
+    .nav-burger span {
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--ink);
+      transition: transform 0.35s var(--ease), opacity 0.3s;
+    }
+    .nav-burger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-burger.open span:nth-child(2) { opacity: 0; }
+    .nav-burger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+    .nav-drawer {
+      display: none;
+      position: fixed;
+      top: var(--nav-h);
+      left: 0; right: 0;
+      background: var(--cream);
+      border-bottom: 1px solid var(--border);
+      padding: 2rem var(--px);
+      z-index: 899;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+    .nav-drawer.open { display: flex; }
+    .nav-drawer a {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ════════════════════════════════════════════════
+       ② HERO — EDITORIAL SPLIT
+    ════════════════════════════════════════════════ */
+    #hero {
+      min-height: 100vh;
+      padding-top: var(--nav-h);
+      display: grid;
+      grid-template-columns: 55fr 45fr;
+      position: relative;
+      overflow: hidden;
+      background: var(--cream);
+    }
+
+    /* Vertical brass rule between columns */
+    #hero::after {
+      content: '';
+      position: absolute;
+      left: 55%;
+      top: 10%; bottom: 10%;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, var(--brass) 25%, var(--brass) 75%, transparent);
+      z-index: 4;
+      pointer-events: none;
+    }
+
+    /* ── Hero Left ── */
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(3rem, 7vw, 7rem) clamp(2rem, 5vw, 4.5rem) clamp(3rem, 7vw, 7rem) var(--px);
+      position: relative;
+      z-index: 3;
+    }
+
+    .hero-overline {
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 0.68rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--brass);
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      margin-bottom: 2rem;
+    }
+    .hero-overline::before {
+      content: '';
+      width: 2.5rem;
+      height: 1px;
+      background: var(--brass);
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .hero-heading {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      line-height: 1.06;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 1.8rem;
+    }
+    .hero-heading .line1 {
+      display: block;
+      font-size: clamp(2.6rem, 5.5vw, 5.2rem);
+    }
+    .hero-heading em {
+      display: block;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--brass);
+      font-size: clamp(3rem, 6.5vw, 6.2rem);
+    }
+    .hero-heading .line3 {
+      display: block;
+      font-size: clamp(2.6rem, 5.5vw, 5.2rem);
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-sans);
+      font-weight: 300;
+      font-size: clamp(0.92rem, 1.3vw, 1.1rem);
+      line-height: 1.85;
+      color: var(--muted);
+      max-width: 460px;
+      margin-bottom: 2rem;
+    }
+
+    /* USP chips */
+    .usp-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 2.5rem;
+    }
+    .usp-chip {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brass);
+      border: 1px solid var(--brass);
+      padding: 0.38rem 1rem;
+      background: var(--brass-light);
+      border-radius: 20px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .usp-chip:hover { background: var(--brass); color: #fff; }
+
+    /* CTA row */
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 2.5rem;
+    }
+    .btn-dark {
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: var(--ink);
+      color: #fff;
+      padding: 0.9rem 2.2rem;
+      border: 1px solid var(--ink);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background 0.3s, border-color 0.3s;
+      cursor: pointer;
+    }
+    .btn-dark:hover { background: var(--brass); border-color: var(--brass); }
+    .btn-outline {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink);
+      border: 1px solid var(--ink);
+      padding: 0.9rem 2.2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background 0.3s, color 0.3s;
+      cursor: pointer;
+    }
+    .btn-outline:hover { background: var(--ink); color: #fff; }
+
+    /* Rating badge */
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.9rem 1.4rem;
+      border: 1px solid var(--border);
+      background: var(--brass-light);
+      max-width: 320px;
+    }
+    .badge-num {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--brass);
+      line-height: 1;
+    }
+    .badge-stars { color: var(--brass); font-size: 0.8rem; letter-spacing: 2px; margin: 2px 0 3px; }
+    .badge-caption {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* Ghost large decorative numeral */
+    .hero-ghost-num {
+      position: absolute;
+      bottom: -2rem;
+      left: -0.5rem;
+      font-family: var(--font-serif);
+      font-size: clamp(10rem, 22vw, 22rem);
+      font-weight: 700;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(184,151,42,0.09);
+      line-height: 1;
+      user-select: none;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Hero Right — CSS Geometric Composition ── */
+    .hero-right {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: #e8e2d6;
+      z-index: 2;
+    }
+
+    /* Large background rect */
+    .geo-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(150deg, #ede7d8 0%, #d4c9b4 100%);
+    }
+
+    /* Primary "wall" panel */
+    .geo-wall {
+      position: absolute;
+      top: 8%; left: 12%; right: 12%; bottom: 8%;
+      background: #cfc5ae;
+    }
+
+    /* Floor suggestion */
+    .geo-floor {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 30%;
+      background: linear-gradient(to top, #b8ab93, #cfc5ae);
+      clip-path: polygon(0 40%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    /* Large brass-toned rectangle (sofa silhouette) */
+    .geo-sofa {
+      position: absolute;
+      bottom: 25%; left: 18%; right: 24%;
+      height: 20%;
+      background: linear-gradient(135deg, #b8972a 0%, #a07820 60%, #8a6518 100%);
+      opacity: 0.82;
+    }
+    .geo-sofa::before {
+      content: '';
+      position: absolute;
+      top: -30%; left: 5%; right: 5%;
+      height: 30%;
+      background: #c9a840;
+      opacity: 0.7;
+    }
+
+    /* Vertical panel (window light) */
+    .geo-window {
+      position: absolute;
+      top: 12%; right: 18%;
+      width: 14%; height: 50%;
+      background: linear-gradient(to bottom, rgba(255,248,228,0.9), rgba(245,235,200,0.4));
+      border-left: 2px solid rgba(184,151,42,0.6);
+      border-right: 2px solid rgba(184,151,42,0.6);
+    }
+    .geo-window::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 0; right: 0;
+      height: 1px;
+      background: rgba(184,151,42,0.5);
+    }
+
+    /* Floor lamp */
+    .geo-lamp {
+      position: absolute;
+      bottom: 38%; left: 15%;
+      width: 3px; height: 30%;
+      background: var(--ink);
+    }
+    .geo-lamp::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -14px;
+      width: 30px; height: 20px;
+      background: linear-gradient(to bottom, #f5e8c0, #e8d48c);
+      clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+      transform: rotate(180deg) translateY(-100%);
+      transform-origin: bottom center;
+    }
+    .geo-lamp::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: -8px;
+      width: 20px; height: 5px;
+      background: var(--ink);
+      border-radius: 2px;
+    }
+
+    /* Floating picture frame */
+    .geo-frame {
+      position: absolute;
+      top: 20%; left: 28%;
+      width: 18%; height: 28%;
+      border: 3px solid rgba(184,151,42,0.7);
+      background: linear-gradient(135deg, #c8bda4 0%, #b0a48c 100%);
+    }
+    .geo-frame::after {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      border: 1px solid rgba(184,151,42,0.4);
+    }
+
+    /* Location tag */
+    .hero-location {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      background: rgba(245,240,232,0.94);
+      backdrop-filter: blur(6px);
+      padding: 0.65rem 1.1rem;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Since year badge */
+    .hero-since {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: var(--ink);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+    }
+    .hero-since-label {
+      font-family: var(--font-sans);
+      font-size: 0.55rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--brass);
+    }
+    .hero-since-year {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    /* ════════════════════════════════════════════════
+       ③ DIAGONAL DIVIDER
+    ════════════════════════════════════════════════ */
+    .diagonal-divider {
+      position: relative;
+      height: 80px;
+      background: var(--cream);
+      overflow: hidden;
+    }
+    .diagonal-divider::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--ink);
+      clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
+    }
+    .diagonal-divider.flip::before {
+      clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 100%);
+    }
+    .diagonal-divider.cream-on-ink {
+      background: var(--ink);
+    }
+    .diagonal-divider.cream-on-ink::before {
+      background: var(--cream);
+      clip-path: polygon(0 0, 100% 60%, 100% 100%, 0 100%);
+    }
+
+    /* ════════════════════════════════════════════════
+       ④ SERVICES
+    ════════════════════════════════════════════════ */
+    #services {
+      background: var(--cream);
+      padding: var(--section-y) 0;
+    }
+    .services-inner {
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: var(--px);
+    }
+    .services-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+    .services-header-left { max-width: 520px; }
+    .services-heading {
+      font-size: clamp(2.2rem, 4vw, 3.6rem);
+    }
+    .services-heading-note {
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      line-height: 1.75;
+      color: var(--muted);
+      max-width: 320px;
+    }
+
+    /* Service grid — two columns of numbered items */
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+    .service-item {
+      padding: 1.8rem 2rem 1.8rem 0;
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0 1.4rem;
+      align-items: start;
+      transition: padding-left 0.3s var(--ease);
+      cursor: default;
+    }
+    .service-item:nth-child(odd) { padding-right: 3rem; border-right: 1px solid var(--border); }
+    .service-item:nth-child(even) { padding-left: 2rem; padding-right: 0; }
+    .service-item:hover { padding-left: 0.8rem; }
+    .service-item:nth-child(even):hover { padding-left: 2.8rem; }
+    .service-num {
+      font-family: var(--font-serif);
+      font-size: 0.78rem;
+      font-style: italic;
+      color: var(--brass);
+      min-width: 32px;
+      padding-top: 3px;
+    }
+    .service-body {}
+    .service-name {
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.5rem;
+      color: var(--ink);
+    }
+    .service-desc {
+      font-family: var(--font-sans);
+      font-weight: 300;
+      font-size: 0.84rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+    /* Left brass accent bar on hover */
+    .service-item::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--brass);
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 0.3s var(--ease);
+    }
+    .service-item { position: relative; }
+    .service-item:hover::before { transform: scaleY(1); }
+
+    /* ════════════════════════════════════════════════
+       ⑤ ABOUT — TWO COLUMN
+    ════════════════════════════════════════════════ */
+    #about {
+      background: var(--ink);
+      padding: var(--section-y) 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-inner {
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: var(--px);
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: clamp(3rem, 7vw, 7rem);
+      align-items: center;
+    }
+
+    /* Portrait placeholder — geometric CSS art */
+    .about-portrait {
+      position: relative;
+      aspect-ratio: 3 / 4;
+    }
+    /* Layered rectangle system simulating a portrait */
+    .portrait-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, #2a2520 0%, #1a1714 100%);
+    }
+    .portrait-accent {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 55%;
+      background: linear-gradient(to top, rgba(184,151,42,0.18), transparent);
+    }
+    .portrait-frame-outer {
+      position: absolute;
+      inset: 12px;
+      border: 1px solid rgba(184,151,42,0.35);
+    }
+    .portrait-frame-inner {
+      position: absolute;
+      inset: 28px;
+      border: 1px solid rgba(184,151,42,0.15);
+    }
+    /* Silhouette block */
+    .portrait-figure {
+      position: absolute;
+      bottom: 16%; left: 50%;
+      transform: translateX(-50%);
+      width: 45%;
+    }
+    .portrait-figure-head {
+      width: 42%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: rgba(184,151,42,0.55);
+      margin: 0 auto 4px;
+    }
+    .portrait-figure-body {
+      width: 100%;
+      height: 80px;
+      background: rgba(184,151,42,0.35);
+      clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
+    }
+    /* Brass cross detail */
+    .portrait-cross-h,
+    .portrait-cross-v {
+      position: absolute;
+      background: rgba(184,151,42,0.2);
+    }
+    .portrait-cross-h { top: 50%; left: 5%; right: 5%; height: 1px; }
+    .portrait-cross-v { left: 50%; top: 5%; bottom: 5%; width: 1px; }
+    /* Since badge */
+    .portrait-since {
+      position: absolute;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      width: 70px; height: 70px;
+      border-radius: 50%;
+      background: var(--brass);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .portrait-since .s-label {
+      font-family: var(--font-sans);
+      font-size: 0.5rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+    }
+    .portrait-since .s-year {
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    /* About text */
+    .about-text .label { color: var(--brass); }
+    .about-text .label::before { background: var(--brass); }
+    .about-heading {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      color: var(--cream);
+      margin-bottom: 2rem;
+    }
+    .about-heading em { color: var(--brass); }
+    .about-text p {
+      font-family: var(--font-sans);
+      font-weight: 300;
+      font-size: 0.98rem;
+      line-height: 1.9;
+      color: rgba(245,240,232,0.65);
+      margin-bottom: 1.4rem;
+    }
+    /* Stats row */
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(245,240,232,0.1);
+    }
+    .stat-item { text-align: center; }
+    .stat-num {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--brass);
+      line-height: 1;
+      display: block;
+    }
+    .stat-label {
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.35);
+      margin-top: 0.5rem;
+      display: block;
+    }
+    /* Decorative quote */
+    .about-pullquote {
+      margin-top: 2rem;
+      padding-left: 1.5rem;
+      border-left: 2px solid var(--brass);
+    }
+    .about-pullquote blockquote {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.15rem;
+      line-height: 1.65;
+      color: rgba(245,240,232,0.5);
+    }
+
+    /* ════════════════════════════════════════════════
+       ⑥ REVIEWS — DARK BACKGROUND
+    ════════════════════════════════════════════════ */
+    #reviews {
+      background: var(--ink);
+      padding: var(--section-y) 0;
+      border-top: 1px solid rgba(184,151,42,0.2);
+    }
+    .reviews-inner {
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: var(--px);
+    }
+    .reviews-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 3.5rem;
+    }
+    .reviews-heading {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      color: var(--cream);
+    }
+    .reviews-meta {
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      color: rgba(245,240,232,0.4);
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .reviews-meta strong {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--brass);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    /* review cards injected via 
+        <div class="review-card reveal">
+          <div class="review-quote">"</div>
+          <p class="review-text">A must Visit salon 😍I had done my keratine + smoothning service here from Pooja &amp; it turns extremely beautiful 🤩  pooja is not only good in her service bt also very friendly in nature so we don’t get bored during this...</p>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-meta">Customer · Verified Google Review · 4 years ago</p>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-quote">"</div>
+          <p class="review-text">I went for Smoothening treatment here and Pooja who attended me has done an amazing job.
+I feel it’s really important for me as a customer that a professional tells me what’s good for me which she did..
+Very polite la...</p>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-meta">Customer · Verified Google Review · 3 years ago</p>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-quote">"</div>
+          <p class="review-text">A very good unisex salon 💇🏻‍♀️ providing excellent service, good ambiance and maintaining good hygiene. Co-operative staff, felling wonderful, felling awesome🤩. Love to do my hair at this place, special thanks 😊 to Ru...</p>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-meta">Customer · Verified Google Review · 4 years ago</p>
+        </div> */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    /* Styles for injected review-card children */
+    .review-card {
+      padding: 2rem;
+      border: 1px solid rgba(184,151,42,0.18);
+      background: rgba(255,255,255,0.03);
+      transition: border-color 0.3s, background 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .review-card:hover { border-color: rgba(184,151,42,0.45); background: rgba(255,255,255,0.06); }
+    .review-quote-mark {
+      font-family: var(--font-serif);
+      font-size: 3.5rem;
+      line-height: 0.8;
+      color: var(--brass);
+      opacity: 0.45;
+      margin-bottom: 1rem;
+    }
+    .review-text {
+      font-family: var(--font-sans);
+      font-weight: 300;
+      font-size: 0.88rem;
+      line-height: 1.8;
+      color: rgba(245,240,232,0.7);
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+    .review-stars { color: var(--brass); font-size: 0.78rem; letter-spacing: 3px; margin-bottom: 0.5rem; }
+    .review-meta {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.3);
+    }
+
+    /* ════════════════════════════════════════════════
+       ⑦ FAQ — ACCORDION (CSS only via details/summary)
+    ════════════════════════════════════════════════ */
+    .faq {
+      background: #111009;
+      padding: var(--section-y) 0;
+      border-top: 1px solid rgba(184,151,42,0.12);
+    }
+    .faq-inner {
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: var(--px);
+    }
+    .faq-heading {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      color: var(--cream);
+      margin-bottom: 3rem;
+    }
+    .faq-heading em { color: var(--brass); }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 820px;
+    }
+    .faq-item {
+      border-bottom: 1px solid rgba(245,240,232,0.08);
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item summary,
+    .faq-q {
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: var(--cream);
+      padding: 1.4rem 2.5rem 1.4rem 0;
+      cursor: pointer;
+      list-style: none;
+      position: relative;
+      display: block;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    /* Plus/minus indicator */
+    .faq-item summary::after {
+      content: '+';
+      position: absolute;
+      right: 0; top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--font-sans);
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--brass);
+      line-height: 1;
+      transition: transform 0.3s var(--ease);
+    }
+    details[open] > summary::after { content: '−'; }
+    .faq-a {
+      font-family: var(--font-sans);
+      font-weight: 300;
+      font-size: 0.92rem;
+      line-height: 1.85;
+      color: rgba(245,240,232,0.55);
+      padding: 0 2.5rem 1.6rem 0;
+    }
+
+    /* ════════════════════════════════════════════════
+       ⑧ PHOTO GALLERY
+    ════════════════════════════════════════════════ */
+    #gallery {
+      background: var(--cream);
+      padding: var(--section-y) 0;
+    }
+    .gallery-inner {
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: var(--px);
+    }
+    .gallery-heading {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      margin-bottom: 3rem;
+    }
+
+    /* Masonry-like grid */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr;
+      grid-template-rows: 280px 280px;
+      gap: 6px;
+    }
+    .photo-cell {
+      overflow: hidden;
+      background: #d4ccc0;
+      position: relative;
+    }
+    /* Featured cell spans two rows */
+    .photo-cell:first-child { grid-row: 1 / 3; }
+    .photo-cell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s var(--ease), opacity 0.4s;
+      opacity: 0.88;
+    }
+    .photo-cell:hover img { transform: scale(1.06); opacity: 1; }
+
+    /* ════════════════════════════════════════════════
+       ⑨ CONTACT — SPLIT
+    ════════════════════════════════════════════════ */
+    #contact {
+      background: var(--cream);
+      padding: var(--section-y) 0;
+      border-top: 1px solid var(--border);
+    }
+    .contact-inner {
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: var(--px);
+    }
+    .contact-heading {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      margin-bottom: 3.5rem;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: start;
+    }
+
+    /* Left column */
+    .contact-info { display: flex; flex-direction: column; gap: 1.8rem; }
+    .c-item { display: flex; align-items: flex-start; gap: 1.1rem; }
+    .c-icon {
+      width: 40px; height: 40px;
+      flex-shrink: 0;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: var(--brass);
+      margin-top: 2px;
+    }
+    .c-label {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 0.3rem;
+    }
+    .c-value {
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: var(--ink);
+    }
+    .c-value a:hover { color: var(--brass); }
+
+    /* Hours block */
+    .hours-block { margin-top: 2rem; }
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .hours-table tr { border-bottom: 1px solid var(--border); }
+    .hours-table td {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      padding: 0.75rem 0;
+      color: var(--ink);
+    }
+    .hours-table td:last-child { text-align: right; color: var(--muted); }
+    .closed { color: #c0392b !important; }
+
+    /* Payment & social */
+    .pay-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .pay-badge {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+    }
+
+    /* Map */
+    .contact-map {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .contact-map iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      filter: grayscale(30%) contrast(1.05);
+    }
+
+    /* ════════════════════════════════════════════════
+       ⑩ FOOTER
+    ════════════════════════════════════════════════ */
+    #footer {
+      background: var(--ink);
+      padding: 3.5rem var(--px);
+      border-top: 2px solid var(--brass);
+    }
+    .footer-inner {
+      max-width: var(--max-w);
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .footer-logo {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--cream);
+      letter-spacing: 0.02em;
+    }
+    .footer-logo span {
+      display: block;
+      font-family: var(--font-sans);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 0.58rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-top: 4px;
+    }
+    .footer-center {
+      text-align: center;
+      flex: 1;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.8rem;
+    }
+    .social-link {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.4);
+      transition: color 0.3s;
+    }
+    .social-link:hover { color: var(--brass); }
+    .footer-address {
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      color: rgba(245,240,232,0.25);
+      line-height: 1.6;
+    }
+    .footer-right {
+      text-align: right;
+    }
+    .footer-copy {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      color: rgba(245,240,232,0.3);
+      line-height: 1.6;
+    }
+    .footer-copy strong { color: rgba(245,240,232,0.5); }
+
+    /* Brass divider line above footer text */
+    .footer-divider {
+      width: 2.5rem;
+      height: 1px;
+      background: var(--brass);
+      margin: 0 auto 1.2rem;
+    }
+
+    /* ════════════════════════════════════════════════
+       FLOATING CTA
+    ════════════════════════════════════════════════ */
+    .float-cta {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 800;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      background: var(--ink);
+      color: var(--cream);
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.85rem 1.5rem;
+      border: 1px solid var(--brass);
+      box-shadow: 0 6px 28px rgba(26,23,20,0.35);
+      transition: background 0.3s, color 0.3s;
+      text-decoration: none;
+    }
+    .float-cta:hover { background: var(--brass); color: #fff; }
+    .float-cta svg { flex-shrink: 0; }
+
+    /* ════════════════════════════════════════════════
+       RESPONSIVE
+    ════════════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .service-item:nth-child(odd) { border-right: none; padding-right: 0; }
+      .service-item:nth-child(even) { padding-left: 0; }
+    }
+    @media (max-width: 768px) {
+      :root { --nav-h: 64px; }
+
+      .nav-right .nav-links,
+      .nav-right .nav-cta { display: none; }
+      .nav-burger { display: flex; }
+
+      #hero { grid-template-columns: 1fr; min-height: auto; }
+      #hero::after { display: none; }
+      .hero-left { padding: calc(var(--nav-h) + 2rem) var(--px) 3rem; }
+      .hero-right { min-height: 65vw; }
+      .hero-ghost-num { font-size: 8rem; }
+
+      .services-header { flex-direction: column; align-items: flex-start; }
+      .services-heading-note { display: none; }
+
+      .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .about-portrait { max-width: 280px; }
+      .about-stats { grid-template-columns: repeat(3, 1fr); }
+
+      .reviews-grid { grid-template-columns: 1fr; }
+      .reviews-header { flex-direction: column; align-items: flex-start; }
+      .reviews-meta { text-align: left; }
+
+      .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        flex-wrap: nowrap;
+      }
+      .photo-cell:first-child { grid-row: auto; grid-column: 1 / 3; height: 220px; }
+      .photo-cell { height: 160px; min-width: 220px; }
+
+      .contact-grid { grid-template-columns: 1fr; }
+
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-right { text-align: center; }
+
+      .diagonal-divider { height: 50px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════ -->
+<nav id="nav">
+  <div class="container">
+    <a class="nav-logo" href="#">
+      Hairforce Salon
+      <span>Beauty Parlour &middot; Pune</span>
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#services">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="tel:tel:+918329951787" class="nav-cta">083299 51787</a>
+      <button class="nav-burger" aria-label="Menu" id="navBurger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="nav-drawer" id="navDrawer">
+  <a href="#services">Projects</a>
+  <a href="#services">Services</a>
+  <a href="#about">About</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+  <a href="tel:tel:+918329951787" style="color: var(--brass);">083299 51787</a>
+</div>
+
+<!-- ════════════════════════════════════════════════
+     HERO — EDITORIAL SPLIT
+════════════════════════════════════════════════ -->
+<section id="hero">
+  <!-- Left: editorial text -->
+  <div class="hero-left">
+    <p class="hero-overline reveal">Pune &middot; Bavdhan</p>
+
+    <h1 class="hero-heading reveal d1">
+      <span class="line1">Expert Beauty</span>
+      <em>Transforming Your</em>
+      <span class="line3">Glamour Within</span>
+    </h1>
+
+    <p class="hero-subtitle reveal d2">Experience the art of beauty at Hairforce Salon, a haven in Pune&#x27;s heart, where skilled stylists like Pooja craft bespoke hairstyles and make you feel confident.</p>
+
+    <div class="usp-chips reveal d3">
+      <div class="usp-chips"><span class="usp-chip">Same-Day Filing</span><span class="usp-chip">Home Visits</span><span class="usp-chip">GST Specialist</span></div>
+    </div>
+
+    <div class="hero-ctas reveal d4">
+      <a href="tel:tel:+918329951787" class="btn-dark">
+        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1v3.49a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.57 1 1 0 01-.24 1.01z"/></svg>
+        Call Now
+      </a>
+      <a href="#contact" class="btn-outline">View Our Work</a>
+    </div>
+
+    <div class="hero-badge reveal d5">
+      <div>
+        <div class="badge-num">4.5</div>
+        <div class="badge-stars">★★★★★</div>
+        <div class="badge-caption">Google Rating</div>
+      </div>
+      <div>
+        <div class="badge-caption" style="font-size:0.8rem; color:var(--muted); line-height:1.6;">
+          Trusted by <strong style="color:var(--ink); font-weight:600;">134</strong> clients<br>in Pune &amp; beyond
+        </div>
+      </div>
+    </div>
+
+    <!-- Ghost numeral decoration -->
+    <div class="hero-ghost-num" aria-hidden="true">01</div>
+  </div>
+
+  <!-- Right: CSS geometric composition simulating a room -->
+  <div class="hero-right">
+    <div class="geo-bg"></div>
+    <div class="geo-wall"></div>
+    <div class="geo-floor"></div>
+    <div class="geo-window"></div>
+    <div class="geo-sofa"></div>
+    <div class="geo-lamp"></div>
+    <div class="geo-frame"></div>
+    <div class="hero-location">
+      <svg width="11" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5z"/></svg>
+      near Hotel Aai Saheb, Woods &amp; Planet Nine, Bhugaon, Bavdhan, Pune, Maharashtra 412115
+    </div>
+    <div class="hero-since">
+      <span class="hero-since-label">Est.</span>
+      <span class="hero-since-year">2019</span>
+    </div>
+  </div>
+</section>
+
+<!-- Diagonal divider into services -->
+<div class="diagonal-divider"></div>
+
+<!-- ════════════════════════════════════════════════
+     SERVICES
+════════════════════════════════════════════════ -->
+<section id="services">
+  <div class="services-inner">
+    <div class="services-header">
+      <div class="services-header-left">
+        <p class="label reveal">What We Do</p>
+        <h2 class="h-display services-heading reveal d1">Crafting spaces<br>with <em>intention</em></h2>
+      </div>
+      <p class="services-heading-note reveal d2">
+        Every project begins with listening — understanding how you live, work, and move through space. We translate that into environments of lasting beauty.
+      </p>
+    </div>
+    <!-- 
+        <div class="service-item service-card reveal">
+          <span class="service-num service-number">01</span>
+          <div>
+            <p class="service-name">Smoothening Treatment</p>
+            <p class="service-desc">Soothe your hair with our expert smoothening treatment</p>
+          </div>
+        </div>
+        <div class="service-item service-card reveal">
+          <span class="service-num service-number">02</span>
+          <div>
+            <p class="service-name">Keratin Treatment</p>
+            <p class="service-desc">Get salon-worthy hair with our keratin-infused treatment</p>
+          </div>
+        </div>
+        <div class="service-item service-card reveal">
+          <span class="service-num service-number">03</span>
+          <div>
+            <p class="service-name">Haircut and Styling</p>
+            <p class="service-desc">Revamp your look with our skilled haircut and styling services</p>
+          </div>
+        </div>
+        <div class="service-item service-card reveal">
+          <span class="service-num service-number">04</span>
+          <div>
+            <p class="service-name">Hair Colouring</p>
+            <p class="service-desc">Explore a vibrant world of colours with our expert hair colouring services</p>
+          </div>
+        </div>
+        <div class="service-item service-card reveal">
+          <span class="service-num service-number">05</span>
+          <div>
+            <p class="service-name">Manicure and Pedicure</p>
+            <p class="service-desc">Indulge in relaxing nail services and emerge with salon-fresh look</p>
+          </div>
+        </div> injects .service-item elements directly -->
+    <div class="services-grid reveal">
+      
+        <div class="service-item service-card reveal">
+          <span class="service-num service-number">01</span>
+          <div>
+            <p class="service-name">Smoothening Treatment</p>
+            <p class="service-desc">Soothe your hair with our expert smoothening treatment</p>
+          </div>
+        </div>
+        <div class="service-item service-card reveal">
+          <span class="service-num service-number">02</span>
+          <div>
+            <p class="service-name">Keratin Treatment</p>
+            <p class="service-desc">Get salon-worthy hair with our keratin-infused treatment</p>
+          </div>
+        </div>
+        <div class="service-item service-card reveal">
+          <span class="service-num service-number">03</span>
+          <div>
+            <p class="service-name">Haircut and Styling</p>
+            <p class="service-desc">Revamp your look with our skilled haircut and styling services</p>
+          </div>
+        </div>
+        <div class="service-item service-card reveal">
+          <span class="service-num service-number">04</span>
+          <div>
+            <p class="service-name">Hair Colouring</p>
+            <p class="service-desc">Explore a vibrant world of colours with our expert hair colouring services</p>
+          </div>
+        </div>
+        <div class="service-item service-card reveal">
+          <span class="service-num service-number">05</span>
+          <div>
+            <p class="service-name">Manicure and Pedicure</p>
+            <p class="service-desc">Indulge in relaxing nail services and emerge with salon-fresh look</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- Diagonal divider into about -->
+<div class="diagonal-divider flip" style="background: var(--cream);"><div style="position:absolute;inset:0;background:var(--ink);clip-path:polygon(0 0, 100% 55%, 100% 100%, 0 100%);"></div></div>
+
+<!-- ════════════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════════════ -->
+<section id="about">
+  <div class="about-inner">
+    <!-- Portrait placeholder -->
+    <div class="about-portrait reveal-left">
+      <div class="portrait-bg"></div>
+      <div class="portrait-accent"></div>
+      <div class="portrait-frame-outer"></div>
+      <div class="portrait-frame-inner"></div>
+      <div class="portrait-cross-h"></div>
+      <div class="portrait-cross-v"></div>
+      <div class="portrait-figure">
+        <div class="portrait-figure-head"></div>
+        <div class="portrait-figure-body"></div>
+      </div>
+      <div class="portrait-since">
+        <span class="s-label">Est.</span>
+        <span class="s-year">2019</span>
+      </div>
+    </div>
+
+    <!-- Text -->
+    <div class="about-text reveal-right">
+      <p class="label">The Studio</p>
+      <h2 class="h-display about-heading">Design born from<br><em>deep listening</em></h2>
+      <p>Hairforce Salon is a renowned beauty parlour in Pune&#x27;s Bavdhan, catering to diverse needs since its inception. Our experienced hairstylists provide top-notch services, fostering a strong bond with customers.</p>
+      <p>As evident from our rave reviews, our commitment to precision, timely delivery, and unparalleled quality has won over the hearts of 134 customers, who trust us for all their beauty needs.</p>
+
+      <div class="about-pullquote">
+        <blockquote>"Space is not just what you see — it is what you feel the moment you walk in."</blockquote>
+      </div>
+
+      <div class="about-stats">
+        <div class="stat-item">
+          <span class="stat-num">134</span>
+          <span class="stat-label">Reviews</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">4.5</span>
+          <span class="stat-label">Avg. Rating</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">2019</span>
+          <span class="stat-label">Est.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     REVIEWS — DARK BACKGROUND
+════════════════════════════════════════════════ -->
+<section id="reviews">
+  <div class="reviews-inner">
+    <div class="reviews-header">
+      <div>
+        <p class="label" style="color:var(--brass);">
+          <span style="display:inline-block;width:2.5rem;height:1px;background:var(--brass);vertical-align:middle;margin-right:0.9rem;"></span>
+          Client Voices
+        </p>
+        <h2 class="h-display reviews-heading reveal">Trusted across<br><em>Pune</em></h2>
+      </div>
+      <div class="reviews-meta reveal d2">
+        <strong>4.5</strong>
+        Based on 134 Google Reviews
+      </div>
+    </div>
+    <div class="reviews-grid">
+      
+        <div class="review-card reveal">
+          <div class="review-quote">"</div>
+          <p class="review-text">A must Visit salon 😍I had done my keratine + smoothning service here from Pooja &amp; it turns extremely beautiful 🤩  pooja is not only good in her service bt also very friendly in nature so we don’t get bored during this...</p>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-meta">Customer · Verified Google Review · 4 years ago</p>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-quote">"</div>
+          <p class="review-text">I went for Smoothening treatment here and Pooja who attended me has done an amazing job.
+I feel it’s really important for me as a customer that a professional tells me what’s good for me which she did..
+Very polite la...</p>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-meta">Customer · Verified Google Review · 3 years ago</p>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-quote">"</div>
+          <p class="review-text">A very good unisex salon 💇🏻‍♀️ providing excellent service, good ambiance and maintaining good hygiene. Co-operative staff, felling wonderful, felling awesome🤩. Love to do my hair at this place, special thanks 😊 to Ru...</p>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-meta">Customer · Verified Google Review · 4 years ago</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     FAQ — CSS ACCORDION
+════════════════════════════════════════════════ -->
+<section class="faq">
+  <div class="faq-inner">
+    <p class="label" style="color:var(--brass);">
+      <span style="display:inline-block;width:2.5rem;height:1px;background:var(--brass);vertical-align:middle;margin-right:0.9rem;"></span>
+      Common Questions
+    </p>
+    <h2 class="h-display faq-heading reveal">Frequently asked<br><em>questions</em></h2>
+    <div class="faq-list">
+      
+      <div class="faq-item">
+        <p class="faq-q">What payment modes does Hairforce Salon accept?</p>
+        <p class="faq-a">We accept all major credit and debit cards, as well as cash payments.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">What is the average time taken for a haircut and styling service?</p>
+        <p class="faq-a">The time taken may vary depending on the service and stylist&#x27;s expertise, but we strive to complete services within 30 minutes.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Can I book an appointment with a specific stylist?</p>
+        <p class="faq-a">Yes, you can book an appointment with a preferred stylist by contacting us in advance.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">What services do you offer for men and women?</p>
+        <p class="faq-a">We cater to both men and women, offering a range of hair and beauty services tailored to your needs</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Diagonal divider out of dark sections -->
+<div style="position:relative;height:70px;background:#111009;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:var(--cream);clip-path:polygon(0 60%, 100% 0%, 100% 100%, 0 100%);"></div>
+</div>
+
+<!-- ════════════════════════════════════════════════
+     PHOTO GALLERY
+════════════════════════════════════════════════ -->
+<section id="gallery">
+  <div class="gallery-inner">
+    <p class="label reveal">The Portfolio</p>
+    <h2 class="h-display gallery-heading reveal d1">Our work in<br><em>Bavdhan</em></h2>
+    <div class="photo-grid reveal d2">
+      
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqSLpjxpKcmHIyWMKKajf5QRb8biAbuKr0mvU5JLiDYbhRaxHUaa7NqXJWkfyPmCeNo7Kst9zDnz_7UqMyuIEJ_lNPTWzk31ycddvyDim0k96xO1hQ_GGm2ulAMVBay3uLCTG4=w1920-h1080-k-no" alt="Hairforce Salon" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqoMc9Cv5yadlIS9V-13vMFuTFaYP5YVPP78k8EgJjrODyOBPbgHhaE9HCu4htNxqU_ZBbPFU3ywf_jpQkHFctt1zsXpSKu7nUvhnCOsO-d-sLHLSThnhNpJoCQ2YyQUGr_8s3xag=w1920-h1080-k-no" alt="Hairforce Salon" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqQ7uDRV8KvHCoB-E9f_CnH-Gq-zHM-u_gZxQkbJ11A9R6hU4vP382FR0NiatDO_wFi0D4oCwIvZ802xGakxxShmR2kb1JVqQDcaZ70OwZjWttlW6Uhvsok2tTbG3qpQuAbmlE6=w1920-h1080-k-no" alt="Hairforce Salon" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipPOr4X0a-697faHbq5a1UpxG7kjQSYfaMwByKcR=w1920-h1080-k-no" alt="Hairforce Salon" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqKxSEFHR1Kgi1hU7q7c2PjCh1vsdEtEvFyynbmMdqtT6tOGGyvAFwnlSNV8OwRRwBA1K4lZmCdqJh-rN8JX-LJzNLnAzzdhfyBq5xTQ0MFGR9ck2s1JfSUtNvbDCryi5FtgnGI=w1920-h1080-k-no" alt="Hairforce Salon" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwery0bK49M4R3UEI19CBjMOJyl0uoAzmUKhbMU4SqR2aDi-bUz5LPwhL65mo6_s7pS7ctlbbvsUwC6Q61T1Y9MyYM7WS933LLTKlbMvEW-pLwup06pYI_YVJMvdYgrTi7trxJ83l=w1920-h1080-k-no" alt="Hairforce Salon" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqIGAUdjaGh2nu3Ajb04yshK9LA4dDzjbhdYK31XN4dFDl1A_YAaJ1bCObKIvtPM_VmI4DX19uL9OlVPaR2lE-0Tw8MTG3-_TFXJ3MhBxUyTVZiFTGvlrwK9qj7RgWjbJUggnDT=w1920-h1080-k-no" alt="Hairforce Salon" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoAJFPD_9OVWqJnaFushygoFYmdBt7o2i18I7DMRPmbKuRa4Gy1uPWjH1qBAZl3OOa1y53jxKB3eSznZNSnr5fPesThXdJ7et9J6exA0FALlITFdJ6-M2AkDwFlmc_OPpfYTwU=w1920-h1080-k-no" alt="Hairforce Salon" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepD2eIx-GivQyADjW2eoyxJ7UUTiO59eWAEwflZOI2gRJ5CqVUg1apDtQPY9D_zfSXYlNi1f37oPS_jC3LbIswtYbEw_k8ZW79RvJR11-OqV4DKfzFEMLe5_UDvp2pV_FzT73k=w1920-h1080-k-no" alt="Hairforce Salon" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweq_AOgOY9iaWasUtN8rvJSFBZg3zaKMEgrA6Ir82BPHgYYpO1zAKQPUg39neS4cSX73ClMpJMWzto4ifR2NnfBIF9fRKkmhVstNiggyg8A7h912JdVYblmjj_15ugtiQZSaUTCWGA=w1920-h1080-k-no" alt="Hairforce Salon" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepgHhNAkbjx07m1SajTN2CFFSBmsgJGHoA2y8fSC7XJw1MZ-wtkAO54ItRb9aqEu5M-A0gsR987mrHXiWPWmJGio49PSMayw6ybSIi3RgzFbP3wXO7tHyjYr_sdDjf5p3PAvwfQ=w1920-h1080-k-no" alt="Hairforce Salon" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipMPT0Kz1o76f5-fsxDDdYiRGtFmDW6tKf8e4c5Z=w1920-h1080-k-no" alt="Hairforce Salon" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     CONTACT — SPLIT WITH MAP
+════════════════════════════════════════════════ -->
+<section id="contact">
+  <div class="contact-inner">
+    <p class="label reveal">Reach Us</p>
+    <h2 class="h-display contact-heading reveal d1">Start your<br><em>transformation</em></h2>
+    <div class="contact-grid">
+      <!-- Left: info + hours -->
+      <div class="reveal-left">
+        <div class="contact-info">
+          <div class="c-item">
+            <div class="c-icon">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5z"/></svg>
+            </div>
+            <div>
+              <p class="c-label">Studio Address</p>
+              <p class="c-value">near Hotel Aai Saheb, Woods &amp; Planet Nine, Bhugaon, Bavdhan, Pune, Maharashtra 412115</p>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1v3.49a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.57 1 1 0 01-.24 1.01z"/></svg>
+            </div>
+            <div>
+              <p class="c-label">Phone</p>
+              <p class="c-value"><a href="tel:tel:+918329951787">083299 51787</a></p>
+              <div class="pay-badges"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hours -->
+        <div class="hours-block">
+          <p class="label" style="margin-top:2rem;">Studio Hours</p>
+          <table class="hours-table">
+            <tr><td>Monday</td><td>9 am–10 pm</td></tr>
+<tr><td>Tuesday</td><td>9 am–10 pm</td></tr>
+<tr><td>Wednesday</td><td>9 am–10 pm</td></tr>
+<tr><td>Thursday</td><td>9 am–10 pm</td></tr>
+<tr><td>Friday</td><td>9 am–10 pm</td></tr>
+<tr><td>Saturday</td><td>9 am–10 pm</td></tr>
+<tr><td>Sunday</td><td>9 am–10 pm</td></tr>
+
+          </table>
+        </div>
+      </div>
+
+      <!-- Right: map -->
+      <div class="reveal-right">
+        <div class="contact-map">
+          https://maps.google.com/maps?q=near%20Hotel%20Aai%20Saheb%2C%20Woods%20%26%20Planet%20Nine%2C%20Bhugaon%2C%20Bavdhan%2C%20Pune%2C%20Maharashtra%20412115&output=embed
+        </div>
+        <p style="margin-top:1rem; text-align:center;">
+          <a href="https://maps.google.com/maps?q=near%20Hotel%20Aai%20Saheb%2C%20Woods%20%26%20Planet%20Nine%2C%20Bhugaon%2C%20Bavdhan%2C%20Pune%2C%20Maharashtra%20412115" target="_blank" rel="noopener" style="font-family:var(--font-sans);font-size:0.75rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--brass);display:inline-flex;align-items:center;gap:0.4rem;">
+            Open in Google Maps
+            <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">
+        Hairforce Salon
+        <span>Beauty Parlour &middot; Pune</span>
+      </div>
+    </div>
+    <div class="footer-center">
+      <div class="social-links"></div>
+      <div class="footer-divider"></div>
+      <p class="footer-address">near Hotel Aai Saheb, Woods &amp; Planet Nine, Bhugaon, Bavdhan, Pune, Maharashtra 412115 &middot; 083299 51787</p>
+    </div>
+    <div class="footer-right">
+      <p class="footer-copy">
+        &copy; 2026 <strong>Hairforce Salon</strong><br>
+        All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════════════════════════════════
+     FLOATING CTA
+════════════════════════════════════════════════ -->
+<a class="float-cta" href="tel:tel:+918329951787">
+  <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1v3.49a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.47 11.47 0 00.57 3.57 1 1 0 01-.24 1.01z"/></svg>
+  Call Now
+</a>
+
+<!-- ════════════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════════════ -->
+<script>
+  /* ── IntersectionObserver Reveals ── */
+  (function () {
+    var targets = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    if (!targets.length) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry, i) {
+        if (entry.isIntersecting) {
+          setTimeout(function () {
+            entry.target.classList.add('visible');
+          }, i * 60);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    targets.forEach(function (el) { observer.observe(el); });
+
+    /* Immediately reveal elements already in viewport on load */
+    window.addEventListener('load', function () {
+      document.querySelectorAll('#hero .reveal, #hero .reveal-left, #hero .reveal-right').forEach(function (el, i) {
+        setTimeout(function () { el.classList.add('visible'); }, 200 + i * 120);
+      });
+    });
+  })();
+
+  /* ── Mobile hamburger ── */
+  (function () {
+    var burger = document.getElementById('navBurger');
+    var drawer = document.getElementById('navDrawer');
+    if (!burger || !drawer) return;
+    burger.addEventListener('click', function () {
+      burger.classList.toggle('open');
+      drawer.classList.toggle('open');
+    });
+    drawer.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        burger.classList.remove('open');
+        drawer.classList.remove('open');
+      });
+    });
+  })();
+
+  /* ── Sticky nav shadow on scroll ── */
+  (function () {
+    var nav = document.getElementById('nav');
+    if (!nav) return;
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 20) {
+        nav.style.boxShadow = '0 2px 20px rgba(26,23,20,0.1)';
+      } else {
+        nav.style.boxShadow = 'none';
+      }
+    }, { passive: true });
+  })();
+</script>
+</body>
+</html>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE — Business in Pune</title>
-  <meta name="description" content="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE — Local Expert based in Pune, N/A. At MMI, we deliver exceptional photography solutions while fostering a passion for creative expression in Pune. Experience the best in class, precision, and attention to detail." />
+  <title>MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE — Photography Institute in Pune</title>
+  <meta name="description" content="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE — Local Expert based in Pune, Hadapsar. Pune&#x27;s best photography school, since 2005." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400&display=swap" rel="stylesheet" />
@@ -142,13 +142,18 @@
 
     .nav-logo {
       font-family: var(--font-h);
-      font-size: clamp(18px, 2vw, 22px);
+      font-size: clamp(16px, 1.8vw, 22px);
       font-weight: 400;
       font-style: italic;
       letter-spacing: 0.04em;
       color: var(--cream);
       flex: 1;
       text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 400px;
+      margin-inline: auto;
     }
 
     .nav-phone {
@@ -198,7 +203,7 @@
     .hero-bg {
       position: absolute;
       inset: -60px -10px;
-      background-image: url('');
+      background-image: url('https://lh3.googleusercontent.com/gps-cs-s/AHVAwepmWyFhaGUswZZl-0jsxtYpp180alAuRlpztpJhGPfomo2epC25TaXGF28gnmHPAW1nJbx6ttY3lElhdir_gxzXwB2QyBGPWpAvqB517puaJll7IK_ce3KhwKxdAcDkiILDL8s=w1920-h1080-k-no');
       background-size: cover;
       background-position: center 30%;
       will-change: transform;
@@ -236,10 +241,11 @@
     .hero-title {
       font-family: var(--font-h);
       font-weight: 300;
-      font-size: clamp(52px, 9vw, 128px);
-      line-height: 1;
+      font-size: clamp(42px, 7vw, 96px);
+      line-height: 1.05;
       letter-spacing: -0.01em;
       color: var(--cream);
+      word-break: break-word;
     }
     .hero-title em {
       color: var(--rose);
@@ -332,7 +338,7 @@
       gap: 16px;
     }
 
-    /* USP chips injected via <div class="usp-chips"><span class="usp-chip">Expert Trainers</span><span class="usp-chip">Cutting-Edge Gear</span><span class="usp-chip">Experiential Learning</span></div> — style them via .usp-chip */
+    /* USP chips — style them via .usp-chip */
     .usp-chip {
       display: inline-block;
       border: 1px solid var(--rose);
@@ -383,20 +389,17 @@
     }
     .portfolio-strip::-webkit-scrollbar { display: none; }
 
-    /* Photos injected via 
-        <div class="photo-cell">
-          <img src="" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
-        </div> — style .portfolio-photo */
-    .portfolio-photo {
+    /* Photos — style .photo-cell */
+    .photo-cell {
       flex: 0 0 auto;
       scroll-snap-align: start;
       position: relative;
       overflow: hidden;
       transition: transform .4s var(--ease);
     }
-    .portfolio-photo:nth-child(odd)  { margin-top: 40px; }
-    .portfolio-photo:nth-child(even) { margin-top: 0; z-index: 2; margin-left: -18px; margin-right: -18px; }
-    .portfolio-photo img {
+    .photo-cell:nth-child(odd)  { margin-top: 40px; }
+    .photo-cell:nth-child(even) { margin-top: 0; z-index: 2; margin-left: -18px; margin-right: -18px; }
+    .photo-cell img {
       width: 320px;
       height: 440px;
       object-fit: cover;
@@ -404,7 +407,7 @@
       filter: brightness(.92) saturate(.9);
       transition: filter .4s, transform .5s var(--ease);
     }
-    .portfolio-photo:hover img {
+    .photo-cell:hover img {
       filter: brightness(1) saturate(1);
       transform: scale(1.03);
     }
@@ -440,42 +443,7 @@
       list-style: none;
     }
 
-    /* Service items from 
-        <div class="service-item service-card reveal">
-          <span class="service-num service-number">01</span>
-          <div>
-            <p class="service-name">Photo Studio</p>
-            <p class="service-desc">State-of-the-art facilities for all your photography needs</p>
-          </div>
-        </div>
-        <div class="service-item service-card reveal">
-          <span class="service-num service-number">02</span>
-          <div>
-            <p class="service-name">Workshops &amp; Courses</p>
-            <p class="service-desc">Expert instruction and hands-on training for budding photographers</p>
-          </div>
-        </div>
-        <div class="service-item service-card reveal">
-          <span class="service-num service-number">03</span>
-          <div>
-            <p class="service-name">Photography Equipment</p>
-            <p class="service-desc">Wide range of top-notch gear for rent or purchase</p>
-          </div>
-        </div>
-        <div class="service-item service-card reveal">
-          <span class="service-num service-number">04</span>
-          <div>
-            <p class="service-name">Wedding Photography</p>
-            <p class="service-desc">Experienced photographers for unforgettable wedding moments</p>
-          </div>
-        </div>
-        <div class="service-item service-card reveal">
-          <span class="service-num service-number">05</span>
-          <div>
-            <p class="service-name">Portfolio Development</p>
-            <p class="service-desc">Guided portfolio creation for professional growth</p>
-          </div>
-        </div> — style .service-item */
+    /* Service items — style .service-item */
     .service-item {
       display: grid;
       grid-template-columns: 72px 1fr;
@@ -617,13 +585,7 @@
       align-items: start;
     }
 
-    /* Review cards from 
-        <div class="review-card reveal">
-          <div class="review-quote">"</div>
-          <p class="review-text">Customers appreciate our quality, responsiveness, and professional service.</p>
-          <div class="review-stars">★★★★★</div>
-          <p class="review-meta">Verified Google Review · Recently</p>
-        </div> — style .review-card */
+    /* Review cards — style .review-card */
     .review-card {
       background: var(--bg-card);
       padding: 40px 36px;
@@ -689,23 +651,7 @@
       margin-top: 16px;
     }
 
-    /* FAQ items from 
-      <div class="faq-item">
-        <p class="faq-q">What services do you offer for photographers?</p>
-        <p class="faq-a">At MMI, we provide photo studio access, workshops &amp; courses, and equipment rental &amp; sales, catering to all your photography needs.</p>
-      </div>
-      <div class="faq-item">
-        <p class="faq-q">Do you offer wedding photography services?</p>
-        <p class="faq-a">Yes, our team of experienced photographers specializes in capturing unforgettable wedding moments.</p>
-      </div>
-      <div class="faq-item">
-        <p class="faq-q">What is the duration of your photography courses?</p>
-        <p class="faq-a">Our courses are designed to fit various schedules and preferences, ranging from short-term workshops to comprehensive diploma programs.</p>
-      </div>
-      <div class="faq-item">
-        <p class="faq-q">What is the minimum qualification required for enrollment?</p>
-        <p class="faq-a">We welcome students with a passion for photography; no prior formal education is necessary, just a willing attitude to learn and grow.</p>
-      </div> — style .faq-item */
+    /* FAQ items — style .faq-item */
     .faq-item {
       border-top: 1px solid var(--rule);
       padding: 28px 0;
@@ -993,7 +939,7 @@
       .hero-title { font-size: clamp(42px, 10vw, 72px); }
       .reviews-grid { grid-template-columns: 1fr; }
       .review-card:nth-child(2) { margin-top: 0 !important; }
-      .portfolio-photo img { width: 240px; height: 320px; }
+      .photo-cell img { width: 240px; height: 320px; }
       .about-years-num { font-size: 72px; }
       .service-item { grid-template-columns: 52px 1fr; }
     }
@@ -1020,7 +966,7 @@
         <span>MMI</span> - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE
       </div>
 
-      <a class="nav-phone" href="tel:" aria-label="Call us"></a>
+      <a class="nav-phone" href="tel:#" aria-label="Call us">Contact Us</a>
     </div>
   </nav>
 
@@ -1033,23 +979,23 @@
       <span class="hero-eyebrow reveal">Local Expert &mdash; Pune</span>
 
       <h1 class="hero-title reveal reveal-delay-1">
-        Transformative<br />
-        <em>_Artistic Vision_</em><br />
-        Visual Excellence
+        Snap Life<br />
+        <em>_Moment forever_</em><br />
+        Unseen beauty
       </h1>
 
       <hr class="hero-rule reveal reveal-delay-2" />
 
-      <p class="hero-subtitle reveal reveal-delay-2">At MMI, we deliver exceptional photography solutions while fostering a passion for creative expression in Pune. Experience the best in class, precision, and attention to detail.</p>
+      <p class="hero-subtitle reveal reveal-delay-2">Pune&#x27;s best photography school, since 2005.</p>
 
       <div class="hero-ctas reveal reveal-delay-3">
-        <a href="tel:" class="btn btn--primary">Call Now</a>
-        <a href="https://wa.me/?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20with%20MMI%20-%20MOLD%20MEDIA%20PHOTOGRAPHY%20INSTITUTE%20PUNE." class="btn btn--ghost" target="_blank" rel="noopener">WhatsApp Us</a>
+        <a href="tel:#" class="btn btn--primary">Call Now</a>
+        <a href="https://wa.me/0000000000?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20with%20MMI%20-%20MOLD%20MEDIA%20PHOTOGRAPHY%20INSTITUTE%20PUNE." class="btn btn--ghost" target="_blank" rel="noopener">WhatsApp Us</a>
       </div>
 
       <div class="hero-rating reveal reveal-delay-4">
         <span class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-        <span><strong>5.0</strong> / 5 &ensp;&bull;&ensp; 0 reviews</span>
+        <span><strong>4.9</strong> / 5 &ensp;&bull;&ensp; 0 reviews</span>
       </div>
     </div>
   </section>
@@ -1058,7 +1004,7 @@
   <section id="usps" aria-label="Why choose us">
     <div class="container">
       <div class="usps-inner reveal">
-        <div class="usp-chips"><span class="usp-chip">Expert Trainers</span><span class="usp-chip">Cutting-Edge Gear</span><span class="usp-chip">Experiential Learning</span></div>
+        <div class="usp-chips"><span class="usp-chip">Best Faculty</span><span class="usp-chip">Real Experience</span><span class="usp-chip">Life-Long Learning</span></div>
       </div>
     </div>
   </section>
@@ -1074,7 +1020,40 @@
     <div class="portfolio-strip reveal" id="portfolioStrip" role="list" aria-label="Portfolio photos">
       
         <div class="photo-cell">
-          <img src="" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepmWyFhaGUswZZl-0jsxtYpp180alAuRlpztpJhGPfomo2epC25TaXGF28gnmHPAW1nJbx6ttY3lElhdir_gxzXwB2QyBGPWpAvqB517puaJll7IK_ce3KhwKxdAcDkiILDL8s=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipN7g79sPmFea0Pqb11f61_2uHQxwNyJ8aWdwEPU=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipPoUrys672-ijztd8-EhK-VtyECLNCew1L2HM4X=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipN7Ml1Ym3M5zEsQIHEJHbeAvQeVeMyOpf6TnGzt=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipPOYoeMnLI5CUgUVePbrpBN8tvxrl3f_Jawcnk0=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipMmkf844Wa2k_E8WldibKUuJH36eCriYKjFsWWi=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqoYYBVJCJa5zdPldubc9omnMAxSuuYAbq0-I1F1RETkQ6R4NW9_HEjtpZrSSrq1KhBvaSUVjIECJpGjmrNVsKqKR3cFIbS53j9Miar45ZvrvJQgzPKsK-Wd2pqyHfsFvEOEqT5=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepjC99S-9ArEN5rx3Jm3h8eBjonc94LsUgnw1A5H7XHZkWG7X28PIJ364ijsyuWTLQGtoMXnnQcuQtGAHtt70iT2Av9KPAjoaiNFpekdtqy_yioorclre7HmzAfrgrtBxHzAJ8=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipMppKv0iY-vGJ3GsB_sbUHwbxkw_A0BWhQQDRe0=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipMNZQws_O3wILPoA-QsXrS_CWJ8WrB90jyEXUYK=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipMiE0GFoTeoPuvZDTMfgsmLYEyFb_kmlWFdTg4t=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipOlfph3onRG2WIktn-_VR3dyo6G-vLVdjI1OD9z=w1920-h1080-k-no" alt="MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE" onerror="this.parentElement.style.background='#2a2a28'">
         </div>
     </div>
     <div class="container">
@@ -1095,36 +1074,36 @@
         <div class="service-item service-card reveal">
           <span class="service-num service-number">01</span>
           <div>
-            <p class="service-name">Photo Studio</p>
-            <p class="service-desc">State-of-the-art facilities for all your photography needs</p>
+            <p class="service-name">Commercial Photography</p>
+            <p class="service-desc">Expert commercial photography for businesses and events.</p>
           </div>
         </div>
         <div class="service-item service-card reveal">
           <span class="service-num service-number">02</span>
           <div>
-            <p class="service-name">Workshops &amp; Courses</p>
-            <p class="service-desc">Expert instruction and hands-on training for budding photographers</p>
+            <p class="service-name">Portrait Photography</p>
+            <p class="service-desc">Capture life&#x27;s precious moments with our expert portrait photography services.</p>
           </div>
         </div>
         <div class="service-item service-card reveal">
           <span class="service-num service-number">03</span>
           <div>
-            <p class="service-name">Photography Equipment</p>
-            <p class="service-desc">Wide range of top-notch gear for rent or purchase</p>
+            <p class="service-name">Fine Art Photography</p>
+            <p class="service-desc">Discover the world of fine art photography with our expert guidance.</p>
           </div>
         </div>
         <div class="service-item service-card reveal">
           <span class="service-num service-number">04</span>
           <div>
             <p class="service-name">Wedding Photography</p>
-            <p class="service-desc">Experienced photographers for unforgettable wedding moments</p>
+            <p class="service-desc">Experience the art of wedding photography with our expert team.</p>
           </div>
         </div>
         <div class="service-item service-card reveal">
           <span class="service-num service-number">05</span>
           <div>
-            <p class="service-name">Portfolio Development</p>
-            <p class="service-desc">Guided portfolio creation for professional growth</p>
+            <p class="service-name">Landscape Photography</p>
+            <p class="service-desc">Get up close and personal with nature through our expert landscape photography services.</p>
           </div>
         </div>
       </ul>
@@ -1138,19 +1117,19 @@
         <div class="about-left reveal">
           <span class="section-label">The Story</span>
           <blockquote class="about-pull-quote">
-            Established in N/A, MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE is an esteemed photography institute committed to empowering aspiring photographers. Our team of experts provides world-class training and mentorship to unlock their full potential.
+            We teach photography at MMI, a renowned institute in Pune, established in 2005. Our expert faculty guides students to grasp the art of photography. We offer a range of courses to cater to all levels and interests.
           </blockquote>
           <div class="about-years">
-            <span class="about-years-num">1+</span>
+            <span class="about-years-num">5+</span>
             <span class="about-years-label">years of<br />capturing<br />love</span>
           </div>
         </div>
 
         <div class="about-right reveal reveal-delay-2">
           <hr class="hr-rose hr-rose--short" style="margin-bottom:40px;" />
-          <p class="about-text">Established in N/A, MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE is an esteemed photography institute committed to empowering aspiring photographers. Our team of experts provides world-class training and mentorship to unlock their full potential.</p>
-          <p class="about-text">Our dedication to excellence has earned us a stellar 5.0-star rating from satisfied clients who vouch for our professionalism and attention to detail.</p>
-          <a href="https://wa.me/?text=Hi%2C%20I%20found%20MMI%20-%20MOLD%20MEDIA%20PHOTOGRAPHY%20INSTITUTE%20PUNE%20online%20and%20would%20like%20to%20know%20more%20about%20your%20services." class="btn btn--ghost" target="_blank" rel="noopener" style="margin-top:16px;">Start a Conversation</a>
+          <p class="about-text">We teach photography at MMI, a renowned institute in Pune, established in 2005. Our expert faculty guides students to grasp the art of photography. We offer a range of courses to cater to all levels and interests.</p>
+          <p class="about-text">Our students praise our unique approach to teaching photography, saying it&#x27;s &#x27;incredibly detailed and well-structured.&#x27; Our experienced faculty helps you achieve your career goals in the field of photography.</p>
+          <a href="https://wa.me/0000000000?text=Hi%2C%20I%20found%20MMI%20-%20MOLD%20MEDIA%20PHOTOGRAPHY%20INSTITUTE%20PUNE%20online%20and%20would%20like%20to%20know%20more%20about%20your%20services." class="btn btn--ghost" target="_blank" rel="noopener" style="margin-top:16px;">Start a Conversation</a>
         </div>
       </div>
     </div>
@@ -1167,10 +1146,22 @@
       <div class="reviews-grid">
         
         <div class="review-card reveal">
-          <div class="review-quote">"</div>
-          <p class="review-text">Customers appreciate our quality, responsiveness, and professional service.</p>
+          <div class="review-quote review-quote-mark">"</div>
+          <p class="review-text">This is a best photography  school  in Pune i found  after wasting  my time going to another  classes. A student  get  perfect  guidance with using right  methods. Vision development  is  one of my  most favorite  top...</p>
           <div class="review-stars">★★★★★</div>
-          <p class="review-meta">Verified Google Review · Recently</p>
+          <p class="review-meta review-author">Customer · Verified Google Review · 3 years ago</p>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-quote review-quote-mark">"</div>
+          <p class="review-text">&quot;I had an amazing experience at the Photography Institute in Pune! The courses offered were incredibly detailed and well-structured, making it easy to learn and improve my skills. The instructors were highly knowledge...</p>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-meta review-author">Customer · Verified Google Review · a year ago</p>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-quote review-quote-mark">"</div>
+          <p class="review-text">Best institute to start your career in photography field. Faculty here are very Experienced in over all technical as well as practical. They do know how to boost their students and that really work. Teaching experienc...</p>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-meta review-author">Customer · Verified Google Review · 4 years ago</p>
         </div>
       </div>
     </div>
@@ -1186,20 +1177,20 @@
       <div class="faq-list">
         
       <div class="faq-item">
-        <p class="faq-q">What services do you offer for photographers?</p>
-        <p class="faq-a">At MMI, we provide photo studio access, workshops &amp; courses, and equipment rental &amp; sales, catering to all your photography needs.</p>
+        <div class="faq-question faq-q">What makes MMI the best photography school in Pune?</div>
+        <div class="faq-answer faq-a"><p>Our experienced faculty, state-of-the-art facilities, and a proven track record of student success.</p></div>
       </div>
       <div class="faq-item">
-        <p class="faq-q">Do you offer wedding photography services?</p>
-        <p class="faq-a">Yes, our team of experienced photographers specializes in capturing unforgettable wedding moments.</p>
+        <div class="faq-question faq-q">What courses do you offer at MMI?</div>
+        <div class="faq-answer faq-a"><p>We offer a range of courses in commercial, portrait, fine art, wedding, and landscape photography.</p></div>
       </div>
       <div class="faq-item">
-        <p class="faq-q">What is the duration of your photography courses?</p>
-        <p class="faq-a">Our courses are designed to fit various schedules and preferences, ranging from short-term workshops to comprehensive diploma programs.</p>
+        <div class="faq-question faq-q">How long do your courses typically take?</div>
+        <div class="faq-answer faq-a"><p>Our courses vary in duration, from a few months to one or two years. However, we ensure you get the best possible learning experience during your stay.</p></div>
       </div>
       <div class="faq-item">
-        <p class="faq-q">What is the minimum qualification required for enrollment?</p>
-        <p class="faq-a">We welcome students with a passion for photography; no prior formal education is necessary, just a willing attitude to learn and grow.</p>
+        <div class="faq-question faq-q">Can I get a job after completing your courses?</div>
+        <div class="faq-answer faq-a"><p>Yes, our strong industry connections and comprehensive training program increase your chances of securing a job in the photography field.</p></div>
       </div>
       </div>
     </div>
@@ -1211,16 +1202,16 @@
       <div class="contact-header reveal">
         <span class="section-label">Get In Touch</span>
         <h2><em>Let&rsquo;s create something</em><br />unforgettable</h2>
-        <p>Based in N/A, Pune &mdash; available worldwide.</p>
+        <p>Based in Hadapsar, Pune &mdash; available worldwide.</p>
       </div>
 
       <div class="contact-grid">
         <div class="reveal">
           <div class="contact-block">
             <span class="contact-block-label">Call or WhatsApp</span>
-            <a class="contact-phone-link" href="tel:"></a>
+            <a class="contact-phone-link" href="tel:#">Contact Us</a>
             <div class="wa-cta-block">
-              <a href="https://wa.me/?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20with%20MMI%20-%20MOLD%20MEDIA%20PHOTOGRAPHY%20INSTITUTE%20PUNE." class="btn--wa" target="_blank" rel="noopener">
+              <a href="https://wa.me/0000000000?text=Hi%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20with%20MMI%20-%20MOLD%20MEDIA%20PHOTOGRAPHY%20INSTITUTE%20PUNE." class="btn--wa" target="_blank" rel="noopener">
                 Message on WhatsApp
               </a>
             </div>
@@ -1243,7 +1234,8 @@
           <div class="contact-block">
             <span class="contact-block-label">Studio Hours</span>
             <table class="contact-hours" aria-label="Business hours">
-              <tr><td colspan='2' style='color:var(--muted)'>Hours not available</td></tr>
+              <tr><td>Sunday</td><td>12:30–9:30 pm</td></tr>
+
             </table>
           </div>
 
@@ -1273,13 +1265,13 @@
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <p class="footer-copy">&copy; 2026 MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE. All rights reserved. Pune, N/A.</p>
+      <p class="footer-copy">&copy; 2026 MMI - MOLD MEDIA PHOTOGRAPHY INSTITUTE PUNE. All rights reserved. Pune, Hadapsar.</p>
     </div>
   </footer>
 
   <!-- ═══════════════ FLOATING WHATSAPP ═══════════════ -->
   <div id="wa-float" aria-label="Chat on WhatsApp">
-    <a class="wa-float-btn" href="https://wa.me/?text=Hi%2C%20I%20found%20MMI%20-%20MOLD%20MEDIA%20PHOTOGRAPHY%20INSTITUTE%20PUNE%20online%20and%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener" aria-label="Open WhatsApp chat">
+    <a class="wa-float-btn" href="https://wa.me/0000000000?text=Hi%2C%20I%20found%20MMI%20-%20MOLD%20MEDIA%20PHOTOGRAPHY%20INSTITUTE%20PUNE%20online%20and%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener" aria-label="Open WhatsApp chat">
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
       </svg>

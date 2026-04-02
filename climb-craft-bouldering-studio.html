@@ -31,6 +31,8 @@
       --border-l: rgba(0,0,0,0.1);
       --display:  'Bebas Neue', 'Impact', 'Arial Narrow', sans-serif;
       --sans:     'Barlow', system-ui, sans-serif;
+      --hero-image: url('https://lh3.googleusercontent.com/gps-cs-s/AHVAwer6fizywSsExjEqebY6ciuIG38EhZNOYhQhPCFUUrqYMLudwHmod4So5qclpI495pQSt5QHd2VYEKHu7aTpIug8jxfV1haqaye16u5v-NbStHY8ff5MKy48lh5yMVN8ZLtZ7j8_=w1920-h1080-k-no');
+      --hero-image-secondary: url('https://lh3.googleusercontent.com/gps-cs-s/AHVAweo1ybwyLfeAecxkH0y0EGstHbQCK-4eYaV-mLD-0RNCIzclVq8PMq0v0T8SOnionhe_MXmqJ99CFGGeqE7Ra_owJSSxbFus4P1HQpFLxU2B26BNFy56JNtRfb3fsAD338m-CSyQ=w1920-h1080-k-no');
     }
 
     html { scroll-behavior: smooth; font-size: 16px; }
@@ -203,6 +205,16 @@
       height: 100%;
       background: var(--red);
     }
+    .hero-mobile-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 58% center;
+      z-index: 0;
+      display: none;
+    }
     .hero-inner {
       max-width: 1280px;
       margin: 0 auto;
@@ -298,51 +310,41 @@
     /* Hero Visual */
     .hero-visual {
       position: relative;
-      height: 520px;
+      height: 540px;
     }
     .hero-big-letter {
       position: absolute;
       inset: 0;
       font-family: var(--display);
-      font-size: 22rem;
+      font-size: 24rem;
       line-height: 1;
       color: var(--white);
-      opacity: 0.025;
+      opacity: 0.04;
       letter-spacing: -0.05em;
-      text-align: center;
+      text-align: right;
       user-select: none;
       pointer-events: none;
       overflow: hidden;
     }
     .hero-dumbbell {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -54%);
-      width: 260px;
-      height: 260px;
-      background: var(--black-3);
-      border: 2px solid rgba(232,25,10,0.35);
-      clip-path: polygon(16px 0%, 100% 0%, calc(100% - 16px) 100%, 0% 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      top: 26px;
+      right: 42px;
+      width: min(92%, 470px);
+      height: 485px;
+      border: 2px solid rgba(232,25,10,0.45);
+      clip-path: polygon(20px 0%, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
+      overflow: hidden;
+      box-shadow: 0 24px 70px rgba(0,0,0,0.62);
     }
     .hero-dumbbell-inner {
-      width: 200px;
-      height: 200px;
-      background: var(--red-pale);
-      border: 1.5px solid rgba(232,25,10,0.5);
-      clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(145deg, rgba(8,8,8,0.12) 0%, rgba(8,8,8,0.62) 100%), var(--hero-image);
+      background-size: cover;
+      background-position: center;
     }
-    .hero-dumbbell-icon {
-      font-size: 4.5rem;
-      line-height: 1;
-      filter: grayscale(0.1);
-    }
+    .hero-dumbbell-icon { display: none; }
     .hero-badge {
       position: absolute;
       top: 32px;
@@ -391,6 +393,25 @@
       width: 24px;
       height: 1.5px;
       background: rgba(232,25,10,0.3);
+    }
+    .hero-photo-chip {
+      position: absolute;
+      right: -6px;
+      bottom: 0;
+      width: min(48%, 270px);
+      aspect-ratio: 4 / 5;
+      border: 2px solid rgba(255,255,255,0.28);
+      clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+      overflow: hidden;
+      z-index: 4;
+      box-shadow: 0 22px 52px rgba(0,0,0,0.68);
+      background: var(--black-4);
+    }
+    .hero-photo-chip img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(1.08) contrast(1.05);
     }
 
     /* ============================================================
@@ -911,23 +932,72 @@
     .photos-heading em { font-style: normal; color: var(--red); }
     .photo-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 4px;
     }
-    .photo-card {
+    .photo-cell {
       aspect-ratio: 4 / 3;
       overflow: hidden;
       position: relative;
       background: var(--black-3);
+      cursor: zoom-in;
     }
-    .photo-card img {
+    .photo-cell::after {
+      content: 'Expand';
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.78);
+      background: rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 4px 8px;
+      z-index: 2;
+    }
+    .photo-cell img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       filter: saturate(0.8) contrast(1.1);
       transition: transform 0.4s ease, filter 0.4s ease;
     }
-    .photo-card:hover img { transform: scale(1.06); filter: saturate(1) contrast(1.1); }
+    .photo-cell:hover img { transform: scale(1.06); filter: saturate(1) contrast(1.1); }
+    .photo-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 1400;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.88);
+      padding: 28px;
+    }
+    .photo-lightbox.open { display: flex; }
+    .photo-lightbox-img {
+      max-width: min(1100px, 100%);
+      max-height: 84vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border: 2px solid rgba(255,255,255,0.18);
+      box-shadow: 0 22px 60px rgba(0,0,0,0.6);
+      background: var(--black-3);
+    }
+    .photo-lightbox-close {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      border: 1px solid rgba(255,255,255,0.32);
+      background: rgba(0,0,0,0.35);
+      color: var(--white);
+      font-size: 0.76rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 9px 12px;
+      cursor: pointer;
+    }
 
     /* ============================================================
        CONTACT
@@ -1170,12 +1240,37 @@
     @media (max-width: 900px) {
       .hero-inner  { grid-template-columns: 1fr; gap: 48px; }
       .hero-visual { height: 300px; }
+      .hero-dumbbell {
+        top: 0;
+        right: 34px;
+        width: min(92%, 420px);
+        height: 300px;
+      }
+      .hero-photo-chip {
+        width: min(50%, 210px);
+        bottom: -12px;
+      }
       .about-inner { grid-template-columns: 1fr; gap: 48px; }
       .contact-inner { grid-template-columns: 1fr; }
       .reviews-header { flex-direction: column; align-items: flex-start; }
       .reviews-sub { text-align: left; }
     }
     @media (max-width: 768px) {
+      .hero {
+        min-height: 92vh;
+      }
+      .hero-mobile-bg { display: block; }
+      .hero-scanlines { opacity: 0.55; }
+      .hero::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(95deg, rgba(8,8,8,0.74) 0%, rgba(8,8,8,0.28) 50%, rgba(8,8,8,0.62) 100%);
+        z-index: 1;
+        pointer-events: none;
+      }
+      .hero-sub { color: rgba(255,255,255,0.82); }
+      .hero::before { opacity: 0; }
       .nav-links { display: none; }
       .nav-hamburger { display: flex; }
       .nav-links.open {
@@ -1198,22 +1293,26 @@
       .stat-item:nth-child(4) { border-right: none; }
       .stat-item:nth-child(5) { grid-column: span 2; border-right: none; }
       .programs, .about, .reviews, .faq, .photos, .contact { padding: 70px 20px; }
-      .photo-grid {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        gap: 4px;
-        padding-bottom: 12px;
+      .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .photo-lightbox { padding: 18px; }
+      .photo-lightbox-close {
+        top: 10px;
+        right: 10px;
       }
-      .photo-card { flex: 0 0 260px; scroll-snap-align: start; }
     }
     @media (max-width: 480px) {
       .hero-inner { padding: 64px 20px; }
       .hero-visual { display: none; }
+      .hero::after {
+        background: linear-gradient(180deg, rgba(8,8,8,0.58) 0%, rgba(8,8,8,0.48) 40%, rgba(8,8,8,0.78) 100%);
+      }
+      .hero-mobile-bg {
+        object-position: 62% center;
+      }
       .hero-actions { flex-direction: column; align-items: stretch; }
       .btn-red, .btn-ghost { text-align: center; justify-content: center; }
       .footer-top { flex-direction: column; align-items: flex-start; }
+      .photo-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -1242,6 +1341,7 @@
        HERO
   ============================================================ -->
   <section class="hero noise" id="hero">
+    <img class="hero-mobile-bg" src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwer6fizywSsExjEqebY6ciuIG38EhZNOYhQhPCFUUrqYMLudwHmod4So5qclpI495pQSt5QHd2VYEKHu7aTpIug8jxfV1haqaye16u5v-NbStHY8ff5MKy48lh5yMVN8ZLtZ7j8_=w1920-h1080-k-no" alt="Climb Craft bouldering wall" loading="eager">
     <div class="hero-scanlines"></div>
     <div class="hero-red-bar"></div>
     <div class="hero-inner">
@@ -1270,6 +1370,9 @@
             <span class="hero-dumbbell-icon">🏋️</span>
           </div>
         </div>
+        <figure class="hero-photo-chip">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqA-KLKwpRV0k1NkJiucIxStMD5WxcWHvfvOeF0x6qOqqB79Qzq-MqKJgOS_vnZ9WrEUvW35FYVun_KKw-6od70-xJlvgzvwwVFz6mk7CAAHMvFCym14VNs-h293ajcJTHXdjFl0PNa869x=w1920-h1080-k-no" alt="Climbers practicing at Climb Craft Bouldering Studio" loading="lazy">
+        </figure>
         <div class="hero-badge">Top Gym</div>
         <div class="hero-tag-bottom">Pune, Since 2017</div>
         <div class="hero-cross-1"></div>
@@ -1386,6 +1489,54 @@
             <p class="service-name">Private Rentals</p>
             <p class="service-desc">Exclusive access to Climbing walls for birthday parties</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PHOTOS
+  ============================================================ -->
+  <section class="photos" id="photos">
+    <div class="photos-inner">
+      <div class="reveal">
+        <div class="section-tag">
+          <span class="section-tag-line"></span>
+          <span class="section-tag-text">Inside the Gym</span>
+        </div>
+        <h2 class="photos-heading">See the <em>Floor</em></h2>
+      </div>
+      <div class="photo-grid reveal delay-1">
+        
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerrAmtC3RQjwXqpJkv5woZlDkLOlY1I4h41JAeVfzLZtpac7gPSHqlj4CHonQrUUlYEEBHGkCjfFeRPJ64xw9tCkTkZS3yOPTi2649rhCiu__nMVo7vfQm1djiLjISfYArL2hID=w1920-h1080-k-no" alt="Climb Craft Bouldering Studio" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwer6fizywSsExjEqebY6ciuIG38EhZNOYhQhPCFUUrqYMLudwHmod4So5qclpI495pQSt5QHd2VYEKHu7aTpIug8jxfV1haqaye16u5v-NbStHY8ff5MKy48lh5yMVN8ZLtZ7j8_=w1920-h1080-k-no" alt="Climb Craft Bouldering Studio" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqw0gAw2RAGHdqfLm1SheR_QuMa8rbFaFQTqX1nkrKYcV9OmUS5ovlM9XmIwRdMx292rlfUQ9nlmJkMtlwFZJsB4mQIV-bNu2cSn1_4m0cOEVa6NfEfWh_Pe5JVUZuCFrWauKoYHAhKL0M=w1920-h1080-p-k-no" alt="Climb Craft Bouldering Studio" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwep5eFZQcrZT9McVnVNKs9XrFUxsRPZ0byJz2776q8ZenwHLC_sxTlPl62IhpJPtdkofRRrhGLzv8aSUlmTQSEj7BrZBQMLGkZQgtjVU0v5Vrt9hxqN5yG_kBKXV2UauUEzjtZ7SyQ=w1920-h1080-k-no" alt="Climb Craft Bouldering Studio" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqA-KLKwpRV0k1NkJiucIxStMD5WxcWHvfvOeF0x6qOqqB79Qzq-MqKJgOS_vnZ9WrEUvW35FYVun_KKw-6od70-xJlvgzvwwVFz6mk7CAAHMvFCym14VNs-h293ajcJTHXdjFl0PNa869x=w1920-h1080-k-no" alt="Climb Craft Bouldering Studio" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqw0gAw2RAGHdqfLm1SheR_QuMa8rbFaFQTqX1nkrKYcV9OmUS5ovlM9XmIwRdMx292rlfUQ9nlmJkMtlwFZJsB4mQIV-bNu2cSn1_4m0cOEVa6NfEfWh_Pe5JVUZuCFrWauKoYHAhKL0M=w1920-h1080-k-no" alt="Climb Craft Bouldering Studio" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweraI5p4J-eV_-WD_WcDL_DquPnTsQLd39XxQEj0TA15YdsLZdLhpHnjLjwz6ifFZb0tUAVjsfIpFS1Kca-bDk3QL7GP9ib2cDqVsYayRPu7wiOOkCF8pMJAjXRgxAIApNaI7OJRDEyxhBq6=w1920-h1080-k-no" alt="Climb Craft Bouldering Studio" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepGqGrhDbc3Ak8-Y8DJW2ZGedMoxIVtQXqNMWUf6OrBasqESFcql_xhe3aLYtKzgy6lUEYJkJnL2Opzb6Tbb8dFqzfKvpOkgA8z42ZJ6DMzcoqUSza2fddB7jeM7VzC5qMBDBYFbA=w1920-h1080-k-no" alt="Climb Craft Bouldering Studio" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweo1ybwyLfeAecxkH0y0EGstHbQCK-4eYaV-mLD-0RNCIzclVq8PMq0v0T8SOnionhe_MXmqJ99CFGGeqE7Ra_owJSSxbFus4P1HQpFLxU2B26BNFy56JNtRfb3fsAD338m-CSyQ=w1920-h1080-k-no" alt="Climb Craft Bouldering Studio" onerror="this.parentElement.style.background='#2a2a28'">
+        </div>
+        <div class="photo-cell">
+          <img src="https://lh3.googleusercontent.com/p/AF1QipPdB3QmaxMoEo6gkoSMTAdybbut5zULchQxy8rZ=w1920-h1080-k-no" alt="Climb Craft Bouldering Studio" onerror="this.parentElement.style.background='#2a2a28'">
         </div>
       </div>
     </div>
@@ -1514,54 +1665,6 @@ Finding the pl...</p>
   </section>
 
   <!-- ============================================================
-       PHOTOS
-  ============================================================ -->
-  <section class="photos" id="photos">
-    <div class="photos-inner">
-      <div class="reveal">
-        <div class="section-tag">
-          <span class="section-tag-line"></span>
-          <span class="section-tag-text">Inside the Gym</span>
-        </div>
-        <h2 class="photos-heading">See the <em>Floor</em></h2>
-      </div>
-      <div class="photo-grid reveal delay-1">
-        
-        <div class="photo-cell">
-          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerrAmtC3RQjwXqpJkv5woZlDkLOlY1I4h41JAeVfzLZtpac7gPSHqlj4CHonQrUUlYEEBHGkCjfFeRPJ64xw9tCkTkZS3yOPTi2649rhCiu__nMVo7vfQm1djiLjISfYArL2hID=w1920-h1080-k-no" alt="Climb Craft Bouldering Studio" onerror="this.parentElement.style.background='#2a2a28'">
-        </div>
-        <div class="photo-cell">
-          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwer6fizywSsExjEqebY6ciuIG38EhZNOYhQhPCFUUrqYMLudwHmod4So5qclpI495pQSt5QHd2VYEKHu7aTpIug8jxfV1haqaye16u5v-NbStHY8ff5MKy48lh5yMVN8ZLtZ7j8_=w1920-h1080-k-no" alt="Climb Craft Bouldering Studio" onerror="this.parentElement.style.background='#2a2a28'">
-        </div>
-        <div class="photo-cell">
-          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqw0gAw2RAGHdqfLm1SheR_QuMa8rbFaFQTqX1nkrKYcV9OmUS5ovlM9XmIwRdMx292rlfUQ9nlmJkMtlwFZJsB4mQIV-bNu2cSn1_4m0cOEVa6NfEfWh_Pe5JVUZuCFrWauKoYHAhKL0M=w1920-h1080-p-k-no" alt="Climb Craft Bouldering Studio" onerror="this.parentElement.style.background='#2a2a28'">
-        </div>
-        <div class="photo-cell">
-          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwep5eFZQcrZT9McVnVNKs9XrFUxsRPZ0byJz2776q8ZenwHLC_sxTlPl62IhpJPtdkofRRrhGLzv8aSUlmTQSEj7BrZBQMLGkZQgtjVU0v5Vrt9hxqN5yG_kBKXV2UauUEzjtZ7SyQ=w1920-h1080-k-no" alt="Climb Craft Bouldering Studio" onerror="this.parentElement.style.background='#2a2a28'">
-        </div>
-        <div class="photo-cell">
-          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqA-KLKwpRV0k1NkJiucIxStMD5WxcWHvfvOeF0x6qOqqB79Qzq-MqKJgOS_vnZ9WrEUvW35FYVun_KKw-6od70-xJlvgzvwwVFz6mk7CAAHMvFCym14VNs-h293ajcJTHXdjFl0PNa869x=w1920-h1080-k-no" alt="Climb Craft Bouldering Studio" onerror="this.parentElement.style.background='#2a2a28'">
-        </div>
-        <div class="photo-cell">
-          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqw0gAw2RAGHdqfLm1SheR_QuMa8rbFaFQTqX1nkrKYcV9OmUS5ovlM9XmIwRdMx292rlfUQ9nlmJkMtlwFZJsB4mQIV-bNu2cSn1_4m0cOEVa6NfEfWh_Pe5JVUZuCFrWauKoYHAhKL0M=w1920-h1080-k-no" alt="Climb Craft Bouldering Studio" onerror="this.parentElement.style.background='#2a2a28'">
-        </div>
-        <div class="photo-cell">
-          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweraI5p4J-eV_-WD_WcDL_DquPnTsQLd39XxQEj0TA15YdsLZdLhpHnjLjwz6ifFZb0tUAVjsfIpFS1Kca-bDk3QL7GP9ib2cDqVsYayRPu7wiOOkCF8pMJAjXRgxAIApNaI7OJRDEyxhBq6=w1920-h1080-k-no" alt="Climb Craft Bouldering Studio" onerror="this.parentElement.style.background='#2a2a28'">
-        </div>
-        <div class="photo-cell">
-          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepGqGrhDbc3Ak8-Y8DJW2ZGedMoxIVtQXqNMWUf6OrBasqESFcql_xhe3aLYtKzgy6lUEYJkJnL2Opzb6Tbb8dFqzfKvpOkgA8z42ZJ6DMzcoqUSza2fddB7jeM7VzC5qMBDBYFbA=w1920-h1080-k-no" alt="Climb Craft Bouldering Studio" onerror="this.parentElement.style.background='#2a2a28'">
-        </div>
-        <div class="photo-cell">
-          <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweo1ybwyLfeAecxkH0y0EGstHbQCK-4eYaV-mLD-0RNCIzclVq8PMq0v0T8SOnionhe_MXmqJ99CFGGeqE7Ra_owJSSxbFus4P1HQpFLxU2B26BNFy56JNtRfb3fsAD338m-CSyQ=w1920-h1080-k-no" alt="Climb Craft Bouldering Studio" onerror="this.parentElement.style.background='#2a2a28'">
-        </div>
-        <div class="photo-cell">
-          <img src="https://lh3.googleusercontent.com/p/AF1QipPdB3QmaxMoEo6gkoSMTAdybbut5zULchQxy8rZ=w1920-h1080-k-no" alt="Climb Craft Bouldering Studio" onerror="this.parentElement.style.background='#2a2a28'">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
        CONTACT
   ============================================================ -->
   <section class="contact" id="contact">
@@ -1649,6 +1752,11 @@ Finding the pl...</p>
       </div>
     </div>
   </footer>
+
+  <div class="photo-lightbox" id="photo-lightbox" aria-hidden="true" role="dialog" aria-label="Expanded gym photo">
+    <button class="photo-lightbox-close" id="photo-lightbox-close" type="button" aria-label="Close expanded image">Close</button>
+    <img class="photo-lightbox-img" id="photo-lightbox-image" alt="Expanded gym photo">
+  </div>
 
   <!-- ============================================================
        JAVASCRIPT
@@ -1759,6 +1867,48 @@ Finding the pl...</p>
       document.querySelectorAll('.service-card').forEach(function (card, i) {
         card.setAttribute('data-num', String(i + 1).padStart(2, '0'));
       });
+
+      /* ---- Photo lightbox ---- */
+      var lightbox = document.getElementById('photo-lightbox');
+      var lightboxImg = document.getElementById('photo-lightbox-image');
+      var lightboxClose = document.getElementById('photo-lightbox-close');
+
+      function closeLightbox() {
+        if (!lightbox) return;
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      if (lightbox && lightboxImg) {
+        document.querySelectorAll('.photo-cell img').forEach(function (img) {
+          img.addEventListener('click', function () {
+            var src = img.getAttribute('src');
+            if (!src) return;
+            lightboxImg.src = src;
+            lightboxImg.alt = img.getAttribute('alt') || 'Expanded gym photo';
+            lightbox.classList.add('open');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+          });
+        });
+
+        if (lightboxClose) {
+          lightboxClose.addEventListener('click', closeLightbox);
+        }
+
+        lightbox.addEventListener('click', function (e) {
+          if (e.target === lightbox) {
+            closeLightbox();
+          }
+        });
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+            closeLightbox();
+          }
+        });
+      }
 
     })();
   </script>
